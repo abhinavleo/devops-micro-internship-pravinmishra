@@ -147,7 +147,7 @@ The biggest change? I became more disciplined, curious, and focused on solving r
 
 https://medium.com/@abhinav1712003/the-future-2-0-152477599749
 
-`__________________________`
+`Add your URL here`
 
 ---
 
@@ -346,7 +346,7 @@ Will maintain fixed learning routine and improve productivity
 
 https://lnkd.in/p/ehyZ-Cka
 
-`__________________________`
+`Add your URL here`
 
 ---
 

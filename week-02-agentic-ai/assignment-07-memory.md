@@ -94,7 +94,7 @@ https://www.linkedin.com/posts/abhinav-t-210682296_dmibypravinmishra-agenticai-c
 ![screenshot 7](screenshots/ass7/6.png)
 
 
-`__________________________`
+`Add your URL here`
 
 ---
 
@@ -102,7 +102,7 @@ https://www.linkedin.com/posts/abhinav-t-210682296_dmibypravinmishra-agenticai-c
 
 https://github.com/abhinavleo/Ultimate-Agentic-DevOps-with-Claude-Code.git
 
-`__________________________`
+`Add your URL here`
 
 ---
 

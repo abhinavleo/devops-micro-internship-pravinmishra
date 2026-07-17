@@ -54,7 +54,7 @@ You can publish your blog on:
 
 Blog Link:https://medium.com/@abhinav1712003/reflection-week-2-cf9b4b13d2c5
 
-`__________________________________________`
+`Add your URL here`
 
 ---
 
@@ -123,7 +123,7 @@ Here you can Read More: https://lnkd.in/gR2teuyC
 ### LinkedIn Post Link:
 https://lnkd.in/p/g_Ehwv-S
 
-`__________________________________________`
+`Add your URL here`
 
 ---
 
