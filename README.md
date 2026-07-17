@@ -133,7 +133,7 @@ Week 03 → Linux & Bash for DevOps
 | 00 | Internet & Networking Basics | ✅ Completed | ✅ Solved | — | — |
 | 01 | Success Mindset | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/abhinav-t-210682296_careergrowth-devops-cloudcomputing-share-7477981851677184000-tbCR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM | https://medium.com/@abhinav1712003/the-future-2-0-152477599749 |
 | 02 | Agentic AI with Claude Code | ✅ Completed | ✅ Completed | https://www.linkedin.com/posts/abhinav-t-210682296_dmibypravinmishra-agenticai-claudecode-ugcPost-7481255100129128448-HQOo/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM | https://medium.com/@abhinav1712003/reflection-week-2-cf9b4b13d2c5?sharedUserId=abhinav1712003 |
-| 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/abhinav-t-210682296_linux-bash-devops-activity-7483896019592679425-pBbv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM | — |
+| 03 | Linux & Bash for DevOps | ✅ Completed | ✅ Solved | https://www.linkedin.com/posts/abhinav-t-210682296_linux-bash-devops-activity-7483896019592679425-pBbv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM | https://medium.com/@abhinav1712003/building-my-first-ai-assisted-linux-health-check-workflow-9d0992f0658c?sharedUserId=abhinav1712003 |
 | 04 | Git & GitHub | ⬜ Not Started | ⏳ Pending | — | — |
 | 05 | DevOps Lifecycle & Agile | ⬜ Not Started | ⏳ Pending | — | — |
 | 06 | AWS Cloud | ⬜ Not Started | ⏳ Pending | — | — |
