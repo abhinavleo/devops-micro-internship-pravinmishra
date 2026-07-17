@@ -54,7 +54,6 @@ You can publish your blog on:
 
 Blog Link:https://medium.com/@abhinav1712003/reflection-week-2-cf9b4b13d2c5
 
-`Add your URL here`
 
 ---
 
@@ -99,7 +98,7 @@ Your post must include:
 
 ### Submission Field
 
-LinkedIn Post Content (copy-paste here):
+
 
 ```
 Just built my first agentic DevOps skill. One command generated an entire Terraform infrastructure. No manual code written 🙅‍♂️ 
@@ -121,7 +120,7 @@ Here you can Read More: https://lnkd.in/gR2teuyC
 ---
 
 ### LinkedIn Post Link:
-https://lnkd.in/p/g_Ehwv-S
+https://www.linkedin.com/posts/abhinav-t-210682296_dmibypravinmishra-agenticai-claudecode-ugcPost-7481255100129128448-HQOo/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
 
 ---
 

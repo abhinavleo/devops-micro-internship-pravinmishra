@@ -94,15 +94,12 @@ https://www.linkedin.com/posts/abhinav-t-210682296_dmibypravinmishra-agenticai-c
 ![screenshot 7](screenshots/ass7/6.png)
 
 
-`Add your URL here`
-
 ---
 
 ## GitHub Repository URL
 
 https://github.com/abhinavleo/Ultimate-Agentic-DevOps-with-Claude-Code.git
 
-`Add your URL here`
 
 ---
 

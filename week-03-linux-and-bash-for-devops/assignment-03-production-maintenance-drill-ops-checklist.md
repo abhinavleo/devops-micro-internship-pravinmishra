@@ -20,25 +20,25 @@ Verify that the deployed React application is reachable from the browser and con
 
 #### Screenshot 1 — Browser showing the React app with your Full Name visible on the UI
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/1.png)
 
 ---
 
 #### Screenshot 2 — Output of `ip a`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/2.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -tulpen`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/3.png)
 
 ---
 
 #### Screenshot 4 — Output of `sudo ufw status`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/4.png)
 
 ---
 
@@ -48,19 +48,19 @@ Answer the following in your own words:
 
 **1. What proves Nginx is listening on 0.0.0.0:80?**
 
-Write your answer here.
+ran the ss command and it showed Nginx on port 80. So I know Nginx is running.
 
 ---
 
 **2. What proves SSH is active on port 22?**
 
-Write your answer here.
+The ss command showed SSH on port 22. That means SSH is working.
 
 ---
 
 **3. Did you find any unexpected open ports? Explain briefly.**
 
-Write your answer here.
+No. I only saw 22 (SSH) and 80 (HTTP) open, which are the expected ports for managing the server and serving the website.
 
 ---
 
@@ -74,19 +74,19 @@ Verify that Nginx is properly installed, running, enabled at boot, and safely co
 
 #### Screenshot 1 — Output of `systemctl status nginx --no-pager`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/5.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/6.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo ss -lptn '( sport = :80 )'`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/7.png)
 
 ---
 
@@ -96,13 +96,13 @@ Answer the following in your own words:
 
 **1. What happens if Nginx fails to restart in production?**
 
-Write your answer here.
+If Nginx does not restart, the website will go down and users will not be able to open it.
 
 ---
 
 **2. What's your basic rollback plan?**
 
-Write your answer here.
+I will restore the last working Nginx configuration, check it with nginx -t, and then restart Nginx again.
 
 ---
 
@@ -116,19 +116,19 @@ Verify real traffic flow and analyze logs to understand system behavior and erro
 
 #### Screenshot 1 — Output of `sudo tail -n 30 /var/log/nginx/access.log`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/8.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo tail -n 30 /var/log/nginx/error.log`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/9.png)
 
 ---
 
 #### Screenshot 3 — Output of `sudo journalctl -u nginx --no-pager -n 50`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/10.png)
 
 ---
 
@@ -141,19 +141,19 @@ Answer the following in your own words:
 - If yes, mention 1–2 example error lines from the logs and explain what each one means in simple terms.
 - If no, explain what it means if the error log is empty or shows no recent errors during your check.
 
-Write your answer here.
+No. I did not find any errors in the logs. The error log and systemd journal did not show any recent errors during my check.
 
 ---
 
 **2. If there were no errors, what does that indicate about the system?**
 
-Write your answer here.
+It means the Nginx service was running properly and there were no recent problems with the server.
 
 ---
 
 **3. Based on the access logs, were your curl requests visible in the log entries? What does that prove about traffic flow?**
 
-Write your answer here.
+Yes. My curl requests were visible in the access log. This proves that the requests reached the server and Nginx handled them successfully.
 
 ---
 
@@ -167,25 +167,29 @@ Assess server capacity and detect potential performance or failure risks.
 
 #### Screenshot 1 — Output of `uptime`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/11.png)
+
 
 ---
 
 #### Screenshot 2 — Output of `free -h`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/12.png)
+
 
 ---
 
 #### Screenshot 3 — Output of `df -h`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/13.png)
+
 
 ---
 
 #### Screenshot 4 — Output of `sudo du -sh /var/* | sort -h`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/14.png)
+
 
 ---
 
@@ -195,13 +199,13 @@ Answer the following in your own words:
 
 **1. Which resource looks most critical right now? (CPU/load, memory, or disk) Explain why.**
 
-Write your answer here.
+The disk is the most important to watch. It is using 59% space. It is fine now, but if it gets full, it can cause problems.
 
 ---
 
 **2. What happens if disk becomes 100% full in a production server?**
 
-Write your answer here.
+If the disk becomes full, the website or services may stop working properly because the server cannot save new files or logs.
 
 ---
 
@@ -215,20 +219,19 @@ Ensure the correct React build is deployed and Nginx is serving it properly.
 
 #### Screenshot 1 — Output of `ls -lah /var/www/html | head -n 20`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/15.png)
 
 ---
 
 #### Screenshot 2 — Output of `grep -R "Deployed by" -n /var/www/html 2>/dev/null | head`
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/16.png)
 
 ---
 
 #### Screenshot 3 — Output of `grep -n "try_files" /etc/nginx/sites-available/default`
 
-Add your screenshot here.
-
+![Assignment 3](screenshots/ass3/17.png)
 ---
 
 ### Notes
@@ -237,7 +240,7 @@ Answer the following in your own words:
 
 **1. How do you confirm that the correct version of the application is deployed?**
 
-Write your answer here.
+The UI displays my full name and the latest date, which matches the latest build files.
 
 ---
 
@@ -251,19 +254,19 @@ Simulate a real-world Nginx misconfiguration and recover the service safely.
 
 #### Screenshot 1 — Output of `sudo nginx -t` showing the syntax error (broken config)
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/18.png)
 
 ---
 
 #### Screenshot 2 — Output of `sudo nginx -t` showing syntax ok (fixed config)
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/19.png)
 
 ---
 
 #### Screenshot 3 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/20.png)
 
 ---
 
@@ -273,19 +276,19 @@ Answer the following in your own words:
 
 **1. What caused the configuration failure?**
 
-Write your answer here.
+Invalid nginx syntax.
 
 ---
 
 **2. How did you fix the issue?**
 
-Write your answer here.
+Corrected config and validated before restart.
 
 ---
 
 **3. How can you avoid this kind of issue in real production systems?**
 
-Write your answer here.
+Always run nginx -t before reloads.
 
 ---
 
@@ -299,13 +302,13 @@ Simulate missing deployment content and recover the application safely.
 
 #### Screenshot 1 — Output of `curl -I http://<public-ip>` showing failure (non-200 response)
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/21.png)
 
 ---
 
 #### Screenshot 2 — Output of `curl -I http://<public-ip>` confirming recovery (200 OK)
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/22.png)
 
 ---
 
@@ -315,19 +318,19 @@ Answer the following in your own words:
 
 **1. What caused the application to break in this scenario?**
 
-Write your answer here
+The app stopped working because I moved the website files from the /var/www/html folder. Nginx could not find the files, so it showed 500 Internal Server Error
 
 ---
 
 **2. How did you fix the issue and restore the application?**
 
-Write your answer here.
+I moved the backup folder back to /var/www/html, restarted Nginx, and checked the website. It showed 200 OK, so the app was working again.
 
 ---
 
 **3. What steps would you take to prevent this kind of issue in real production systems?**
 
-Write your answer here.
+I will take a backup before making changes, check everything after the changes, and keep a backup so I can restore it if something goes wrong.
 
 ---
 
@@ -343,31 +346,31 @@ Answer the following in your own words:
 
 **1. Why is SSH key-based authentication more secure than sharing passwords?**
 
-Write your answer here.
+SSH keys are safer because they are harder to break than passwords.
 
 ---
 
 **2. Why should only required ports be open on a production server?**
 
-Write your answer here.
+Only needed ports should be open so the server stays safe.
 
 ---
 
 **3. Why is it important for Nginx to be enabled on boot?**
 
-Write your answer here.
+So Nginx starts by itself after a restart and the website keeps working.
 
 ---
 
 **4. What are the risks of sharing secrets, keys, or credentials publicly?**
 
-Write your answer here.
+Someone else can use them and get access to the server.
 
 ---
 
 **5. Why should cloud resources be stopped or terminated when they are no longer needed?**
 
-Write your answer here.
+It saves money because you don't pay for resources you are not using.
 
 ---
 
@@ -377,15 +380,14 @@ Write your answer here.
 
 #### LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
-
-`Add your URL here`
+https://www.linkedin.com/posts/abhinav-t-210682296_dmibypravinmishra-react-nginx-ugcPost-7483118745591300096-7wi8/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
 
 ---
 
 #### Screenshot — Published LinkedIn post
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/00.png)
+![Assignment 3](screenshots/ass3/0.0.png)
 
 ---
 
@@ -399,17 +401,17 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Task 1: Screenshots (browser, ip a, ss -tulpen, ufw status) + Notes answered
-- [ ] Task 2: Screenshots (nginx status, nginx -t, ss port 80) + Notes answered
-- [ ] Task 3: Screenshots (access log, error log, journalctl) + Notes answered
-- [ ] Task 4: Screenshots (uptime, free -h, df -h, du -sh) + Notes answered
-- [ ] Task 5: Screenshots (ls html, grep deployed by, grep try_files) + Notes answered
-- [ ] Task 6: Screenshots (nginx -t fail, nginx -t pass, curl recovery) + Notes answered
-- [ ] Task 7: Screenshots (curl failure, curl recovery) + Notes answered
-- [ ] Task 8: Security & Reliability Notes answered
-- [ ] LinkedIn post published and URL submitted
-- [ ] Full Name visible in all required screenshots
-- [ ] No sensitive data exposed
+- [✅] Task 1: Screenshots (browser, ip a, ss -tulpen, ufw status) + Notes answered
+- [✅] Task 2: Screenshots (nginx status, nginx -t, ss port 80) + Notes answered
+- [✅] Task 3: Screenshots (access log, error log, journalctl) + Notes answered
+- [✅] Task 4: Screenshots (uptime, free -h, df -h, du -sh) + Notes answered
+- [✅] Task 5: Screenshots (ls html, grep deployed by, grep try_files) + Notes answered
+- [✅] Task 6: Screenshots (nginx -t fail, nginx -t pass, curl recovery) + Notes answered
+- [✅] Task 7: Screenshots (curl failure, curl recovery) + Notes answered
+- [✅] Task 8: Security & Reliability Notes answered
+- [✅] LinkedIn post published and URL submitted
+- [✅] Full Name visible in all required screenshots
+- [✅] No sensitive data exposed
 
 ---
 

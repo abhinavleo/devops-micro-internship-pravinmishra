@@ -342,13 +342,13 @@ Will maintain fixed learning routine and improve productivity
 
 ### LinkedIn Post
 
-https://lnkd.in/p/ehyZ-Cka
+https://www.linkedin.com/posts/abhinav-t-210682296_careergrowth-devops-cloudcomputing-share-7477981851677184000-tbCR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
 
 ---
 
 ## 10. Proof of Work
 
-- LinkedIn Post URL: **https://lnkd.in/p/ehyZ-Cka**  
+- LinkedIn Post URL: https://www.linkedin.com/posts/abhinav-t-210682296_careergrowth-devops-cloudcomputing-share-7477981851677184000-tbCR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
 - Blog / Medium : **https://medium.com/@abhinav1712003/the-future-2-0-152477599749**  
 
 ---

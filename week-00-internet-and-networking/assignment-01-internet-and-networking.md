@@ -23,18 +23,19 @@ Take a screenshot of your interaction showing:
 
 ## Screenshot
 
-Save your screenshot in the `screenshots` folder and update the file name below.
-
-![Task 1 Screenshot](screenshots/task-1-chatgpt.png)
 
 
-Replace `task-1-chatgpt.png` with your actual screenshot file name.
+![Assignment 0](screenshots/ass0/2.png)
+![Assignment 0](screenshots/ass0/3.png)
+
+
 
 ---
 
 ## What I Learned (2–3 lines)
 
-Add your answer here...
+Well i learned how to use chatgpt and get answers/concept that we can understand easily
+
 
 ---
 
@@ -59,7 +60,10 @@ Write a short explanation (**100–150 words**) that includes:
 
 ## Answer
 
-Add your answer here...
+Well, when someone from USA enters the website name in the browser,
+first browser will find the (IP address), then using TCP/IP request will be broken into pieces called packet switching. These packets will travel through different routes to reach Finland.
+When they arrive server will send back the data using HTTP/HTTPS. TCP/IP will reassemble the broken pieces when it reaches the user & browser will display the EpicRead website.
+
 
 ---
 
@@ -89,12 +93,9 @@ EpicReads bookstore has two application versions:
 
 ## Diagram Screenshot / Photo
 
-Save your diagram image in the `screenshots` folder and update the file name below.
 
-![Application Architecture Diagram](screenshots/task-3-diagram.png)
+![Assignment 0](screenshots/ass0/4.png)
 
-
-Replace `task-3-diagram.png` with your actual diagram file name.
 
 ---
 
@@ -102,18 +103,17 @@ Replace `task-3-diagram.png` with your actual diagram file name.
 
 ### Frontend
 
-* Add your answer here...
-* Add your answer here...
+* Next.js,Tailwind.css
+
 
 ### Backend
 
-* Add your answer here...
-* Add your answer here...
+* :Node.js(for API) 
+
 
 ### Database
 
-* Add your answer here...
-* Add your answer here...
+* MySQL(database)
 
 ---
 
@@ -142,7 +142,13 @@ In **50–100 words**, explain in your own words:
 
 ## Answer
 
-Add your answer here...
+DNS
+This translates domain names to IP addresses.
+• Basically it’s like a phonebook,
+we search the name to find the person. We look for the name, not the phone number, because it’s easy to remember the name instead of remembering the 10-digit number.
+• Given IP is an IPv4, so the record type we should use is A.
+
+
 
 ---
 
@@ -176,12 +182,8 @@ ls
 
 ## Screenshot
 
-Save your screenshot in the `screenshots` folder and update the file name below.
+![Assignment 0](screenshots/ass0/1.png)
 
-![VS Code Setup Screenshot](screenshots/task-5-vscode.png)
-
-
-Replace `task-5-vscode.png` with your actual screenshot file name.
 
 ---
 

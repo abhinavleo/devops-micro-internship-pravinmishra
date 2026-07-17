@@ -20,19 +20,20 @@ Demonstrate understanding of AWS basics and Free Tier usage by answering the fol
 
 #### Question 1 — What is an AWS account, and why do you need it at this stage?
 
-Write your answer here.
+AWS account is to access resources like server,storage,database.For upcoming DevOps labs and deployment we will be using AWS,as of now created an account to create Linux EC2 instance 
+
 
 ---
 
 #### Question 2 — What is AWS Free Tier, and how long does it last?
 
-Write your answer here.
+Earlier it was 12 months but Now its 6 months,we can use AWS service for free
 
 ---
 
 #### Question 3 — Name three AWS Free Tier services and their free usage limits.
 
-Write your answer here.
+EC2,S3(5GB),Amazon RDS
 
 ---
 
@@ -56,7 +57,7 @@ Confirm that your AWS account setup is complete by navigating to the Account sec
 
 #### Screenshot 1 — AWS Account page showing account name (email may be blurred)
 
-Add your screenshot here.
+![Assignment 1](screenshots/ass1/1.png)
 
 ---
 
@@ -70,11 +71,11 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Task 1 answers written in own words
-- [ ] AWS Free Tier account created successfully
-- [ ] Signed in to AWS Management Console
-- [ ] Screenshot of AWS Account page captured (full name visible, no sensitive data)
-- [ ] All required screenshots added to repository
+- [✅] Task 1 answers written in own words
+- [✅] AWS Free Tier account created successfully
+- [✅] Signed in to AWS Management Console
+- [✅] Screenshot of AWS Account page captured (full name visible, no sensitive data)
+- [✅] All required screenshots added to repository
 
 ---
 
