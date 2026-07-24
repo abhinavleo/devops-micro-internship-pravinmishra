@@ -217,19 +217,34 @@ Add the following credit note at the end of your post:
 
 ## LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
+https://www.linkedin.com/posts/abhinav-t-210682296_epic-reads-shop-young-adult-ya-books-activity-7454897554913292288-BT43?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
 
-```text
-Add your URL here...
-```
 
 ---
 
 ## LinkedIn Post Backup Copy
 
-Paste the full text of your LinkedIn post here:
+Completed the Pre-Entry Assessment for the DevOps Micro Internship!
 
-Add your post content here...
+As part of Pravin Mishra's FREE DevOps Micro Internship (Cohort 3), I completed the pre-entry assessment and learned many new concepts that helped me build a stronger foundation in DevOps.
+
+Here's what I worked on:
+
+🔹 ChatGPT Practice: I learned how asking better prompts gives better answers. Using simple questions helped me understand networking concepts more easily.
+
+🔹 Internet & Networking: I learned how DNS works and how it connects a domain name to an IP address. I also understood how an A Record maps a domain to an IPv4 address.
+
+🔹 Application Architecture: I explored the difference between two-tier and three-tier applications and learned the role of the frontend, backend, and database in a web application.
+
+🔹 DNS Records: I practiced the basics of A Records, CNAME Records, and MX Records and understood what each one is used for.
+
+🔹 VS Code & Terminal: I set up VS Code, customized it for my workflow, and practiced terminal commands like pwd, ls, and dir to navigate the file system.
+
+This assessment helped me understand the basics of networking, DNS, application architecture, and development tools. I'm excited to continue learning more as I move forward in my DevOps journey.
+
+P.S. This post is part of the DevOps Micro Internship with Agentic AI – Cohort 3 by Pravin Mishra. If you're interested in starting your DevOps journey, you can join the DMI waiting list: https://lnkd.in/eMuJvtCW
+
+#DevOps #DMIByPravinMishra #Networking #DNS #ChatGPT #VSCode #LearningJourney #Linux
 
 ---
 
@@ -237,19 +252,19 @@ Add your post content here...
 
 ### What did you find easy?
 
-Add your answer here...
+I found VS Code easy to use, and simple commands like pwd, ls, and dir became easier with practice. I also liked using ChatGPT because it explained my doubts in a simple way and helped me understand things quickly.
 
 ---
 
 ### What was difficult?
 
-Add your answer here...
+Understanding which technology belongs to each layer and how DNS connects a domain name to an IP address was a little confusing at first, but I understood it after practicing.
 
 ---
 
 ### What will you improve next week?
 
-Add your answer here...
+Next week, I want to learn more about backend and databases so I can better understand how full-stack applications work. I also want to practice more terminal commands and improve how I use ChatGPT to learn faster.
 
 ---
 
