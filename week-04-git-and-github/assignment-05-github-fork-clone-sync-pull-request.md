@@ -114,9 +114,7 @@ Add your screenshot here.
 
 #### Pull Request URL
 
-Paste your Pull Request URL here:
-
-`Add your URL here`
+https://github.com/pravinmishraaws/devops-micro-internship-interviews/pull/382
 
 ---
 
