@@ -1,97 +1,161 @@
 # Week 01 — Success Mindset (Mindset OS)
 
-Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
+Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ---
 
-## Purpose (Read This First)
+## Task 1 — A Belief You Hold
 
-This week is not motivation homework.
+### Question
 
-This is you building your **Mindset OS** — the system you will use for the next 5 months (and honestly, for years).
+What is something you believe to be true that most people around you would disagree with?
 
-### Expectations
+Write at least **50 words**. Be honest, specific, and use clear professional sentences.
 
-* Be honest.
-* Be specific.
-* Be practical.
-* Write like an adult professional: clear sentences, no one-liners.
-
-You will reuse this in later weeks. So do it properly once.
-
----
-
-# Assignment 1. What is something you believe to be true that most people around you would disagree with?
-
-### Rules
-
-* No "safe" answers.
-* Must be your real belief (not copied from internet).
-* Minimum 50 words.
-
-**Hint:** What do you believe about career, money, learning, discipline, relationships, health, success, life, tech industry, etc. that most people don't agree with?
-
-## Answer
+### Your Answer
 
 I believe building skills and real projects are more important/valuable than going after certifications , so many people around me like my brother,my friends from college always think getting certifications will get a good jobs.Yes they are usefull it will show you the path but wont give you destination that you need to reach, its part of the journey.Building projects showcasing the skills that you earned solving the problem and building a portfolio will get you a job(i don’t believe in going after certificate after certificate)
 
 ---
 
-# Assignment 2. What are the top 3 objective truths you discovered through experimentation and results?
+## Task 2 — Three Objective Truths Discovered Through Experimentation
 
-### Definition
+Write three objective truths you discovered through your own actions and results. For each truth, include one sentence for the truth and two to four lines of evidence from your life.
 
-Objective truths do not depend on opinions. They hold true regardless of how people feel.
+### Truth #1
 
-Write each truth in this format:
-
-**Truth:** (1 sentence)
-
-**Evidence from my life:** (2–4 lines: what you tried + what happened)
-
----
-
-## Truth #1
-
-### Truth
+**Truth**
 
 Being consistent create progress
 
-### Evidence from my life
+**Evidence from My Life**
+
+Add your answer here...
+
+### Truth #2
+
+**Truth**
+
+Add your answer here...
+
+**Evidence from My Life**
+
+Add your answer here...
+
+### Truth #3
+
+**Truth**
+
+Add your answer here...
+
+**Evidence from My Life**
 
 When I entered the tech/IT field, everything around me made me feel like I had chosen the wrong career. During my college years, I often doubted my decision to study Computer Engineering. But instead of giving up, I spent countless hours practicing, debugging errors in my code, and learning from my mistakes. Slowly, the same field that I once believed was not meant for me became the field I chose to build my career in
 ---
 
-## Truth #2
+## Task 3 — What Does Your 2.0 Version Look Like?
 
-### Truth
+Write and publicly publish an article about your future professional self, written as if a journalist is writing about you **3–7 years from now**.
+
+Your article must:
+
+* Be at least **300 words**.
+* Be written in the **past tense**, as if it has already happened.
+* Include specific proof such as projects, portfolio, GitHub, blogs, certifications, job role, leadership, or community contribution.
+* Be published on LinkedIn, Medium, WordPress, Blogspot, a personal blog, or a portfolio page.
+
+### My Article
+
+Paste your complete article here...
+
+### Public Article URL
+
+```text
+Paste your published article URL here...
+```
+
+### LinkedIn Post URL
+
+Create a LinkedIn post sharing your published article, then add the URL below.
+
+```text
+Paste your LinkedIn post URL here...
+```
+
+### Credit Note — DMI Self-Paced Engineer Track Students
+
+Add this credit note at the end of your public article. Replace `YOUR-GITHUB-USERNAME` with your actual GitHub username.
+
+> **P.S. This post is part of the DevOps Micro Internship (DMI) — Self-Paced Engineer Track — by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). My graded progress is public:** https://dmi.pravinmishra.com/s/YOUR-GITHUB-USERNAME.html **· Start your DevOps journey:** https://dmi.pravinmishra.com/?utm_source=student&utm_medium=ps-blog&utm_campaign=self-paced
+
+`#DMIByPravinMishra`
+
+Tag [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/) in your LinkedIn post.
+
+### Credit Note — DMI Campus Students
+
+Add this credit note at the end of your public article. Replace `YOUR-GITHUB-USERNAME` with your actual GitHub username.
+
+> **P.S. This post is part of the DevOps Micro Internship (DMI) — Campus — by [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/). My graded progress is public:** https://dmi.pravinmishra.com/s/YOUR-GITHUB-USERNAME.html **· Start your DevOps journey:** https://dmi.pravinmishra.com/?utm_source=student&utm_medium=ps-blog&utm_campaign=campus
+
+`#DMIByPravinMishra`
+
+Tag [Pravin Mishra](https://www.linkedin.com/in/pravin-mishra-aws-trainer/) and Lead Co-Mentor [Anjana Muthunayake](https://www.linkedin.com/in/anjana-muthunayake/) in your LinkedIn post.
+
+---
+
+## Task 4 — Reflection on Cutting Corners
+
+### Question
+
+Have you ever cut corners through unethical, dishonest, or shortcut behaviour (not necessarily illegal)? If yes, how did it make you feel?
+
+You do not need to tell the full story. Focus on the emotions you experienced. If your answer is yes, write **50–100 words**.
+
+### Your Answer
+
+**Yes / No:**
 
 Watching Videos wont teach you anything
 
-### Evidence from my life
+**Reflection:**
 
 Concepts became more clear when i actually tried them myself. Fixing problems, Troubleshooting errors helped me understand how this works easily instead of watching tutorials and memorizing it
 
 ---
 
-## Truth #3
+## Task 5 — Your One-Year Non-Fiction Reading Plan
 
-### Truth
+List **10 non-fiction books** you plan to read during the next year. Include the title and author of each book. Books in any language are allowed.
 
+<<<<<<< HEAD
 Theory wont help
 
 ### Evidence from my life
 
 Whenever i faced issues in code, I learned most by decoding what really happend and trying different solution to solve the cause 
+=======
+1. Add book title and author here...
+2. Add book title and author here...
+3. Add book title and author here...
+4. Add book title and author here...
+5. Add book title and author here...
+6. Add book title and author here...
+7. Add book title and author here...
+8. Add book title and author here...
+9. Add book title and author here...
+10. Add book title and author here...
+>>>>>>> upstream/main
 
 ---
 
-# Assignment 3. What does your 2.0 version look like?
+## Task 6 — Your Life and Career Metrics
 
-### Instructions
+List the things you will measure regularly in your life and career. You only need to list the metric topics; do not include personal numbers.
 
-Write as if a journalist is writing about you **3 to 7 years from now** (not 20 years).
+Your list must include learning or skills, output or proof, health or energy, time or focus, and money or finance.
 
+<<<<<<< HEAD
 **Minimum 300 words.**
 
 ### Rules
@@ -240,6 +304,9 @@ List topics only. No need to share numbers.
 * Spending tracker
 
 ## My Metrics
+=======
+### My Metrics
+>>>>>>> upstream/main
 
 * Learning Hours
 * Projects Completed
@@ -252,22 +319,19 @@ List topics only. No need to share numbers.
 
 ---
 
-# Assignment 7. Brain Dump + 5-Month System Plan
+## Task 7 — Brain Dump and Three-Month System Plan
 
-## Step 1: Brain Dump (Private)
+### Step 1 — Brain Dump (Private)
 
-Do a brain dump of everything in your mind into a notebook.
+Do a private brain dump in a notebook, notes app, or document. Include everything currently on your mind, such as tasks, bills, worries, goals, pending messages, ideas, and responsibilities.
 
-Examples:
+**Did you create a brain dump?**
 
-* Bills
-* Tasks
-* Worries
-* Goals
-* Pending messages
-* Ideas
-* Responsibilities
+```text
+Yes / No
+```
 
+<<<<<<< HEAD
 ### Did You Do It?
 
 **Yes / No**
@@ -300,58 +364,96 @@ Example:
 ### Focus Blocks
 
 #### When Will You Do DMI Work? (Days + Time)
+=======
+### Step 2 — My Three-Month Routine and Focus Blocks
+
+#### My Weekly Routine
+
+Add your answer here...
+
+#### When Will I Complete My DMI Work? (Include Days and Time)
+>>>>>>> upstream/main
 
 Mon-Fri 2-4 hour each
 
-#### How Many Sessions Per Week?
+#### How Many DMI Work Sessions Will I Complete Each Week?
 
 4-5 session
 
----
-
-### Distraction Rules
-
-Examples:
-
-* Phone rules
-* Social media rules
-* Environment setup
-
 #### My Distraction Rules
 
+<<<<<<< HEAD
 No Social Media during learning time
 Keep the phone away during deep work
 Focused study session without interuptions
 
+=======
+* Add your answer here...
+* Add your answer here...
+* Add your answer here...
+* Add your answer here...
+>>>>>>> upstream/main
 
 ---
 
-# Reflection – Week 1
+## Task 8 — Week 1 Reflection and Proof of Work
 
-### Biggest insight I got about myself this week
+### Biggest Insight I Got About Myself This Week
 
 Consistency and curiosity about what comes next
 
-### My biggest weakness/loop I noticed
+### My Biggest Weakness or Loop I Noticed
 
 Managing time: need to improve managing time use it properly instead of wasting it
 
-### One system I will implement from this week (exact habit + time)
+### One System I Will Implement From This Week (Exact Habit and Time)
 
 Will maintain fixed learning routine and improve productivity
 
-### LinkedIn Post
+### Proof of Work
 
+<<<<<<< HEAD
 https://www.linkedin.com/posts/abhinav-t-210682296_careergrowth-devops-cloudcomputing-share-7477981851677184000-tbCR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
+=======
+**LinkedIn Post URL**
+
+```text
+Paste your LinkedIn post URL here...
+```
+
+**Blog / Medium / Public Article URL**
+
+```text
+Paste your published article URL here...
+```
+>>>>>>> upstream/main
 
 ---
 
-## 10. Proof of Work
+## Completion Checklist
 
+<<<<<<< HEAD
 - LinkedIn Post URL: https://www.linkedin.com/posts/abhinav-t-210682296_careergrowth-devops-cloudcomputing-share-7477981851677184000-tbCR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
 - Blog / Medium : **https://medium.com/@abhinav1712003/the-future-2-0-152477599749**  
+=======
+* [ ] All eight tasks are completed.
+* [ ] All written answers are honest, specific, and written in clear professional sentences.
+* [ ] Task 1 has at least 50 words.
+* [ ] Task 2 includes all three truths and evidence from my life.
+* [ ] Task 3 includes a 300+ word article written in past tense.
+* [ ] My Task 3 article is published on an approved public platform.
+* [ ] I added the correct DMI credit note and replaced `YOUR-GITHUB-USERNAME`.
+* [ ] I published a LinkedIn post sharing my Task 3 article.
+* [ ] Task 5 has 10 non-fiction books with titles and authors.
+* [ ] Task 6 includes learning, output, health, time, and finance metrics.
+* [ ] I completed the private brain dump for Task 7.
+* [ ] I added a realistic three-month routine, DMI focus blocks, and distraction rules.
+* [ ] I completed the Week 1 reflection.
+* [ ] I added both the LinkedIn post and public article URLs under Task 8.
+>>>>>>> upstream/main
 
 ---
+
 
 ## 📌 About DMI & CloudAdvisory
 
@@ -372,4 +474,4 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ---
 
-*This submission is part of DevOps Micro Internship (DMI) Cohort 3 — Agentic AI Track*
+*This submission is part of DevOps Micro Internship (DMI) — Agentic AI Track*

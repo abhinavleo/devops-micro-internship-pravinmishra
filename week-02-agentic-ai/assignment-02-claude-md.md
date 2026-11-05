@@ -1,6 +1,6 @@
 # Assignment 2 — Teaching Claude Your Project
 
-Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
+Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ---
 
@@ -87,6 +87,20 @@ Commit the `CLAUDE.md` file and push it to your GitHub fork so the project instr
 
 ---
 
+# Task 6 — Share Your Progress on WhatsApp
+
+## Goal
+
+Celebrate your progress and share your DMI Leaderboard achievement on WhatsApp.
+
+### Evidence
+
+#### Screenshot 7 — Your shared WhatsApp Status or community message showing the automatically generated leaderboard rank and personal progress link
+
+Add your screenshot here.
+
+---
+
 # Submission Instructions
 
 - Ensure `CLAUDE.md` is committed to your GitHub repository
@@ -103,6 +117,7 @@ https://github.com/abhinavleo/Ultimate-Agentic-DevOps-with-Claude-Code.git
 
 # Completion Checklist
 
+<<<<<<< HEAD
 [✅] Screenshot 1 shows a generic Claude response (no CLAUDE.md)<br>
 [✅] Screenshot 2 shows the auto-generated `/init` output <br>
 [✅] Screenshot 3 shows all 5 sections in your customized CLAUDE.md <br>
@@ -110,6 +125,16 @@ https://github.com/abhinavleo/Ultimate-Agentic-DevOps-with-Claude-Code.git
 [✅] Screenshot 5 shows Claude refusing the React request <br>
 [✅] Screenshot 6 shows `CLAUDE.md` committed and visible in your GitHub repository <br>
 [✅] GitHub repository URL is included in the submission <br>
+=======
+[ ] Screenshot 1 shows a generic Claude response (no CLAUDE.md)<br>
+[ ] Screenshot 2 shows the auto-generated `/init` output <br>
+[ ] Screenshot 3 shows all 5 sections in your customized CLAUDE.md <br>
+[ ] Screenshot 4 shows Claude mentioning S3, CloudFront, and Terraform <br>
+[ ] Screenshot 5 shows Claude refusing the React request <br>
+[ ] Screenshot 6 shows `CLAUDE.md` committed and visible in your GitHub repository <br>
+[ ] Screenshot 7 shows your shared WhatsApp Status with the automatically generated DMI Leaderboard rank and personal progress link<br>
+[ ] GitHub repository URL is included in the submission <br>
+>>>>>>> upstream/main
 
 ---
 
@@ -133,4 +158,4 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ---
 
-*This submission is part of DevOps Micro Internship (DMI) Cohort 3 — Agentic AI Track.*
+*This submission is part of DevOps Micro Internship (DMI)— Agentic AI Track.*

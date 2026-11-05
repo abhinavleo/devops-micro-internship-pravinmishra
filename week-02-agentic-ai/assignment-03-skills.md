@@ -96,6 +96,12 @@ https://github.com/abhinavleo/Ultimate-Agentic-DevOps-with-Claude-Code.git
 https://lnkd.in/p/g_Ehwv-S
 ![screenshot 3](screenshots/ass3/14.png)
 
+<<<<<<< HEAD
+=======
+`Add your URL here`
+
+---
+>>>>>>> upstream/main
 
 # Completion Checklist
 
