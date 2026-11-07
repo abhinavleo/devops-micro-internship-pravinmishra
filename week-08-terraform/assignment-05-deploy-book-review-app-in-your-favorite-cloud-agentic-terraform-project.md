@@ -30,31 +30,31 @@ Prepare the Book Review App project and configure the provided Claude Code Agent
 ### Screenshot 1 — Project `CLAUDE.md`
 
 Add a screenshot of the project `CLAUDE.md` showing the three-tier architecture, security boundaries, Terraform requirements, and human-approval rules.
-[Assignment 5](screenshots/as5/1.png)
+![Assignment 5](screenshots/as5/1.png)
 ---
 
 ### Screenshot 2 — Terraform Engineer Subagent
 
 Add a screenshot showing the Terraform Engineer subagent configuration.
-[Assignment 5](screenshots/as5/2.png)
+![Assignment 5](screenshots/as5/2.png)
 ---
 
 ### Screenshot 3 — Architecture and Security Reviewer Subagent
 
 Add a screenshot showing the Architecture and Security Reviewer subagent configuration.
-[Assignment 5](screenshots/as5/3.png)
+![Assignment 5](screenshots/as5/3.png)
 ---
 
 ### Screenshot 4 — Terraform MCP Connection
 
 Add a screenshot showing Terraform MCP connected and available.
-[Assignment 5](screenshots/as5/4.png)
+![Assignment 5](screenshots/as5/4.png)
 ---
 
 ### Screenshot 5 — Validation Hooks
 
 Add a screenshot showing the configured Claude Code validation hooks.
-[Assignment 5](screenshots/as5/5.png)
+![Assignment 5](screenshots/as5/5.png)
 ---
 
 # Task 1 — Design the Three-Tier Architecture
@@ -79,7 +79,7 @@ The diagram must show:
 - Main traffic flow
 
 ## Architecture Diagram
-[Assignment 5](screenshots/as5/a5.png)
+![Assignment 5](screenshots/as5/a5.png)
 ---
 
 # Task 2 — Build the Terraform Networking and Security Layers
@@ -93,19 +93,19 @@ Create the modular Terraform project and implement the network and security laye
 ### Screenshot 6 — Modular Terraform Project Structure
 
 Add a screenshot showing the modular Terraform project structure.
-[Assignment 5](screenshots/as5/6.png)
+![Assignment 5](screenshots/as5/6.png)
 ---
 
 ### Screenshot 7 — Six-Subnet Architecture
 
 Add a screenshot showing the six-subnet architecture across two availability locations.
-[Assignment 5](screenshots/as5/7.jpg)
+![Assignment 5](screenshots/as5/7.jpg)
 ---
 
 ### Screenshot 8 — Public and Private Tier Separation
 
 Add a screenshot showing the public and private tier separation, including routing and security boundaries.
-[Assignment 5](screenshots/as5/8.jpg)
+![Assignment 5](screenshots/as5/8.jpg)
 ---
 
 # Task 3 — Build the Load-Balancing and Compute Layers
@@ -119,25 +119,25 @@ Deploy the public and internal load balancers and the Web and Application comput
 ### Screenshot 9 — Web and Application Compute
 
 Add a screenshot showing the Web and Application compute resources in their required subnets.
-[Assignment 5](screenshots/as5/9.jpg)
+![Assignment 5](screenshots/as5/9.jpg)
 ---
 
 ### Screenshot 10 — Public Load Balancer
 
 Add a screenshot showing the internet-facing public load balancer.
-[Assignment 5](screenshots/as5/10.jpg)
+![Assignment 5](screenshots/as5/10.jpg)
 ---
 
 ### Screenshot 11 — Internal Load Balancer
 
 Add a screenshot showing the private internal load balancer.
-[Assignment 5](screenshots/as5/11.jpg)
+![Assignment 5](screenshots/as5/11.jpg)
 ---
 
 ### Screenshot 12 — Healthy Targets
 
 Add a screenshot showing healthy target groups or backend pools.
-[Assignment 5](screenshots/as5/12.jpg)
+![Assignment 5](screenshots/as5/12.jpg)
 *Captured from CloudWatch after teardown: peak HealthyHostCount of 2 per target group (1 per AZ), recorded while the stack was live.*
 
 ---
@@ -153,25 +153,25 @@ Deploy a private, highly available managed MySQL database with a read replica an
 ### Screenshot 13 — Managed MySQL Database
 
 Add a screenshot showing the managed MySQL database deployment.
-[Assignment 5](screenshots/as5/13.jpg)
+![Assignment 5](screenshots/as5/13.jpg)
 ---
 
 ### Screenshot 14 — High Availability
 
 Add a screenshot showing the Multi-AZ or high-availability configuration.
-[Assignment 5](screenshots/as5/14.jpg)
+![Assignment 5](screenshots/as5/14.jpg)
 ---
 
 ### Screenshot 15 — Read Replica
 
 Add a screenshot showing the read replica configuration.
-[Assignment 5](screenshots/as5/15.jpg)
+![Assignment 5](screenshots/as5/15.jpg)
 ---
 
 ### Screenshot 16 — Private Database Access
 
 Add a screenshot showing that the database is private and accepts MySQL traffic only from the Application Tier.
-[Assignment 5](screenshots/as5/16.jpg)
+![Assignment 5](screenshots/as5/16.jpg)
 ---
 
 # Task 5 — Validate, Review, and Apply the Terraform Configuration
@@ -185,19 +185,19 @@ Validate the Terraform configuration, review the execution plan using both Agent
 ### Screenshot 17 — Terraform Validation
 
 Add a screenshot showing successful `terraform validate` output.
-[Assignment 5](screenshots/as5/17.jpg)
+![Assignment 5](screenshots/as5/17.jpg)
 ---
 
 ### Screenshot 18 — Terraform Plan
 
 Add a screenshot showing the Terraform plan output.
-[Assignment 5](screenshots/as5/18.jpg)
+![Assignment 5](screenshots/as5/18.jpg)
 ---
 
 ### Screenshot 19 — Terraform Apply
 
 Add a screenshot showing successful `terraform apply` completion.
-[Assignment 5](screenshots/as5/19.jpg)
+![Assignment 5](screenshots/as5/19.jpg)
 ---
 
 # Task 6 — Deploy and Configure the Book Review Application
@@ -211,31 +211,31 @@ Deploy and configure the Book Review App across the Web, Application, and Databa
 ### Screenshot 20 — Homepage
 
 Add a screenshot showing the Book Review App homepage through the public endpoint.
-[Assignment 5](screenshots/as5/20.jpg)
+![Assignment 5](screenshots/as5/20.jpg)
 ---
 
 ### Screenshot 21 — Login or Authentication
 
 Add a screenshot showing successful login or authentication.
-[Assignment 5](screenshots/as5/21.jpg)
+![Assignment 5](screenshots/as5/21.jpg)
 ---
 
 ### Screenshot 22 — Book Data
 
 Add a screenshot showing the book listing or book details.
-[Assignment 5](screenshots/as5/22.jpg)
+![Assignment 5](screenshots/as5/22.jpg)
 ---
 
 ### Screenshot 23 — Review Functionality
 
 Add a screenshot showing the review functionality working successfully.
-[Assignment 5](screenshots/as5/23.jpg)
+![Assignment 5](screenshots/as5/23.jpg)
 ---
 
 ### Screenshot 24 — Backend or API Evidence
 
 Add a screenshot showing that the backend or API is working successfully.
-[Assignment 5](screenshots/as5/24.jpg)
+![Assignment 5](screenshots/as5/24.jpg)
 *Captured from CloudWatch after teardown: 14 successful (2xx) responses from the App target group behind the internal load balancer, split 7 and 7 across both App instances. Live API and database evidence is in Screenshots 20 to 23 and 25.*
 
 ---
@@ -243,7 +243,7 @@ Add a screenshot showing that the backend or API is working successfully.
 ### Screenshot 25 — Database Reads and Writes
 
 Add a screenshot showing successful database reads and writes.
-[Assignment 5](screenshots/as5/25.jpg)
+![Assignment 5](screenshots/as5/25.jpg)
 ## Public Application URL
 
 **Public Application URL / DNS:** http://abhinav-bookreview-alb-pub-17263731.eu-west-2.elb.amazonaws.com (verified working end to end, then destroyed after evidence was captured to stop costs)
@@ -263,21 +263,21 @@ You do not need to submit your complete Claude Code conversation history. Includ
 ### Screenshot 26 — AI-Assisted Terraform Generation
 
 Add a screenshot showing one useful example of AI-assisted Terraform generation or improvement.
-[Assignment 5](screenshots/as5/26.jpg)
+![Assignment 5](screenshots/as5/26.jpg)
 ---
 
 ### Screenshot 27 — Architecture or Security Review
 
 Add a screenshot showing one structured architecture or security review result.
-[Assignment 5](screenshots/as5/27a.jpg)
+![Assignment 5](screenshots/as5/27a.jpg)
 ---
 
 ### Screenshot 28 — AI-Assisted Troubleshooting
 
 Add a screenshot showing one AI-assisted troubleshooting interaction based on collected evidence.
-[Assignment 5](screenshots/as5/28.jpg)
+![Assignment 5](screenshots/as5/28.jpg)
 Supporting evidence, the earlier apply failure diagnosed from its error message:
-[Assignment 5](screenshots/as5/28a.jpg)
+![Assignment 5](screenshots/as5/28a.jpg)
 ---
 
 # Task 8 — Complete the Final Architecture Review

@@ -19,8 +19,8 @@ Create a VNet (10.0.0.0/16) with a public subnet (10.0.1.0/24) for the VM and a 
 ### Evidence
 
 #### Screenshot 1 — Virtual Network overview showing the 10.0.0.0/16 address space and both subnets
-[Assignment 5](screenshots/ass5/1a.jpg)
-[Assignment 5](screenshots/ass5/1b.jpg)
+![Assignment 5](screenshots/ass5/1a.jpg)
+![Assignment 5](screenshots/ass5/1b.jpg)
 The private subnet is delegated to `Microsoft.DBforMySQL/flexibleServers`, which VNet-integrated MySQL requires, so nothing else can be deployed into it.
 
 **Note on region:** everything in this assignment runs in UK West. The first build was in UK South, where Azure Database for MySQL Flexible Server turned out to be unavailable to this subscription. Even a read-only `az mysql flexible-server list-skus --location uksouth` returned `InternalServerError`, while UK West, North Europe and West Europe all listed the Burstable tier. Private access requires the server and the VNet to be in the same region, so the whole network was rebuilt in UK West.
@@ -28,15 +28,15 @@ The private subnet is delegated to `Microsoft.DBforMySQL/flexibleServers`, which
 ---
 
 #### Screenshot 2 — Public and private NSG inbound rules showing ports 80, 22, and restricted 3306 access
-[Assignment 5](screenshots/ass5/2a.jpg)
-[Assignment 5](screenshots/ass5/2b.jpg)
+![Assignment 5](screenshots/ass5/2a.jpg)
+![Assignment 5](screenshots/ass5/2b.jpg)
 
 The deny rule at priority 1100 is what makes the restriction real. Without it, Azure's default `AllowVnetInBound` rule at priority 65000 would admit 3306 from anywhere inside the VNet, so an allow rule on its own would restrict nothing. After this NSG was attached, the app was restarted to force fresh database connections, and it reconnected normally.
 
 ---
 
 #### Screenshot 3 — Public IP and Network Interface association for the Virtual Machine
-[Assignment 5](screenshots/ass5/3.jpg)
+![Assignment 5](screenshots/ass5/3.jpg)
 The NIC has no NSG of its own; inbound traffic is governed by the subnet NSG in Screenshot 2a.
 
 ---
@@ -50,11 +50,11 @@ Launch an Ubuntu 22.04 LTS VM (Standard B1s or equivalent) in the public subnet,
 ### Evidence
 
 #### Screenshot 4 — Virtual Machine overview showing Ubuntu, size, public IP, and subnet
-[Assignment 5](screenshots/ass5/4.jpg)
+![Assignment 5](screenshots/ass5/4.jpg)
 ---
 
 #### Screenshot 5 — Terminal showing successful software installation or installed-version checks
-[Assignment 5](screenshots/ass5/5.jpg)
+![Assignment 5](screenshots/ass5/5.jpg)
 Node.js 18 was installed from NodeSource, because the version in Ubuntu 22.04's own repository is 12.x.
 
 ---
@@ -69,20 +69,20 @@ Clone the EpicBook repository, install dependencies, build the frontend, configu
 
 #### Screenshot 6 — Terminal showing the EpicBook repository cloned and dependencies installed
 
-[Assignment 5](screenshots/ass5/6.jpg)
-[Assignment 5](screenshots/ass5/6b.jpg)
+![Assignment 5](screenshots/ass5/6.jpg)
+![Assignment 5](screenshots/ass5/6b.jpg)
 **No build step:** the Task 3 goal mentions building the frontend, but EpicBook is a server-rendered Express app that uses Handlebars templates, not a single-page app. `package.json` defines only `start`, `lint` and `test`, so there is no frontend build to run. The app listens on port 8080.
 
 ---
 
 #### Screenshot 7 — Nginx configuration or service status proving the frontend is configured to be served
-[Assignment 5](screenshots/ass5/7.jpg)
+![Assignment 5](screenshots/ass5/7.jpg)
 Because Node renders the HTML, Nginx serves the frontend by proxying port 80 to the app on `127.0.0.1:8080`, rather than serving a static build folder.
 
 ---
 
 #### Screenshot 8 — Backend process or listening-port evidence (without exposing environment-variable secrets)
-[Assignment 5](screenshots/ass5/8.jpg)
+![Assignment 5](screenshots/ass5/8.jpg)
 
 **Environment variables:** EpicBook's production configuration reads the database connection from one environment variable, `JAWSDB_URL`. As shipped, that path cannot work against Azure: `models/index.js` passed only the URL to Sequelize and dropped the rest of the configuration, including the SSL options, while Azure MySQL enforces TLS. Restoring the second argument, which matches the model loader that sequelize-cli generates, fixed it:
 
@@ -102,19 +102,19 @@ Create a private Azure Database for MySQL Flexible Server (VNet Integration) in 
 ### Evidence
 
 #### Screenshot 9 — MySQL Flexible Server overview showing Private access (VNet Integration)
-[Assignment 5](screenshots/ass5/9.jpg)
+![Assignment 5](screenshots/ass5/9.jpg)
 **Why the server was created in the portal:** `az mysql flexible-server create` (Azure CLI 2.90.0) rebuilt the existing VNet twice, once when given the VNet and subnet by name and again when given the full subnet ID. Each time it deleted the public subnet and recreated the private subnet at `10.0.0.0/24` instead of `10.0.2.0/24`. An Azure CLI pull request (#33446) traces a related fault to the command's VNet existence check, which uses an API version that regional network providers may not support yet. Combined with the CLI's documented fallback of creating a network with default address prefixes when it believes none exists, that matches what happened here. Both misplaced servers were deleted, the subnets restored, and the server created through the portal, which left the network untouched.
 
 ---
 
 #### Screenshot 10 — Networking configuration showing the private subnet and restricted access
-[Assignment 5](screenshots/ass5/10.jpg)
+![Assignment 5](screenshots/ass5/10.jpg)
 Access to the database is restricted at three levels. The server has no public endpoint and sits in a delegated subnet, so it is reachable only from inside the VNet. The private NSG in Screenshot 2b then allows port 3306 only from the VM subnet. Finally, the application's database user is `epicbook_app@10.0.1.%`, which can only sign in from the VM subnet and holds privileges on the `bookstore` database alone, so the app never uses the admin account.
 
 ---
 
 #### Screenshot 11 — MySQL Client output showing the EpicBook database or imported tables (no password visible)
-[Assignment 5](screenshots/ass5/11.jpg)
+![Assignment 5](screenshots/ass5/11.jpg)
 The schema file created `Author`, `Book` and `Cart`, and Sequelize created `Cartbook` and `Checkout` when the app first started. Table names appear in lowercase because the server uses `lower_case_table_names = 1`. The client reads its credentials from a `~/.my.cnf` with mode 600, so no password appears on screen.
 
 ---
@@ -128,16 +128,16 @@ Confirm the EpicBook application loads through the VM's public IP and that viewi
 ### Evidence
 
 #### Screenshot 12 — Browser showing the EpicBook application with the Virtual Machine public IP visible
-[Assignment 5](screenshots/ass5/12.jpg)
+![Assignment 5](screenshots/ass5/12.jpg)
 The homepage queries MySQL on every load for the books and their authors, the genre list and the cart count, so a rendered listing is itself proof of a working database connection.
 
 ---
 
 #### Screenshot 13 — Proof of a successful database-backed action (viewing products, adding to cart, or placing an order)
-[Assignment 5](screenshots/ass5/13.jpg)
-[Assignment 5](screenshots/ass5/13b.jpg)
-[Assignment 5](screenshots/ass5/13c.jpg)
-[Assignment 5](screenshots/ass5/13d.jpg)
+![Assignment 5](screenshots/ass5/13.jpg)
+![Assignment 5](screenshots/ass5/13b.jpg)
+![Assignment 5](screenshots/ass5/13c.jpg)
+![Assignment 5](screenshots/ass5/13d.jpg)
 
 
 Viewing products, adding to the cart and checking out all work. One thing worth knowing about EpicBook: checking out does not record an order. The Checkout button shows the confirmation and calls `DELETE /api/cart/delete`, which clears the cart tables, and nothing is ever written to the `Checkout` table. Screenshots 13b and 13d show the database before and after.

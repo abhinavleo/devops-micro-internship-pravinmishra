@@ -51,7 +51,7 @@ Confirm that both EpicBook pipelines are healthy and place the supplied assignme
 ### Screenshot 1 — Healthy Baseline for Both Pipelines
 
 Terminal output showing the latest completed Infrastructure and Application Pipeline runs with successful results.
-[Assignment 5](screenshots/as5/1.jpg)
+![Assignment 5](screenshots/as5/1.jpg)
 *The latest completed run of each pipeline, read with the Azure DevOps CLI before the drill. `gbadedata.epicbook-infra`: run ID 26 (#20260927.1) on `refs/heads/main`, `completed`, `succeeded`, finished 2026-09-27 12:31 UTC. `gbadedata.epicbook-app`: run ID 28 (#20261012.1) on `refs/heads/main`, `completed`, `succeeded`, finished 2026-10-12 08:06 UTC.*
 
 ## Notes
@@ -84,7 +84,7 @@ Configure the supplied project context and verify the safety boundaries Claude m
 ### Screenshot 2 — CLAUDE.md Context and Safety Rules
 
 `CLAUDE.md` open in the editor with the Project Overview, Incident Workflow, Safety Rules, and Output Rules visible.
-[Assignment 5](screenshots/as5/2.jpg)
+![Assignment 5](screenshots/as5/2.jpg)
 
 *`CLAUDE.md` in the assignment folder, which is the folder Claude Code is started from. It holds the Project Overview, the four-step Incident Workflow (Gather, Analyze, Human Act, Verify), the Safety Rules and the nine Output Rules, exactly as given in Task 2 of the lesson.*
 
@@ -129,10 +129,10 @@ Configure the supplied Bash script and verify that it retrieves and classifies e
 ### Screenshot 3 — Pipeline Triage Script Configuration
 
 Editor showing the script configuration variables, report filenames, check-function array, and read-only log-retrieval functions. Ensure that no token is visible.
-[Assignment 5](screenshots/as5/3a.jpg)
+![Assignment 5](screenshots/as5/3a.jpg)
 
 *The configuration block of `pipeline-triage.sh`: Full Name, organization URL, project and the two numeric pipeline IDs (5 and 6). All of these are non-secret. Below them are the report and raw-log filenames and the `checks=( ... )` array. No token is stored in the file; the script reads the credential from the `AZURE_DEVOPS_EXT_PAT` environment variable when it runs.*
-[Assignment 5](screenshots/as5/3b.jpg)
+![Assignment 5](screenshots/as5/3b.jpg)
 
 *`ado_get`, the only function that contacts Azure DevOps. It always sends `--request GET`, passes the credential to `curl` on standard input (`--header @-`), rejects a 200 response that is not JSON (often a sign-in page), and maps HTTP 203, 302, 401 and 403 to an authentication error and 404 to a configuration error. `report_api_error` writes these as `ERROR` lines in the report, so a failed request can never be reported as healthy.*
 
@@ -141,7 +141,7 @@ Editor showing the script configuration variables, report filenames, check-funct
 ### Screenshot 4 — Script Validation
 
 Terminal showing successful Bash syntax validation and executable file permission.
-[Assignment 5](screenshots/as5/4.jpg)
+![Assignment 5](screenshots/as5/4.jpg)
 
 *Bash syntax validation reports no syntax errors, and `ls -l` shows the script is executable (`-rwxr-xr-x`).*
 
@@ -226,9 +226,9 @@ Run the supplied script against the healthy baseline and verify the initial pipe
 ### Screenshot 5 — Healthy Pipeline Report
 
 Healthy pipeline report showing your Full Name, both successful pipelines, Overall Status `HEALTHY`, and captured exit code `0`.
-[Assignment 5](screenshots/as5/5.jpg)
+![Assignment 5](screenshots/as5/5.jpg)
 
-*The healthy-state run: the exit code captured from the shell is `0`, and the key report lines show Full Name Oluwagbade Odimayo, the Infrastructure Pipeline (run ID 26) and the Application Pipeline (run ID 28) both `succeeded` with verdict `HEALTHY`, Overall Status `HEALTHY` and Script Exit Code `0`. The `reports/` listing shows the report and both downloaded raw logs.*
+*The healthy-state run: the exit code captured from the shell is `0`, and the key report lines show Full Name Abhinav T, the Infrastructure Pipeline (run ID 26) and the Application Pipeline (run ID 28) both `succeeded` with verdict `HEALTHY`, Overall Status `HEALTHY` and Script Exit Code `0`. The `reports/` listing shows the report and both downloaded raw logs.*
 
 ## Notes
 
@@ -237,7 +237,7 @@ Healthy pipeline report showing your Full Name, both successful pipelines, Overa
 Screenshot 5 shows:
 
 * the exit code captured from the shell straight after the run: `0`
-* Full Name: Oluwagbade Odimayo
+* Full Name: Abhinav T
 * Infrastructure Pipeline `gbadedata.epicbook-infra`, run #20260927.1 (run ID 26): result `succeeded`, verdict `HEALTHY`
 * Application Pipeline `gbadedata.epicbook-app`, run #20261012.1 (run ID 28): result `succeeded`, verdict `HEALTHY`
 * Overall Status `HEALTHY` and Script Exit Code `0`
@@ -263,7 +263,7 @@ Configure the supplied Claude Code skill and verify that it runs the Bash tool a
 ### Screenshot 6 — Pipeline-Triage Skill Definition
 
 `SKILL.md` showing the frontmatter, manual-invocation setting, narrowly scoped tools, safety rules, and required output structure.
-[Assignment 5](screenshots/as5/6.jpg)
+![Assignment 5](screenshots/as5/6.jpg)
 
 *`.claude/skills/pipeline-triage/SKILL.md`. The frontmatter sets `disable-model-invocation: true`, pre-approves only `Bash(./pipeline-triage.sh)`, `Read` and `Grep`, and removes `Edit`, `Write` and `NotebookEdit` with `disallowed-tools`. The body runs the script, reads the evidence, and reports the same nine items as the Output Rules in `CLAUDE.md`, without editing files, rerunning pipelines or touching secrets.*
 
@@ -272,7 +272,7 @@ Configure the supplied Claude Code skill and verify that it runs the Bash tool a
 ### Screenshot 7 — Healthy Skill Result
 
 Healthy `/pipeline-triage` result showing that both pipelines are healthy and no fix is required.
-[Assignment 5](screenshots/as5/7.jpg)
+![Assignment 5](screenshots/as5/7.jpg)
 
 *The healthy check before the drill: both pipelines healthy (runs 26 and 28), exit code `0`, 18 PASS, no failure category and no fix needed. I made a mistake here: I typed `./pipeline-triage.sh` as the prompt instead of `/pipeline-triage`, so this run followed `CLAUDE.md` but did not use the skill (it ran two shell commands, which the skill would not allow). Both later runs were invoked as `/pipeline-triage`. Screenshot 11a is the skill on a healthy state, reporting both pipelines healthy and no fix required.*
 
@@ -320,10 +320,10 @@ Create a controlled Application Pipeline failure that can be diagnosed without c
 ### Screenshot 8 — Controlled Application Pipeline Failure
 
 Failed Application Pipeline run showing the temporary branch, failed status, failed step, and relevant non-sensitive error evidence.
-[Assignment 5](screenshots/as5/8a.jpg)
+![Assignment 5](screenshots/as5/8a.jpg)
 
 *Run #20261012.2 (run ID 29) of `gbadedata.epicbook-app`, queued manually on `drill/pipeline-failure` at commit `56b77864`. The Validate stage failed at "Install dependencies (npm ci)" with `Bash exited with code '1'.`, and the Configure and deploy and Verify stages were skipped due to conditions, so nothing was deployed.*
-[Assignment 5](screenshots/as5/8b.jpg)
+![Assignment 5](screenshots/as5/8b.jpg)
 
 *The failed step, "Install dependencies (npm ci)": `npm error code E404`, `npm error 404 Not Found - GET https://registry.npmjs.org/epicbook-drill-missing-dependency - Not found`, and `##[error]Bash exited with code '1'.` The log contains no credentials.*
 
@@ -372,10 +372,10 @@ Use `/pipeline-triage` to classify the failed Application Pipeline without allow
 ### Screenshot 9 — Failed-State Diagnosis and Incident Report
 
 `/pipeline-triage` output and saved incident report showing the affected pipeline, failure category, sanitized evidence, recommendation, and your Full Name.
-[Assignment 5](screenshots/as5/9a.png)
+![Assignment 5](screenshots/as5/9a.png)
 
 *`/pipeline-triage` after the failure. Claude reports Overall Status `FAIL` with exit code `2`, the Application Pipeline, run ID 29, the dependency installation failure category, the npm `E404` lines as evidence, the non-existent package added by commit `56b7786` as the root cause, one recommendation and one verification step. It also states "I haven't changed any files or touched any pipeline run."*
-[Assignment 5](screenshots/as5/9b.jpg)
+![Assignment 5](screenshots/as5/9b.jpg)
 
 *`reports/incident-failure-report.txt`, saved before the fix: Full Name, and the Application Pipeline section with run ID 29 on `drill/pipeline-failure`, the failed step, the sanitized evidence, the category and the recommended human action, ending with Overall Status `FAIL` and Script Exit Code `2`.*
 
@@ -424,7 +424,7 @@ Apply the recommended fix manually and verify that the Application Pipeline and 
 ### Screenshot 10 — Corrected Application Pipeline Run
 
 Corrected Application Pipeline run showing the temporary branch and successful status.
-[Assignment 5](screenshots/as5/10.jpg)
+![Assignment 5](screenshots/as5/10.jpg)
 
 *Run #20261012.3 (run ID 30) on `drill/pipeline-failure` at commit `16d58cc7`, which reverts the drill commit: `Success`, in 16 seconds. Validate passed. The Configure and deploy and Verify stages show "Skipped due to conditions" because they only run for `main`, so the corrected branch did not redeploy EpicBook either.*
 
@@ -433,10 +433,10 @@ Corrected Application Pipeline run showing the temporary branch and successful s
 ### Screenshot 11 — Recovery Triage Result
 
 Recovery `/pipeline-triage` output showing Overall Status `HEALTHY`, exit code `0`, your Full Name, and both saved report filenames.
-[Assignment 5](screenshots/as5/11a.jpg)
+![Assignment 5](screenshots/as5/11a.jpg)
 
 *`/pipeline-triage` after the fix: Overall Status `HEALTHY`, Script Exit Code `0`, 18 PASS, the Infrastructure Pipeline at run ID 26 and the Application Pipeline at run ID 30. Claude ends with "I didn't change any files, pipelines or Azure resources."*
-[Assignment 5](screenshots/as5/11b.jpg)
+![Assignment 5](screenshots/as5/11b.jpg)
 
 *`reports/recovery-report.txt`: Full Name, both pipelines `HEALTHY`, Script Exit Code `0`, and the folder listing with both saved reports, `incident-failure-report.txt` and `recovery-report.txt`.*
 
@@ -567,9 +567,9 @@ Also in the folder: [`CHANGES.md`](./assignment-05-pipeline-triage/CHANGES.md) (
 
 # Final Submission
 
-**Full Name:** Oluwagbade Odimayo
+**Full Name:** Abhinav T
 
-**GitHub Repository or Fork URL:** https://github.com/gbadedata/devops-micro-internship-pravinmishra
+**GitHub Repository or Fork URL:** https://github.com/abhinavleo/devops-micro-internship-pravinmishra
 
 **LinkedIn Post URL:** Not published, by choice.
 

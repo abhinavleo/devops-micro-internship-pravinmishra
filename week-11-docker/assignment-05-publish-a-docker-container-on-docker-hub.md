@@ -25,7 +25,7 @@ Add a screenshot of Docker Hub showing your newly created public repository:
 ```text
 my-react-app
 ```
-[Assignment 5](screenshots/as5/1.png)
+![Assignment 5](screenshots/as5/1.png)
 *Abhinav T*
 
 ---
@@ -39,7 +39,7 @@ Login Succeeded
 ```
 
 Ensure that your full name is visible and that no password, Personal Access Token, or device code is exposed.
-[Assignment 5](screenshots/as5/2.png)
+![Assignment 5](screenshots/as5/2.png)
 ---
 
 #### Screenshot 3 — Correctly Tagged Image
@@ -51,7 +51,7 @@ docker image ls <YOUR_DOCKERHUB_USERNAME>/my-react-app
 ```
 
 The output must show the `latest` tag.
-[Assignment 5](screenshots/as5/3.png)
+![Assignment 5](screenshots/as5/3.png)
 ---
 
 #### Screenshot 4 — Successful Docker Push
@@ -63,13 +63,13 @@ docker push <YOUR_DOCKERHUB_USERNAME>/my-react-app:latest
 ```
 
 The output must include a pushed status or image digest.
-[Assignment 5](screenshots/as5/4.png)
+![Assignment 5](screenshots/as5/4.png)
 ---
 
 #### Screenshot 5 — Published `latest` Tag in Docker Hub
 
 Add a screenshot of your Docker Hub repository showing the uploaded `latest` image tag.
-[Assignment 5](screenshots/as5/5.jpg)
+![Assignment 5](screenshots/as5/5.jpg)
 *Abhinav T*
 
 ---
@@ -81,7 +81,7 @@ Add a screenshot of the terminal showing:
 - The targeted local image tags removed
 - Successful `docker pull` output
 - `docker image ls` showing the pulled image
-[Assignment 5](screenshots/as5/6.png)
+![Assignment 5](screenshots/as5/6.png)
 ---
 
 #### Screenshot 7 — Running Pulled Image
@@ -97,7 +97,7 @@ The output must show the running `react-container` with:
 ```text
 0.0.0.0:80->80/tcp
 ```
-[Assignment 5](screenshots/as5/7.png)
+![Assignment 5](screenshots/as5/7.png)
 ---
 
 #### Screenshot 8 — React Application in Browser
@@ -109,7 +109,7 @@ http://<YOUR-VM-PUBLIC-IP>
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
-[Assignment 5](screenshots/as5/8.png)
+![Assignment 5](screenshots/as5/8.png)
 *Abhinav T*
 
 ---

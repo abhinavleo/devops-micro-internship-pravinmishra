@@ -19,25 +19,25 @@ Build a VPC (10.0.0.0/16) with two public and two private subnets across two Ava
 ### Evidence
 
 #### Screenshot 1 — VPC details showing CIDR 10.0.0.0/16
-[Assignment 5](screenshots/ass5/1.jpg)
+![Assignment 5](screenshots/ass5/1.jpg)
 ---
 
 #### Screenshot 2 — Subnets list showing four subnets and their Availability Zones
-[Assignment 5](screenshots/ass5/2.jpg)
+![Assignment 5](screenshots/ass5/2.jpg)
 ---
 
 #### Screenshot 3 — Public route table showing the Internet Gateway route and both public-subnet associations
-[Assignment 5](screenshots/ass5/3.jpg)
+![Assignment 5](screenshots/ass5/3.jpg)
 
 ---
 
 #### Screenshot 4 — Private route table showing the NAT Gateway route and both private-subnet associations
-[Assignment 5](screenshots/ass5/4.jpg)
-[Assignment 5](screenshots/ass5/4b.jpg)
+![Assignment 5](screenshots/ass5/4.jpg)
+![Assignment 5](screenshots/ass5/4b.jpg)
 ---
 
 #### Screenshot 5 — NAT Gateway status showing Available and the Elastic IP
-[Assignment 5](screenshots/ass5/5.jpg)
+![Assignment 5](screenshots/ass5/5.jpg)
 ---
 
 # Task 2 — Create Security Groups (ALB, EC2, RDS) with Least Privilege
@@ -49,15 +49,15 @@ Create `ha-alb-sg` (HTTP public), `ha-web-sg` (HTTP only from `ha-alb-sg`, SSH f
 ### Evidence
 
 #### Screenshot 6 — ALB Security Group inbound rules
-[Assignment 5](screenshots/ass5/6.jpg)
+![Assignment 5](screenshots/ass5/6.jpg)
 ---
 
 #### Screenshot 7 — EC2 Security Group inbound rules showing the ALB Security Group reference and SSH from your IP
-[Assignment 5](screenshots/ass5/7.jpg)
+![Assignment 5](screenshots/ass5/7.jpg)
 ---
 
 #### Screenshot 8 — RDS Security Group inbound rule showing the database port allowed only from the EC2 Security Group
-[Assignment 5](screenshots/ass5/8.jpg)
+![Assignment 5](screenshots/ass5/8.jpg)
 ---
 
 # Task 3 — Deploy Database Tier (RDS Multi-AZ in Private Subnets)
@@ -69,11 +69,11 @@ Launch a private, Multi-AZ RDS database (MySQL or PostgreSQL) using the private 
 ### Evidence
 
 #### Screenshot 9 — RDS summary showing Multi-AZ = Yes and Publicly accessible = No
-[Assignment 5](screenshots/ass5/9.jpg)
+![Assignment 5](screenshots/ass5/9.jpg)
 ---
 
 #### Screenshot 10 — RDS connectivity section showing the DB Subnet Group and Security Group
-[Assignment 5](screenshots/ass5/10.jpg)
+![Assignment 5](screenshots/ass5/10.jpg)
 ---
 
 # Task 4 — Build a Launch Template (User Data Installs App + Connects to DB)
@@ -85,12 +85,12 @@ Create a Launch Template whose user data installs the web-server runtime, deploy
 ### Evidence
 
 #### Screenshot 11 — Launch Template details showing that user data exists, including a visible snippet
-[Assignment 5](screenshots/ass5/11.jpg)
-[Assignment 5](screenshots/ass5/11b.jpg)
+![Assignment 5](screenshots/ass5/11.jpg)
+![Assignment 5](screenshots/ass5/11b.jpg)
 ---
 
 #### Screenshot 12 — A running instance created from the template showing the application responds on port 80
-[Assignment 5](screenshots/ass5/12.jpg)
+![Assignment 5](screenshots/ass5/12.jpg)
 ---
 
 # Task 5 — Create an Application Load Balancer (ALB) Across 2 Public Subnets
@@ -102,11 +102,11 @@ Create an internet-facing ALB across both public subnets with an HTTP listener a
 ### Evidence
 
 #### Screenshot 13 — ALB details showing two public subnets in two Availability Zones
-[Assignment 5](screenshots/ass5/13.jpg)
+![Assignment 5](screenshots/ass5/13.jpg)
 ---
 
 #### Screenshot 14 — Target group showing at least one healthy target
-[Assignment 5](screenshots/ass5/14.jpg)
+![Assignment 5](screenshots/ass5/14.jpg)
 ---
 
 # Task 6 — Create Auto Scaling Group (ASG) in 2 Public Subnets
@@ -118,11 +118,11 @@ Create an Auto Scaling Group from the Launch Template across both public subnets
 ### Evidence
 
 #### Screenshot 15 — Auto Scaling Group showing desired, minimum, and maximum capacity and the selected subnet Availability Zones
-[Assignment 5](screenshots/ass5/15.jpg)
+![Assignment 5](screenshots/ass5/15.jpg)
 ---
 
 #### Screenshot 16 — EC2 instances list showing two running instances in different Availability Zones
-[Assignment 5](screenshots/ass5/16.jpg)
+![Assignment 5](screenshots/ass5/16.jpg)
 ---
 
 # Task 7 — Configure App to Use RDS + Validate Read/Write
@@ -134,12 +134,12 @@ Confirm the application communicates with the RDS database through the ALB DNS n
 ### Evidence
 
 #### Screenshot 17 — Browser showing the application loaded through the ALB DNS name with the URL visible
-[Assignment 5](screenshots/ass5/17.jpg)
+![Assignment 5](screenshots/ass5/17.jpg)
 ---
 
 #### Screenshot 18 — Proof of a database write through a UI message or database query output
-[Assignment 5](screenshots/ass5/18.jpg)
-[Assignment 5](screenshots/ass5/18b.jpg)
+![Assignment 5](screenshots/ass5/18.jpg)
+![Assignment 5](screenshots/ass5/18b.jpg)
 
 ---
 
@@ -152,20 +152,20 @@ Test A: terminate one web instance and confirm the Auto Scaling Group replaces i
 ### Evidence
 
 #### Screenshot 19 — EC2 showing the terminated instance and the newly launched instance
-[Assignment 5](screenshots/ass5/19.jpg)
+![Assignment 5](screenshots/ass5/19.jpg)
 ---
 
 #### Screenshot 20 — Target group showing healthy targets after replacement
-[Assignment 5](screenshots/ass5/20.jpg)
+![Assignment 5](screenshots/ass5/20.jpg)
 ---
 
 #### Screenshot 21 — Evidence that an instance was removed, detached, placed in Standby, or stopped in one Availability Zone
-[Assignment 5](screenshots/ass5/21az.jpg)
+![Assignment 5](screenshots/ass5/21az.jpg)
 
 ---
 
 #### Screenshot 22 — Browser showing that the ALB DNS endpoint still works during the change
-[Assignment 5](screenshots/ass5/22alb.jpg)
+![Assignment 5](screenshots/ass5/22alb.jpg)
 ---
 
 # Task 9 — Architecture and Test-Results Summary
@@ -177,22 +177,22 @@ Summarize the VPC/subnet layout, the ALB and Auto Scaling Group setup, the priva
 ### Evidence
 
 #### Screenshot 23 — A simple architecture diagram (hand-drawn is fine), or an AWS console overview showing the components
-[Assignment 5](screenshots/ass5/23.jpg)
+![Assignment 5](screenshots/ass5/23.jpg)
 ---
 
 ### Additional evidence
 
 #### Auto Scaling group healing captured mid-replacement
-[Assignment 5](screenshots/ass5/20b.jpg)
+![Assignment 5](screenshots/ass5/20b.jpg)
 
 All three states in one view: the terminated instance winding down as unhealthy, its replacement already in service in the same Availability Zone, and the instance in the other zone untouched. The replacement went back into the zone that lost capacity rather than simply topping up the total, which is what preserves zone-level redundancy after a failure instead of leaving both instances in one place.
 
 #### Load balancer continuity during the instance failure test
-[Assignment 5](screenshots/ass5/21alb.jpg)
+![Assignment 5](screenshots/ass5/21alb.jpg)
 The same curl loop used in Test B, run during Test A. Two independent mechanisms are working here: the load balancer stops routing to the failing instance once its health check fails, and separately the Auto Scaling group notices capacity has dropped and launches a replacement. Neither knows about the other, and the user data script is what makes the replacement useful rather than an empty server.
 
 #### Multi-AZ database failover
-[Assignment 5](screenshots/ass5/22rds.jpg)
+![Assignment 5](screenshots/ass5/22rds.jpg)
 
 I forced a Multi-AZ failover with a reboot to test the database tier directly, which the assignment does not require. The primary moved from eu-west-2a to eu-west-2b and the former primary became the standby. The endpoint hostname did not change, because AWS repoints the DNS record at the promoted instance, so every web instance kept its existing configuration and reconnected without intervention. That is the reason the launch template hardcodes an endpoint rather than an address.
 
