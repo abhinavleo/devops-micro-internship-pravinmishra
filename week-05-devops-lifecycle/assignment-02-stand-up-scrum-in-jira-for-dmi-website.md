@@ -151,14 +151,12 @@ Locate the Burndown Chart for Sprint 1 so it is ready for later progress trackin
 ## Evidence
 
 #### LinkedIn Post URL
+Not applicable: I will publish a LinkedIn post for this assignment.
 
-Paste your LinkedIn post URL here:
-
-Add your URL here...
 
 #### Screenshot 13 — LinkedIn Post Showing Your Scrum Project Setup and DMI Leaderboard Progress Link
 
-Add your screenshot here.
+Not applicable: I will publish a LinkedIn post for this assignment.
 
 ---
 

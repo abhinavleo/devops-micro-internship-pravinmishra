@@ -401,7 +401,7 @@ Write the post in your own words and include at least one deployment screenshot 
 
 Add a screenshot of the published LinkedIn post showing the post and at least one deployment image or other proof.
 
-Not applicable: I chose not to publish a LinkedIn post for this assignment.
+Not applicable: I will publish a LinkedIn post for this assignment.
 
 ## LinkedIn Post URL
 

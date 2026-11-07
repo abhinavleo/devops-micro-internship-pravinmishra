@@ -144,19 +144,18 @@ Record a two-to-three-minute demo video of the shipped footer, add a retrospecti
 
 #### Screenshot 15 — Burndown Chart for Sprint 1
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/15.jpg)
 
 ---
 
 #### Screenshot 16 — Jira retrospective comment
 
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/16.jpg)
 
 ---
 
 #### Screenshot 17 — Final EC2 browser view showing the complete footer requirement
-
-Add your screenshot here.
+![Assignment 3](screenshots/ass3/17.jpg)
 
 ---
 
@@ -164,7 +163,7 @@ Add your screenshot here.
 
 Paste your unlisted YouTube or accessible Google Drive demo-video link here:
 
-`Add your URL here`
+https://drive.google.com/file/d/1XCL5cgH43JvIeRiVOvBdb23LL6sNd4ll/view?usp=drive_link
 
 ---
 
@@ -178,15 +177,13 @@ Publish a LinkedIn post about your five-day mini-Sprint, including your GitHub r
 
 #### LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
-
-`Add your URL here`
+Not applicable: I will publish a LinkedIn post for this assignment.
 
 ---
 
 #### LinkedIn Screenshot 1 — Published LinkedIn post showing the post content and at least one required link or proof image
 
-Add your screenshot here.
+Not applicable: I will publish a LinkedIn post for this assignment.
 
 ---
 

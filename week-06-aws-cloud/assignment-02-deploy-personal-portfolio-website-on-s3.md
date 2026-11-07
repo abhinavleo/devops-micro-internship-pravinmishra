@@ -126,15 +126,15 @@ Include the required hashtags, the credit note for your track, and the tags spec
 
 #### LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
+Not applicable: I will publish a LinkedIn post for this assignment.
 
-`Add your URL here`
+
 
 ---
 
 #### Screenshot 8 — Published LinkedIn post showing your caption, live S3 website link, and portfolio screenshot
 
-Add your screenshot here.
+Not applicable: I will publish a LinkedIn post for this assignment.
 
 > **Privacy Note:** Do not expose credentials, billing details, or sensitive AWS account information.
 
