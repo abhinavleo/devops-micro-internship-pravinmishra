@@ -19,21 +19,15 @@ Prepare your local environment for Terraform deployment by installing Terraform,
 ### Evidence
 
 #### Screenshot 1 — Terminal showing successful `terraform version` output
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/1.jpg)
 ---
 
 #### Screenshot 2 — Terminal showing successful `az version` output
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/2.jpg)
 ---
 
 #### Screenshot 3 — VS Code Extensions panel showing the HashiCorp Terraform extension installed and enabled
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/3.jpg)
 ---
 
 # Task 1 — Create a New Terraform Project and Define the Infrastructure
@@ -45,14 +39,14 @@ Create a new Terraform project and define the complete Azure Virtual Machine env
 ### Evidence
 
 #### Screenshot 4 — VS Code showing the AzureRM provider configuration and resource group configuration in `main.tf`
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/4.jpg)
 ---
 
 #### Screenshot 5 — VS Code showing the Linux virtual machine configuration and public IP `output` block in `main.tf`. Ensure that the VM password is hidden or redacted
+[Assignment 1](screenshots/as1/5.jpg)
+---
 
-Add your screenshot here.
+Terraform configuration: [`terraform-azure-vm/main.tf`](./terraform-azure-vm/main.tf)
 
 ---
 
@@ -65,9 +59,7 @@ Initialize the Terraform working directory and download the required provider co
 ### Evidence
 
 #### Screenshot 6 — Terminal showing the successful `terraform init` output
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/6.jpg)
 ---
 
 # Task 3 — Plan and Apply the Configuration
@@ -79,24 +71,18 @@ Review the Terraform execution plan and provision the Azure resources.
 ### Evidence
 
 #### Screenshot 7 — Terraform plan summary showing the proposed resources
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/7.png)
 ---
 
 #### Screenshot 8 — Terraform apply output showing successful completion
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/8.jpg)
 ---
 
 #### Screenshot 9 — Terraform output showing the public IP address of the VM
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/9.jpg)
 ### Question
 
-VM Public IP Address: [Enter the public IP shown by terraform output]
+VM Public IP Address: **51.137.190.37**
 
 ---
 
@@ -109,9 +95,7 @@ Confirm through Azure CLI that the virtual machine was created successfully and 
 ### Evidence
 
 #### Screenshot 10 — Azure CLI output showing the deployed VM name and `VM running` status
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/as1/10.jpg)
 ---
 
 # Task 5 — Destroy the Resources
@@ -123,30 +107,12 @@ Remove all Azure resources created by Terraform after completing the deployment 
 ### Evidence
 
 #### Screenshot 11 — Terminal showing successful `terraform destroy` completion
-
-Add your screenshot here.
-
----
-
-# Task 6 — Share Your Terraform Progress on WhatsApp
-
-## Goal
-
-Share your Terraform deployment progress on WhatsApp by using Screenshot 8, the provided Terraform caption, and your generated DMI Leaderboard progress link.
-
-### Evidence
-
-#### Screenshot 12 — Published WhatsApp Status showing your Terraform deployment progress and DMI Leaderboard progress link
-
-Add your screenshot here.
-
-> Ensure that no passwords, account IDs, subscription IDs, private phone numbers, or personal messages are visible.
-
+[Assignment 1](screenshots/as1/11.jpg)
 ---
 
 # Submission Instructions
 
-- Complete all tasks in sequence and include all required screenshots specified in Tasks 0–6.
+- Complete all tasks in sequence and include all required screenshots specified in Tasks 0–5.
 - Do not expose passwords, keys, account IDs, or other sensitive information in screenshots.
 
 ---
@@ -169,8 +135,6 @@ Add your screenshot here.
 - Captured and recorded the VM public IP using `terraform output`
 - Verified that the VM is running using Azure CLI
 - Completed `terraform destroy` successfully
-- Shared Terraform deployment progress on WhatsApp by following Task 6
-- Captured a screenshot of the published WhatsApp Status
 - Captured all required screenshots
 - Checked that no passwords, keys, account IDs, or other sensitive information are visible in the screenshots
 

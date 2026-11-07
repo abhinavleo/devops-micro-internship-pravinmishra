@@ -6,7 +6,7 @@ Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 ## Purpose
 
-In this assignment, you will deploy the Mini Finance static web application to an Azure Storage Account by enabling Static Website Hosting. The completed website must be publicly accessible through the Azure Storage Primary endpoint URL.
+In this assignment, you will deploy the Mini Finance static web application directly from an Azure Storage Account by enabling Static Website Hosting. The completed website must be publicly accessible through the Azure Storage primary endpoint URL.
 
 ---
 
@@ -14,131 +14,72 @@ In this assignment, you will deploy the Mini Finance static web application to a
 
 ## Goal
 
-Download and extract the Mini Finance application from [GitHub](https://github.com/pravinmishraaws/mini_finance), including `index.html` and all supporting files and folders.
+Download and extract the Mini Finance static website files (`index.html`, `style.css`, images, and other assets) from `https://github.com/pravinmishraaws/mini_finance`.
 
-## Evidence
-
-#### Screenshot 1 — Extracted project folder showing `index.html` and the supporting files and folders
-
-Add your screenshot here.
+> No screenshot required for this task.
 
 ---
 
-# Task 2 — Create a Storage Account
+# Task 2 — Create a Storage Account and Enable Static Website Hosting
 
 ## Goal
 
-Create Resource Group `mini-finance-rg` and a globally unique Storage Account named `minifinance<uniqueid>` in your selected Azure region, using Standard performance and LRS redundancy.
+Create Resource Group `mini-finance-rg` and a globally unique Storage Account named `minifinance<uniqueid>` (Standard performance, LRS redundancy), then enable Static Website Hosting with `index.html` as the index document.
 
-## Evidence
-
-#### Screenshot 2 — Storage Account Overview or configuration showing its name, `mini-finance-rg`, region, Standard performance, and LRS redundancy
-
-Add your screenshot here.
+> No screenshot required for this task. Completion is verified through Task 4.
 
 ---
 
-# Task 3 — Enable Static Website Hosting
+# Task 3 — Upload Your Website Files
 
 ## Goal
 
-Enable Static Website Hosting, set `index.html` as the index document, optionally use `index.html` as the error document, and copy the Primary endpoint URL.
+Upload all Mini Finance project files to the `$web` container.
 
-## Evidence
-
-#### Screenshot 3 — Static website configuration showing hosting enabled, the index document, the error-document setting, and the Primary endpoint URL
-
-Add your screenshot here.
+> No screenshot required for this task.
 
 ---
 
-# Task 4 — Upload Your Website Files
+# Task 4 — Test Your Website
 
 ## Goal
 
-Upload all Mini Finance website files to `$web`, with `index.html` directly at the container root. Preserve the original folder structure, filenames, capitalization, and relative asset paths.
+Open the primary endpoint URL and confirm the Mini Finance application, styling, and images all load correctly.
 
-## Evidence
+### Evidence
 
-#### Screenshot 4 — `$web` container showing `index.html` at the root and the supporting files and folders
+#### Screenshot 1 — Mini Finance website running in the browser
+[Assignment 4](screenshots/ass4/1.jpg)
+The page renders with full styling, chart rendering and images, which confirms the CSS, JS, fonts and image directories all uploaded with their paths intact.
 
-Add your screenshot here.
+**A note on uploading:** the portal's Upload dialog does not recursively upload directories, so selecting the files from the repository folder produced a flat set of HTML files with no assets, and the site rendered unstyled. Uploading with `az storage blob upload-batch` preserved the directory structure that the relative paths in `index.html` depend on.
 
----
-
-#### Screenshot 5 — An uploaded CSS or image folder showing its contents and folder path
-
-Add your screenshot here.
-
----
-
-# Task 5 — Test Your Website
-
-## Goal
-
-Open the Primary endpoint URL and confirm that the Mini Finance website, styling, images, and supporting assets load correctly.
-
-## Evidence
-
-#### Screenshot 6 — Browser showing the Mini Finance website with styling and images loaded, and the Primary endpoint URL visible in the address bar
-
-Add your screenshot here.
+Two further points came out of that. Subscription-level Owner does not grant data-plane access to blobs, so `--auth-mode login` was rejected and an account key was needed instead. Management-plane and data-plane permissions in Azure Storage are separate RBAC layers. And uploading the repository folder wholesale also pushed the `.git` directory to a public endpoint, exposing the remote URL in `.git/config` and the full history in the pack files. That was removed with `az storage blob delete-batch --pattern ".git/*"`, and `--exclude-pattern` would prevent it on a repeat run.
 
 ---
 
 #### Website URL
 
-Paste the Azure Storage Primary endpoint URL here:
+Paste the Azure Storage static website URL here:
 
-`Add your URL here`
-
----
-
-# LinkedIn Post (Required)
-
-## Goal
-
-Publish a LinkedIn post sharing your Azure Storage deployment. Include the website screenshot, Primary endpoint URL, and a caption in your own words explaining what you deployed, what you learned, and any challenge you resolved.
-
-Include **#DMIByPravinMishra #Azure #DevOps #CloudComputing**.
-
-## Evidence
-
-#### LinkedIn Post URL
-
-Paste your published LinkedIn post URL here:
-
-`Add your URL here`
-
----
-
-#### Screenshot 7 — Published LinkedIn post showing your caption, website URL, and Mini Finance website screenshot
-
-Add your screenshot here.
+`https://minifinancegbade.z33.web.core.windows.net/`
 
 ---
 
 # Submission Instructions
 
-- Add Screenshots **1–7** under the corresponding evidence headings.
-- Include the working **Primary endpoint URL** and your published **LinkedIn post URL**.
-- Ensure screenshots are readable and show your own environment.
-- Do not expose passwords, access keys, subscription IDs, or other sensitive account information.
-- Submit your work using the method specified in the assignment guidelines.
+- Add the required screenshot and URL in your submission
+- Do not expose subscription identifiers or other sensitive account information
 
 ---
 
 # Completion Checklist
 
-- [ ] Task 1: Mini Finance project downloaded and extracted (Screenshot 1)
-- [ ] Task 2: Storage Account created with Standard performance and LRS redundancy in `mini-finance-rg` (Screenshot 2)
-- [ ] Task 3: Static Website Hosting enabled and Primary endpoint copied (Screenshot 3)
-- [ ] Task 4: Website files uploaded with `index.html` at the `$web` root and the original folder structure preserved (Screenshots 4–5)
-- [ ] Task 5: Website, styling, and images verified through the Primary endpoint (Screenshot 6)
-- [ ] Working website URL included
-- [ ] LinkedIn post published with the required content and hashtags (Screenshot 7)
-- [ ] LinkedIn post URL included
-- [ ] All screenshots readable
+- [ ] Mini Finance project downloaded and extracted
+- [ ] Storage Account created with Static Website Hosting enabled
+- [ ] All website files uploaded to the `$web` container
+- [ ] Website verified through the primary endpoint (Screenshot 1)
+- [ ] Website URL included
 - [ ] No sensitive account information exposed
 
 ---

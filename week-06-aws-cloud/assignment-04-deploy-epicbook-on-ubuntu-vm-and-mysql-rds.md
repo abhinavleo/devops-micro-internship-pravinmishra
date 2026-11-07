@@ -1,6 +1,6 @@
 # Assignment 4 — Deploy EpicBook on Ubuntu VM + MySQL RDS with Secure Cloud Network
 
-Part of the DevOps Micro Internship (DMI) with Agentic AI
+Part of the DevOps Micro Internship (DMI) Cohort 3 with Agentic AI
 
 ---
 
@@ -14,25 +14,30 @@ In this assignment, you will deploy the EpicBook web application in AWS using a 
 
 ## Goal
 
-Create the AWS network for the EpicBook deployment with a public subnet for the EC2 instance and private subnets for Amazon RDS MySQL.
+Create `epicbook-vpc` (10.0.0.0/16) with a public subnet (10.0.1.0/24) and a private subnet (10.0.2.0/24), attach an Internet Gateway, and route only the public subnet to it.
 
 ### Evidence
 
 #### Screenshot 1 — VPC details showing CIDR 10.0.0.0/16
 
-Add your screenshot here.
+[Assignment 4](screenshots/ass4/1.jpg)
 
 ---
 
-#### Screenshot 2 — Subnets list showing the public subnet and both private database subnets with their CIDR ranges.
+#### Screenshot 2 — Subnets list showing both subnets and their CIDRs
 
-Add your screenshot here.
+[Assignment 4](screenshots/ass4/2.jpg)
 
 ---
 
 #### Screenshot 3 — Route table showing 0.0.0.0/0 → IGW and association with the public subnet
 
-Add your screenshot here.
+[Assignment 4](screenshots/ass4/3.jpg)
+#### Additional evidence — Private route table with no internet route
+
+![Private route table associated with both private subnets and no internet gateway route](./screenshots/a4-03b-private-route-table.png)
+
+Creating a separate private route table was not in the task list but was necessary. A new subnet inherits the VPC main route table, which here is the public one carrying the 0.0.0.0/0 route to the internet gateway, so both private subnets would have had an internet path by default. Associating them with a dedicated table that holds only the local route is what actually makes them private.
 
 ---
 
@@ -40,99 +45,85 @@ Add your screenshot here.
 
 ## Goal
 
-Create security groups that allow users to access the EpicBook application while restricting database access to the EC2 instance.
+Create `epicbook-ec2-sg` (SSH from your IP, HTTP/HTTPS public) and `epicbook-rds-sg` (MySQL 3306 only from `epicbook-ec2-sg`).
 
 ### Evidence
 
 #### Screenshot 4 — EC2 security-group inbound rules showing ports and sources
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/4.jpg)
 ---
 
 #### Screenshot 5 — RDS security-group inbound rule showing MySQL 3306 allowed from the EC2 security group
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/5.jpg)
 ---
 
 # Task 3 — Launch Ubuntu EC2 in Public Subnet
 
 ## Goal
 
-Launch the EC2 instance that will host the EpicBook application and connect to it through SSH.
+Launch an Ubuntu 20.04 instance in the public subnet with `epicbook-ec2-sg` attached, and connect to it over SSH.
 
 ### Evidence
 
 #### Screenshot 6 — EC2 instance summary showing the public IPv4 address, subnet, and security group
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/6.jpg)
 ---
 
-#### Screenshot 7 — Terminal showing a successful SSH login with the `ubuntu@...` prompt
-
-Add your screenshot here.
-
+#### Screenshot 7 — Terminal showing a successful SSH login
+[Assignment 4](screenshots/ass4/7.jpg)
 ---
 
 # Task 4 — Install Required Software on EC2
 
 ## Goal
 
-Prepare Ubuntu to download and run EpicBook, receive HTTP traffic, and connect to RDS.
+Install Node.js, npm, Nginx, and the MySQL client on the instance, and confirm Nginx is running.
 
 ### Evidence
 
 #### Screenshot 8 — Output of `node -v` and `npm -v`
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/8.jpg)
 ---
 
 #### Screenshot 9 — Output of `systemctl status nginx`
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/9.jpg)
 ---
 
 #### Screenshot 10 — Output of `mysql --version`
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/10.jpg)
 ---
 
 # Task 5 — Create RDS MySQL in Private Subnet (No Public Access)
 
 ## Goal
 
-Launch a private MySQL database accessible only from the application EC2 security group.
+Create a private MySQL RDS instance in `epicbook-vpc` using a DB Subnet Group over the private subnet, with `epicbook-rds-sg` attached and public access disabled.
 
 ### Evidence
 
 #### Screenshot 11 — RDS instance summary showing Publicly accessible: No
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/11.jpg)
 ---
 
 #### Screenshot 12 — Connectivity & security section showing the VPC and attached security group
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/12.jpg)
 ---
 
 # Task 6 — Initialize Database (SQL Dump Import)
 
 ## Goal
 
-Download EpicBook and populate bookstore with the schema, authors, and books required by the application.
+Connect to RDS from EC2, create the `epicbook` database, and import the provided SQL dump.
 
 ### Evidence
 
 #### Screenshot 13 — Terminal showing successful `SHOW TABLES;` output with tables listed
+[Assignment 4](screenshots/ass4/13.jpg)
+#### Additional evidence — Row counts confirming the seed data imported
 
-Add your screenshot here.
+![Author and Book row counts after importing the seed files](./screenshots/a4-13b-row-counts.png)
+
+Tables existing does not prove data landed. The counts confirm 53 authors and 54 books, which also proves the import order held, since Book carries a foreign key to Author and would have failed had the seeds run the other way round.
 
 ---
 
@@ -140,107 +131,73 @@ Add your screenshot here.
 
 ## Goal
 
-Run EpicBook on port 8080 and connect its Sequelize models to bookstore in RDS.
+Clone the EpicBook repository, install backend dependencies, configure `.env` with the RDS endpoint and credentials, and start the backend on port 3000.
 
 ### Evidence
 
 #### Screenshot 14 — Terminal showing the repository cloned and the `ls` output
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/14.jpg)
 ---
 
-#### Screenshot 15 — Terminal showing EpicBook running, or ss -tulpn output showing port 8080 listening
-
-Add your screenshot here.
-
+#### Screenshot 15 — Terminal showing the backend running, or `ss -tulpn` showing the port open
+[Assignment 4](screenshots/ass4/15.jpg)
 ---
 
-#### Screenshot 16 — `curl` output proving the backend responds; a 200, 301, or 404 response is acceptable if the service responds
-
-Add your screenshot here.
-
+#### Screenshot 16 — `curl` output proving the backend responds
+[Assignment 4](screenshots/ass4/16.jpg)
 ---
 
-# Task 8 — Configure Nginx as a Reverse Proxy and Enable Persistence.
+# Task 8 — Serve Frontend Using Nginx + Reverse Proxy to Backend
 
 ## Goal
 
-Expose EpicBook through Nginx on port 80 and keep its Node.js process running after SSH disconnects and server reboots.
+Copy the frontend files to the Nginx web root and configure Nginx to reverse-proxy `/api/` to the Node backend.
 
 ### Evidence
 
 #### Screenshot 17 — `nginx -t` success output
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/17.jpg)
 ---
 
-#### Screenshot 18 — Nginx configuration snippet showing location / forwarding requests to http://127.0.0.1:8080
-
-Add your screenshot here.
-
+#### Screenshot 18 — Nginx configuration snippet showing the `/api/` reverse proxy
+[Assignment 4](screenshots/ass4/18.jpg)
 ---
 
 # Task 9 — End-to-End Testing (Frontend ↔ Backend ↔ RDS)
 
 ## Goal
 
-Verify the public application and its use of the imported RDS data.
+Verify the frontend loads publicly, the backend responds through Nginx, and EC2 can query the private RDS database.
 
 ### Evidence
 
 #### Screenshot 19 — Browser showing the EpicBook application loaded with the public IP visible
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/ass4/19.jpg)
 ---
 
-#### Screenshot 20 — Terminal showing a successful HTTP request to EpicBook through the public Nginx endpoint using curl -i http://<EC2_PUBLIC_IP>/
-
-Add your screenshot here.
-
+#### Screenshot 20 — Terminal showing a successful API call through the public endpoint
+[Assignment 4](screenshots/ass4/20.jpg)
 ---
 
-#### Screenshot 21 — Terminal showing the successful database connectivity test using `SELECT 1;` or similar
-
-Add your screenshot here.
-
+#### Screenshot 21 — Terminal showing a successful database connectivity test (`SELECT 1;` or similar)
+[Assignment 4](screenshots/ass4/21.jpg)
 ---
 
-# LinkedIn Post (Required)
+## Deployment notes
 
-## Goal
+The brief and the actual repository disagree in four places, and following the brief literally would have produced a broken deployment. Reading the code first saved a lot of debugging.
 
-Publish a LinkedIn post sharing your experience deploying EpicBook on an Ubuntu EC2 instance with Nginx and a private Amazon RDS MySQL database.
+**There is no .env support.** The task list says to create a .env file with DB_HOST, DB_USER and similar variables. The repository has no dotenv dependency and nothing loads one. Database configuration is read by models/index.js from config/config.json, keyed on NODE_ENV, so I edited the development block there instead. The only environment variable the code genuinely reads is PORT, which server.js picks up directly, so I started the app with PORT=3000 to match the port the assignment expects rather than the default of 8080.
 
-Include:
-- A screenshot of the live EpicBook application showing the book listing
-- Your application URL: `http://<EC2_PUBLIC_IP>/`
-- A caption in your own words explaining what you deployed, how the main components connect, and what you learned about network security, Nginx, and PM2
-- One challenge you faced and how you resolved it, if applicable
+**EpicBook is not a React application.** The brief describes copying a frontend build into the Nginx web root and proxying only /api/ to the backend. EpicBook is a server-rendered Express app using Handlebars templates, and it serves its own static assets through express.static. There is no build step and no separate frontend directory. Emptying /var/www/html and pointing Nginx at it would have served nothing, so I configured Nginx to proxy all traffic to the Node process and kept an explicit /api/ block for clarity.
 
-Include these hashtags:
+**The proxy_pass trailing slash matters.** The configuration in the brief uses location /api/ with proxy_pass ending in a slash. That combination strips the location prefix, so a request for /api/cart reaches the backend as /cart, which is a Handlebars page route rather than the API. The response would have been HTML instead of JSON. Omitting the trailing slash passes the path through unchanged, which is why the API test returns JSON with both the Nginx and Express headers visible.
 
-#DMIByPravinMishra #AWS #DevOps #CloudComputing
+**The SQL dump hardcodes a different database name.** All three files in db/ open with USE bookstore and use fully qualified names such as bookstore.Author, so passing epicbook on the command line was silently overridden and the import failed with an unknown database error. Since the assignment specifies epicbook, I rewrote the dump files to match rather than creating a second database, which keeps the RDS instance consistent with both the assignment and the application config.
 
-Add the credit note for your track, replace `YOUR-GITHUB-USERNAME` with your GitHub username, and include the tags specified in the assignment guidelines.
+I also deviated on two versions. Ubuntu 20.04 is past end of standard support, so I used the current LTS AMI. Node 18 came from NodeSource because the distribution package is too old for this dependency tree, though NodeSource itself now flags 18 as unsupported and a current LTS would be the right choice for production.
 
-## Evidence
-
-#### LinkedIn Post URL
-
-Paste your LinkedIn post URL here:
-
-`Add your URL here`
-
----
-
-#### Screenshot 22 — Published LinkedIn post showing your caption, application URL, and live EpicBook screenshot
-
-Add your screenshot here.
-
-> **Privacy Note:** Do not expose passwords, private keys, `.env` values, database credentials, or sensitive AWS account information.
+One observation worth carrying into the security audit: npm install reported 45 vulnerabilities across a dependency tree last updated in 2020. Running npm audit fix --force would upgrade Sequelize and Express across major versions and break the application, which is a good illustration of why dependency risk is a lifecycle problem rather than something a single command resolves.
 
 ---
 
@@ -253,17 +210,16 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Task 1: VPC, public/private subnets, IGW, and public routing created (Screenshots 1–3)
-- [ ] Task 2: Least-privilege EC2 and RDS security groups created (Screenshots 4–5)
-- [ ] Task 3: Ubuntu EC2 launched in the public subnet with SSH verified (Screenshots 6–7)
-- [ ] Task 4: Node.js, npm, Nginx, and MySQL client, Git installed (Screenshots 8–10)
-- [ ] Task 5: Private MySQL RDS created with no public access (Screenshots 11–12)
-- [ ] Task 6: Database initialized from the SQL dump (Screenshot 13)
-- [ ] Task 7: Backend deployed and responding on port 8080 (Screenshots 14–16)
-- [ ] Task 8: Nginx proxying requests to EpicBook, with PM2 persistence. (Screenshots 17–18)
-- [ ] Task 9: Frontend, backend, and RDS verified end to end (Screenshots 19–21)
-- [ ] No sensitive data exposed
-- [ ] LinedIn post published
+- [x] Task 1: VPC, public/private subnets, IGW, and public routing created (Screenshots 1–3)
+- [x] Task 2: Least-privilege EC2 and RDS security groups created (Screenshots 4–5)
+- [x] Task 3: Ubuntu EC2 launched in the public subnet with SSH verified (Screenshots 6–7)
+- [x] Task 4: Node.js, npm, Nginx, and MySQL client installed (Screenshots 8–10)
+- [x] Task 5: Private MySQL RDS created with no public access (Screenshots 11–12)
+- [x] Task 6: Database initialized from the SQL dump (Screenshot 13)
+- [x] Task 7: Backend deployed and responding on port 3000 (Screenshots 14–16)
+- [x] Task 8: Nginx serving the frontend and reverse-proxying to the backend (Screenshots 17–18)
+- [x] Task 9: Frontend, backend, and RDS verified end to end (Screenshots 19–21)
+- [x] No sensitive data exposed
 
 ---
 
@@ -287,4 +243,4 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ---
 
-*This submission is part of DevOps Micro Internship (DMI) — Agentic AI Track.*
+*This submission is part of DevOps Micro Internship (DMI) Cohort 3 — Agentic AI Track.*

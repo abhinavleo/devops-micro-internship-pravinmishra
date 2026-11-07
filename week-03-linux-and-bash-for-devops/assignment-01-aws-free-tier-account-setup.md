@@ -86,13 +86,11 @@ Add your screenshot here.
 
 # Completion Checklist
 
-<<<<<<< HEAD
 - [✅] Task 1 answers written in own words
 - [✅] AWS Free Tier account created successfully
 - [✅] Signed in to AWS Management Console
 - [✅] Screenshot of AWS Account page captured (full name visible, no sensitive data)
 - [✅] All required screenshots added to repository
-=======
 - [ ] Task 1 answers written in own words
 - [ ] AWS Free Tier account created successfully
 - [ ] Signed in to AWS Management Console
@@ -100,7 +98,6 @@ Add your screenshot here.
 - [ ] Task 4: AWS onboarding progress shared on WhatsApp Status
 - [ ] Screenshot 2 of published WhatsApp Status captured with leaderboard progress link visible
 - [ ] All required screenshots added to repository
->>>>>>> upstream/main
 
 ---
 

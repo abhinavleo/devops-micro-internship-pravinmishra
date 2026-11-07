@@ -29,14 +29,12 @@ Confirm successful Azure Portal access and Locate the required services and subs
 ### Evidence
 
 #### Screenshot 1 — Azure Portal homepage after successful login
-
-Add your screenshot here.
-
+[Assignment 1](screenshots/ass1/1.jpg)
 ---
 
 #### Screenshot 2 — "Subscriptions" section showing the "Free Trial" subscription
-
-Add your screenshot here.
+[Assignment 1](screenshots/ass1/2.jpg)
+**Note on subscription type:** This task asks for a Free Trial subscription. The Azure free account is limited to one per customer, and this account has previously held an Azure subscription, so the free offer is no longer available to it. Microsoft's documented guidance for that situation, which the course solution document for this assignment also cites, is to use a pay-as-you-go subscription instead. The screenshot shows the subscription is Active and running under an Azure Plan, with my role as Owner. The subscription ID, directory name and parent management group ID are redacted.
 
 ---
 
@@ -44,23 +42,7 @@ Add your screenshot here.
 
 Write a three-to-four-line paragraph explaining which Azure services you plan to explore first and why.
 
-Write your answer here.
-
----
-
-# Share Your Progress on WhatsApp
-
-## Goal
-
-Share your Azure account setup achievement and DMI Leaderboard progress together in the same WhatsApp Status.
-
-### Evidence
-
-#### Screenshot 3 — Published WhatsApp Status showing your Azure account setup update, automatically generated DMI Leaderboard rank, and personal progress link
-
-Add your screenshot here.
-
-> **Privacy Note:** Do not include payment details, subscription IDs, private phone numbers, or other sensitive information.
+I plan to start with Virtual Machines and Virtual Networks, because every other service this week sits on top of them. Coming from AWS, I want to see exactly how Resource Groups and Network Security Groups differ from tagging and security groups, since that mapping is where most of my early mistakes are likely to come from. After that, Azure Database for MySQL Flexible Server and Storage Accounts, as those cover the managed database and static hosting patterns the later assignments depend on. Cost Management is the one I will keep open throughout, since I am running on a pay-as-you-go subscription rather than free credits.
 
 ---
 

@@ -23,25 +23,19 @@ Prepare your local environment by installing Terraform, AWS CLI, and the HashiCo
 ### Screenshot 1 — Terraform Version
 
 Add a screenshot of the terminal showing successful `terraform version` output.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/1.jpg)
 ---
 
 ### Screenshot 2 — AWS CLI Version
 
 Add a screenshot of the terminal showing successful `aws --version` output.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/2.jpg)
 ---
 
 ### Screenshot 3 — HashiCorp Terraform Extension
 
 Add a screenshot of VS Code showing the HashiCorp Terraform extension installed and enabled.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/3.jpg)
 ---
 
 # Task 1 — Create the Modular Terraform Project
@@ -79,8 +73,10 @@ terraform-aws-epicbook/
 ### Screenshot 4 — Modular Project Structure
 
 Add a screenshot of the VS Code Explorer showing the complete root project and the `network`, `ec2`, and `rds` module directory structure.
+[Assignment 4](screenshots/as4/4.jpg)
+---
 
-Add your screenshot here.
+Terraform project: [`terraform-aws-epicbook/`](./terraform-aws-epicbook/) (root module plus `modules/network`, `modules/ec2` and `modules/rds`)
 
 ---
 
@@ -108,33 +104,25 @@ The network module must include:
 ### Screenshot 5 — VPC and Subnets
 
 Add a screenshot of VS Code showing the VPC, public subnet, and two private database subnet configurations.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/5.jpg)
 ---
 
 ### Screenshot 6 — Internet Gateway and Public Routing
 
 Add a screenshot of VS Code showing the Internet Gateway, public route table, and route table association.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/6.jpg)
 ---
 
 ### Screenshot 7 — EC2 and RDS Security Groups
 
 Add a screenshot of VS Code showing the EC2 and RDS Security Groups, including MySQL access from the EC2 Security Group only.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/7.jpg)
 ---
 
 ### Screenshot 8 — Network Module Outputs
 
 Add a screenshot of VS Code showing the network module outputs.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/8.jpg)
 ---
 
 # Task 3 — Build the EC2 Module and User Data Installation Script
@@ -160,9 +148,7 @@ The `user_data.sh` script must install the required software without storing dat
 ### Screenshot 9 — EC2 Resource and `user_data`
 
 Add a screenshot of VS Code showing the EC2 resource and `user_data` configuration.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/9.jpg)
 ---
 
 ### Screenshot 10 — `user_data.sh`
@@ -170,17 +156,13 @@ Add your screenshot here.
 Add a screenshot of VS Code showing `user_data.sh`.
 
 Ensure that no credentials, passwords, private keys, access tokens, or application secrets are visible.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/10.jpg)
 ---
 
 ### Screenshot 11 — EC2 Module Variables and Outputs
 
 Add a screenshot of VS Code showing the EC2 module variables and outputs.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/11.jpg)
 ---
 
 # Task 4 — Build the Amazon RDS Module
@@ -204,9 +186,7 @@ The RDS module must include:
 ### Screenshot 12 — DB Subnet Group and RDS MySQL
 
 Add a screenshot of VS Code showing the DB subnet group and RDS MySQL configuration.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/12.jpg)
 ---
 
 ### Screenshot 13 — Private RDS and Sensitive Variables
@@ -214,17 +194,13 @@ Add your screenshot here.
 Add a screenshot of VS Code showing `publicly_accessible = false`, the RDS Security Group configuration or reference, and the sensitive database variable configuration.
 
 Ensure that the database password and other sensitive values are hidden.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/13.jpg)
 ---
 
 ### Screenshot 14 — RDS Endpoint Output
 
 Add a screenshot of VS Code showing the RDS endpoint output.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/14.jpg)
 ---
 
 # Task 5 — Connect the Terraform Modules from the Root Module
@@ -238,25 +214,19 @@ Use the root Terraform configuration to call the Network, EC2, and RDS modules a
 ### Screenshot 15 — Root Module Blocks
 
 Add a screenshot of VS Code showing the root `main.tf` with the Network, EC2, and RDS module blocks.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/15.jpg)
 ---
 
 ### Screenshot 16 — Values Passed Between Modules
 
 Add a screenshot of VS Code showing values passed from the Network module to the EC2 and RDS modules.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/16.jpg)
 ---
 
 ### Screenshot 17 — Root Outputs
 
 Add a screenshot of VS Code showing the root EC2 public IP and RDS endpoint outputs.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/17.jpg)
 ---
 
 # Task 6 — Initialize, Validate, Plan, and Apply the Terraform Configuration
@@ -270,41 +240,31 @@ Initialize the modular Terraform project, validate the configuration, review the
 ### Screenshot 18 — Terraform Initialization
 
 Add a screenshot of the terminal showing successful `terraform init` output.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/18.jpg)
 ---
 
 ### Screenshot 19 — Terraform Validation
 
 Add a screenshot of the terminal showing successful `terraform validate` output.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/19.jpg)
 ---
 
 ### Screenshot 20 — Terraform Plan
 
 Add a screenshot showing the Terraform plan summary and proposed resources.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/20.jpg)
 ---
 
 ### Screenshot 21 — Terraform Apply
 
 Add a screenshot showing successful `terraform apply` completion.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/21.jpg)
 ---
 
 ### Screenshot 22 — Terraform Outputs
 
 Add a screenshot showing the EC2 public IP and RDS endpoint returned by `terraform output`.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/22.jpg)
 ---
 
 # Task 7 — Verify EC2, User Data, and Amazon RDS
@@ -318,25 +278,19 @@ Verify that the EC2 and RDS resources were successfully provisioned and confirm 
 ### Screenshot 23 — EC2 Running
 
 Add a screenshot of AWS CLI showing the EC2 instance running.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/23.jpg)
 ---
 
 ### Screenshot 24 — Private RDS Available
 
 Add a screenshot of AWS CLI showing that RDS is available and not publicly accessible.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/24.jpg)
 ---
 
 ### Screenshot 25 — Installed Software and Nginx
 
 Add a screenshot of the EC2 terminal showing the required software version checks and the active Nginx service.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/25.jpg)
 ---
 
 # Task 8 — Prepare the EpicBook Database
@@ -352,17 +306,13 @@ Connect from EC2 to Amazon RDS, create the EpicBook database, import the schema 
 Add a screenshot of the terminal showing a successful connection from EC2 to Amazon RDS.
 
 Ensure that the database password is not visible.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/26.jpg)
 ---
 
 ### Screenshot 27 — EpicBook Tables and Imported Data
 
 Add a screenshot of the terminal showing the EpicBook tables and imported data.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/27.jpg)
 ---
 
 # Task 9 — Deploy and Configure the EpicBook Application
@@ -376,25 +326,19 @@ Install EpicBook dependencies, configure the application to use Amazon RDS, conf
 ### Screenshot 28 — Dependencies and `node_modules`
 
 Add a screenshot of the terminal showing successful dependency installation and the `node_modules` directory.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/28.jpg)
 ---
 
 ### Screenshot 29 — Nginx Configuration and Service
 
 Add a screenshot of the terminal showing a successful Nginx configuration test and active service status.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/29.jpg)
 ---
 
 ### Screenshot 30 — EpicBook on Port `8080`
 
 Add a screenshot of the terminal showing EpicBook running or listening on port `8080`.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/30.jpg)
 ---
 
 # Task 10 — Test End-to-End Functionality
@@ -405,24 +349,20 @@ Verify that EpicBook, EC2, Nginx, and Amazon RDS work together successfully.
 
 ## EC2 Public IP URL
 
-**EC2 Public IP URL:** Add the working EpicBook EC2 public IP URL here
+**EC2 Public IP URL:** http://18.134.226.26 (verified working during testing; the instance was destroyed afterwards as required in Task 11)
 
 ## Evidence
 
 ### Screenshot 31 — EpicBook Through the EC2 Public IP
 
 Add a screenshot of the browser showing EpicBook using the EC2 public IP.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/31.jpg)
 ---
 
 ### Screenshot 32 — Cart or Checkout Action
 
 Add a screenshot of the browser showing a successful cart or checkout action.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/32.jpg)
 ---
 
 ### Screenshot 33 — Corresponding RDS Record
@@ -430,9 +370,7 @@ Add your screenshot here.
 Add a screenshot of the terminal showing the corresponding RDS database record created by the application action.
 
 Ensure that database credentials and other sensitive values are not visible.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/33.jpg)
 ---
 
 # Task 11 — Destroy the Terraform Infrastructure
@@ -446,9 +384,7 @@ Remove all AWS resources created by the modular Terraform configuration.
 ### Screenshot 34 — Terraform Destroy
 
 Add a screenshot of the terminal showing successful `terraform destroy` completion.
-
-Add your screenshot here.
-
+[Assignment 4](screenshots/as4/34.jpg)
 ---
 
 # Task 12 — LinkedIn Post (Mandatory)
@@ -465,11 +401,11 @@ Write the post in your own words and include at least one deployment screenshot 
 
 Add a screenshot of the published LinkedIn post showing the post and at least one deployment image or other proof.
 
-Add your screenshot here.
+Not applicable: I chose not to publish a LinkedIn post for this assignment.
 
 ## LinkedIn Post URL
 
-**LinkedIn Post URL:** Add your LinkedIn post URL here
+**LinkedIn Post URL:** Not published: I chose not to publish a LinkedIn post for this assignment.
 
 ---
 

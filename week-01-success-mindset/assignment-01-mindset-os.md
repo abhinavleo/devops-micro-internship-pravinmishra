@@ -128,13 +128,11 @@ Concepts became more clear when i actually tried them myself. Fixing problems, T
 
 List **10 non-fiction books** you plan to read during the next year. Include the title and author of each book. Books in any language are allowed.
 
-<<<<<<< HEAD
 Theory wont help
 
 ### Evidence from my life
 
 Whenever i faced issues in code, I learned most by decoding what really happend and trying different solution to solve the cause 
-=======
 1. Add book title and author here...
 2. Add book title and author here...
 3. Add book title and author here...
@@ -145,7 +143,6 @@ Whenever i faced issues in code, I learned most by decoding what really happend 
 8. Add book title and author here...
 9. Add book title and author here...
 10. Add book title and author here...
->>>>>>> upstream/main
 
 ---
 
@@ -155,7 +152,6 @@ List the things you will measure regularly in your life and career. You only nee
 
 Your list must include learning or skills, output or proof, health or energy, time or focus, and money or finance.
 
-<<<<<<< HEAD
 **Minimum 300 words.**
 
 ### Rules
@@ -304,9 +300,7 @@ List topics only. No need to share numbers.
 * Spending tracker
 
 ## My Metrics
-=======
 ### My Metrics
->>>>>>> upstream/main
 
 * Learning Hours
 * Projects Completed
@@ -331,7 +325,6 @@ Do a private brain dump in a notebook, notes app, or document. Include everythin
 Yes / No
 ```
 
-<<<<<<< HEAD
 ### Did You Do It?
 
 **Yes / No**
@@ -364,15 +357,6 @@ Example:
 ### Focus Blocks
 
 #### When Will You Do DMI Work? (Days + Time)
-=======
-### Step 2 — My Three-Month Routine and Focus Blocks
-
-#### My Weekly Routine
-
-Add your answer here...
-
-#### When Will I Complete My DMI Work? (Include Days and Time)
->>>>>>> upstream/main
 
 Mon-Fri 2-4 hour each
 
@@ -382,17 +366,14 @@ Mon-Fri 2-4 hour each
 
 #### My Distraction Rules
 
-<<<<<<< HEAD
 No Social Media during learning time
 Keep the phone away during deep work
 Focused study session without interuptions
 
-=======
 * Add your answer here...
 * Add your answer here...
 * Add your answer here...
 * Add your answer here...
->>>>>>> upstream/main
 
 ---
 
@@ -412,9 +393,7 @@ Will maintain fixed learning routine and improve productivity
 
 ### Proof of Work
 
-<<<<<<< HEAD
 https://www.linkedin.com/posts/abhinav-t-210682296_careergrowth-devops-cloudcomputing-share-7477981851677184000-tbCR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
-=======
 **LinkedIn Post URL**
 
 ```text
@@ -426,16 +405,13 @@ Paste your LinkedIn post URL here...
 ```text
 Paste your published article URL here...
 ```
->>>>>>> upstream/main
 
 ---
 
 ## Completion Checklist
 
-<<<<<<< HEAD
 - LinkedIn Post URL: https://www.linkedin.com/posts/abhinav-t-210682296_careergrowth-devops-cloudcomputing-share-7477981851677184000-tbCR/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEelfqwBrAEfQ03WBMjV0-o9bvqgBIe7vGM
 - Blog / Medium : **https://medium.com/@abhinav1712003/the-future-2-0-152477599749**  
-=======
 * [ ] All eight tasks are completed.
 * [ ] All written answers are honest, specific, and written in clear professional sentences.
 * [ ] Task 1 has at least 50 words.
@@ -450,7 +426,6 @@ Paste your published article URL here...
 * [ ] I added a realistic three-month routine, DMI focus blocks, and distraction rules.
 * [ ] I completed the Week 1 reflection.
 * [ ] I added both the LinkedIn post and public article URLs under Task 8.
->>>>>>> upstream/main
 
 ---
 
