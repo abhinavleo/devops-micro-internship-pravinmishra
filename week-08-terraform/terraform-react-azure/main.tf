@@ -1,5 +1,5 @@
 # Assignment 3: React app on an Azure VM, provisioned with Terraform
-# Author: Oluwagbade Odimayo
+# Author: Abhinav T
 
 terraform {
   required_version = ">= 1.5.0"
@@ -17,12 +17,12 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "oluwagbade-tf-react-rg"
+  name     = "abhinav-tf-react-rg"
   location = var.location
 }
 
 resource "azurerm_network_security_group" "nsg" {
-  name                = "oluwagbade-tf-react-nsg"
+  name                = "abhinav-tf-react-nsg"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -52,14 +52,14 @@ resource "azurerm_network_security_group" "nsg" {
 }
 
 resource "azurerm_virtual_network" "vnet" {
-  name                = "oluwagbade-tf-react-vnet"
+  name                = "abhinav-tf-react-vnet"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 }
 
 resource "azurerm_subnet" "subnet" {
-  name                 = "oluwagbade-tf-react-subnet"
+  name                 = "abhinav-tf-react-subnet"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = ["10.0.1.0/24"]
@@ -71,7 +71,7 @@ resource "azurerm_subnet_network_security_group_association" "subnet_nsg" {
 }
 
 resource "azurerm_public_ip" "pip" {
-  name                = "oluwagbade-tf-react-pip"
+  name                = "abhinav-tf-react-pip"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   allocation_method   = "Static"
@@ -79,7 +79,7 @@ resource "azurerm_public_ip" "pip" {
 }
 
 resource "azurerm_network_interface" "nic" {
-  name                = "oluwagbade-tf-react-nic"
+  name                = "abhinav-tf-react-nic"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
 
@@ -92,8 +92,8 @@ resource "azurerm_network_interface" "nic" {
 }
 
 resource "azurerm_linux_virtual_machine" "vm" {
-  name                            = "oluwagbade-react-vm"
-  computer_name                   = "oluwagbade-odimayo"
+  name                            = "abhinav-react-vm"
+  computer_name                   = "abhinav-t"
   resource_group_name             = azurerm_resource_group.rg.name
   location                        = azurerm_resource_group.rg.location
   size                            = "Standard_B1s"

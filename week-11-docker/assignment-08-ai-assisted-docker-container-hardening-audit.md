@@ -150,7 +150,7 @@ Add a terminal screenshot showing:
 - Your full name
 - The updated running container
 - The final audit report
-[Assignment 9](screenshots/as8/1.jpg)
+![Assignment 8](screenshots/as8/1.jpg)
 ---
 
 ### Before-and-After Comparison

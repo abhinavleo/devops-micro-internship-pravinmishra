@@ -18,4 +18,4 @@ npm -v
 nginx -v
 mysql --version
 
-echo "EpicBook server setup completed at $(date -u '+%Y-%m-%d %H:%M:%S UTC') by Oluwagbade Odimayo" | tee /var/log/epicbook-setup.done
+echo "EpicBook server setup completed at $(date -u '+%Y-%m-%d %H:%M:%S UTC') by Abhinav T" | tee /var/log/epicbook-setup.done

@@ -1,5 +1,5 @@
 # Assignment 2: AWS EC2 with a public network, provisioned with Terraform
-# Author: Oluwagbade Odimayo
+# Author: Abhinav T
 
 terraform {
   required_version = ">= 1.5.0"
@@ -21,7 +21,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "oluwagbade-tf-vpc"
+    Name = "abhinav-tf-vpc"
   }
 }
 
@@ -32,7 +32,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "oluwagbade-tf-public-subnet"
+    Name = "abhinav-tf-public-subnet"
   }
 }
 
@@ -42,7 +42,7 @@ resource "aws_subnet" "private" {
   availability_zone = "${var.region}a"
 
   tags = {
-    Name = "oluwagbade-tf-private-subnet"
+    Name = "abhinav-tf-private-subnet"
   }
 }
 
@@ -50,7 +50,7 @@ resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "oluwagbade-tf-igw"
+    Name = "abhinav-tf-igw"
   }
 }
 
@@ -63,7 +63,7 @@ resource "aws_route_table" "public" {
   }
 
   tags = {
-    Name = "oluwagbade-tf-public-rt"
+    Name = "abhinav-tf-public-rt"
   }
 }
 
@@ -73,7 +73,7 @@ resource "aws_route_table_association" "public" {
 }
 
 resource "aws_security_group" "web" {
-  name        = "oluwagbade-tf-web-sg"
+  name        = "abhinav-tf-web-sg"
   description = "SSH from my IP only, HTTP from anywhere"
   vpc_id      = aws_vpc.main.id
 
@@ -102,13 +102,13 @@ resource "aws_security_group" "web" {
   }
 
   tags = {
-    Name = "oluwagbade-tf-web-sg"
+    Name = "abhinav-tf-web-sg"
   }
 }
 
 # Only the public key is uploaded; the private key never leaves ~/.ssh
 resource "aws_key_pair" "deployer" {
-  key_name   = "oluwagbade-tf-key"
+  key_name   = "abhinav-tf-key"
   public_key = file(pathexpand(var.public_key_path))
 }
 
@@ -129,12 +129,12 @@ resource "aws_instance" "web" {
     #!/bin/bash
     apt-get update -y
     apt-get install -y nginx
-    sed -i 's|<h1>Welcome to nginx!</h1>|<h1>Welcome to nginx!</h1><p>Deployed with Terraform by Oluwagbade Odimayo</p>|' /var/www/html/index.nginx-debian.html
+    sed -i 's|<h1>Welcome to nginx!</h1>|<h1>Welcome to nginx!</h1><p>Deployed with Terraform by abhinav t</p>|' /var/www/html/index.nginx-debian.html
     systemctl enable --now nginx
   EOF
 
   tags = {
-    Name = "oluwagbade-odimayo-tf-ec2"
+    Name = "abhinav-t-tf-ec2"
   }
 }
 

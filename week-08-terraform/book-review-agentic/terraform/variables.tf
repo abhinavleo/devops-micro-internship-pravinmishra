@@ -32,7 +32,7 @@ variable "my_ip_cidr" {
 variable "name_prefix" {
   description = "Prefix applied to resource Name tags for consistent naming."
   type        = string
-  default     = "oluwagbade-bookreview"
+  default     = "abhinav-bookreview"
 
   # ALB and target group names are limited to 32 characters and the longest
   # suffix appended is 8 ("-alb-pub"), so the prefix is capped at 21.

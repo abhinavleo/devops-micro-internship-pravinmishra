@@ -1,5 +1,5 @@
 # Assignment 4: EpicBook on AWS with Terraform modules and Amazon RDS for MySQL
-# Author: Oluwagbade Odimayo
+# Author: Abhinav T
 
 terraform {
   required_version = ">= 1.5.0"

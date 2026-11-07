@@ -20,7 +20,7 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 #### Screenshot 1 — Jira "Create project" screen, or the project sidebar after creation
 
-[Assignment 4](screenshots/ass4/2.jpg)
+![Assignment 4](screenshots/ass4/2.jpg)
 
 ---
 
@@ -42,7 +42,7 @@ Create a Team-managed Scrum project named `Gotto Job – Team <#>` (Team Mode) o
 
 #### Screenshot 2 — Project created page showing the project name and key
 
-[Assignment 4](screenshots/ass4/2.jpg)
+![Assignment 4](screenshots/ass4/2.jpg)
 
 ---
 
@@ -56,7 +56,7 @@ Create the Epic `Improve Gotto Job UI discoverability & trust` to group the UI i
 
 #### Screenshot 3 — Backlog showing the Epic panel with the Epic visible
 
-[Assignment 4](screenshots/ass4/3.jpg)
+![Assignment 4](screenshots/ass4/3.jpg)
 
 ---
 
@@ -70,13 +70,13 @@ Create at least six Stories under the Epic, estimate each with 1, 2, or 3 story 
 
 #### Screenshot 4 — Backlog showing the Epic and at least six Stories under it
 
-[Assignment 4](screenshots/ass4/4.jpg)
+![Assignment 4](screenshots/ass4/4.jpg)
 
 ---
 
 #### Screenshot 5 — One Story opened showing its Story Points and acceptance criteria filled in
 
-[Assignment 4](screenshots/ass4/5.jpg)
+![Assignment 4](screenshots/ass4/5.jpg)
 
 ---
 
@@ -90,7 +90,7 @@ Confirm the Story Points (1, 2, or 3) for each Story and record brief reasoning 
 
 #### Screenshot 6 — Backlog showing Story Points visible, or two or three Stories opened showing their points
 
-[Assignment 4](screenshots/ass4/6.jpg)
+![Assignment 4](screenshots/ass4/6.jpg)
 
 ---
 
@@ -112,13 +112,13 @@ Create Sprint 1, move three or four Stories into it (approximately 3–6 points)
 
 #### Screenshot 7 — Sprint 1 with the selected Stories inside it
 
-[Assignment 4](screenshots/ass4/7.jpg)
+![Assignment 4](screenshots/ass4/7.jpg)
 
 ---
 
 #### Screenshot 8 — One Story showing the Sub-tasks created
 
-[Assignment 4](screenshots/ass4/8.jpg)
+![Assignment 4](screenshots/ass4/8.jpg)
 
 ---
 
@@ -132,8 +132,8 @@ Open the Burndown Chart and confirm it exists for Sprint 1. It is acceptable if 
 
 #### Screenshot 9 — Burndown Chart page opened, even if empty
 
-[Assignment 4](screenshots/ass4/9a.jpg)
-[Assignment 4](screenshots/ass4/9b.jpg)
+![Assignment 4](screenshots/ass4/9a.jpg)
+![Assignment 4](screenshots/ass4/9b.jpg)
 ---
 
 # Task 8 — Ship One Small Increment (Build + Deploy + Proof)
@@ -146,19 +146,19 @@ Implement one small UI-only Story from Sprint 1, commit it, deploy it live, and 
 
 #### Screenshot 10 — Jira board showing the Story moved to Done
 
-[Assignment 4](screenshots/ass4/10.jpg)
+![Assignment 4](screenshots/ass4/10.jpg)
 
 ---
 
 #### Screenshot 11 — Git commit output
 
-[Assignment 4](screenshots/ass4/11.jpg)
+![Assignment 4](screenshots/ass4/11.jpg)
 
 ---
 
 #### Screenshot 12 — Live URL in the browser showing the UI change, with the URL visible
 
-[Assignment 4](screenshots/ass4/12.png)
+![Assignment 4](screenshots/ass4/12.png)
 
 ---
 
@@ -172,7 +172,7 @@ Add a retro comment covering what went well, what to improve, one Scrum pillar o
 
 #### Screenshot 13 — Jira retro comment visible
 
-[Assignment 4](screenshots/ass4/13.jpg)
+![Assignment 4](screenshots/ass4/13.jpg)
 
 ---
 
