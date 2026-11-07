@@ -19,7 +19,7 @@ Confirm your Azure CLI is authenticated and can see the VM, network, storage acc
 ### Evidence
 
 #### Screenshot 1 — `az account show` and `az vm list -d -o table` confirming your subscription and running VM (subscription ID partially blurred)
-[Assignment 7](screenshots/ass7/1.png)
+[Assignment 7](screenshots/ass7/1.jpg)
 Workspace created at `~/DMI/azure-audit`, outside the submission repository so that audit reports containing resource detail are never committed by accident. Subscription ID partially blurred as required; tenant IDs and the account email are also covered.
 
 ---

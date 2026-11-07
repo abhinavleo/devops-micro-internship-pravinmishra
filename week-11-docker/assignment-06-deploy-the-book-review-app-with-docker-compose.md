@@ -29,9 +29,7 @@ backend/
 .gitignore
 docker-compose.yml
 ```
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/1.jpg)
 ---
 
 #### Screenshot 2 — Environment and Docker Ignore Files
@@ -46,9 +44,7 @@ backend/.dockerignore
 ```
 
 Ensure that no real passwords, tokens, or secrets are visible.
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/2.jpg)
 ---
 
 # Task 2 — Create or Confirm Application Dockerfiles
@@ -62,17 +58,13 @@ Prepare Dockerfiles for the frontend and backend services and build both service
 #### Screenshot 3 — Frontend Dockerfile
 
 Add a screenshot showing the completed `frontend/Dockerfile`.
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/3.jpg)
 ---
 
 #### Screenshot 4 — Backend Dockerfile
 
 Add a screenshot showing the completed `backend/Dockerfile`.
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/4.jpg)
 ---
 
 #### Screenshot 5 — Docker Compose Build
@@ -82,9 +74,7 @@ Add a screenshot of the terminal showing successful completion of:
 ```bash
 docker compose build
 ```
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/5.jpg)
 ---
 
 # Task 3 — Create the Docker Compose Stack
@@ -104,9 +94,7 @@ Add a screenshot showing the MySQL service in `docker-compose.yml`, including:
 - MySQL health check
 - `mysql_data` volume mount
 - No published MySQL port
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/6.jpg)
 ---
 
 #### Screenshot 7 — Backend Configuration
@@ -117,9 +105,7 @@ Add a screenshot showing the backend service configuration, including:
 - Database host set to `mysql`
 - Browser frontend origin configured for CORS
 - Published backend port
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/7.jpg)
 ---
 
 #### Screenshot 8 — Frontend Configuration
@@ -129,17 +115,13 @@ Add a screenshot showing the frontend service configuration, including:
 - Published frontend port
 - `depends_on` for the backend service
 - Browser-facing `NEXT_PUBLIC_API_URL`
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/8.jpg)
 ---
 
 #### Screenshot 9 — Named Volume Definition
 
 Add a screenshot showing the `mysql_data` volume definition in `docker-compose.yml`.
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/9.jpg)
 ---
 
 # Task 4 — Start and Verify the Stack
@@ -159,9 +141,7 @@ docker compose ps
 ```
 
 The output must show the MySQL, backend, and frontend services running. MySQL must show as healthy.
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/10.jpg)
 ---
 
 #### Screenshot 11 — MySQL and Backend Logs
@@ -173,9 +153,7 @@ docker compose logs mysql backend --tail=50
 ```
 
 The logs must show MySQL readiness and successful backend database connection.
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/11.jpg)
 ---
 
 # Task 5 — Test End-to-End Application Functionality
@@ -191,8 +169,8 @@ Verify that the Book Review App works through the browser.
 Add a browser screenshot showing successful user registration or login.
 
 Add your full name as a clear caption directly below the screenshot.
-
-Add your screenshot here.
+[Assignment 6](screenshots/as6/12.jpg)
+*Abhinav T*
 
 ---
 
@@ -201,8 +179,8 @@ Add your screenshot here.
 Add a browser screenshot showing a created book review visible in the application.
 
 Add your full name as a clear caption directly below the screenshot.
-
-Add your screenshot here.
+[Assignment 6](screenshots/as6/13.jpg)
+*Abhinav T*
 
 ---
 
@@ -212,8 +190,8 @@ Add a browser developer-tools screenshot with:
 
 - The Network tab showing a successful API request
 - The Console drawer showing no CORS error after the API interaction
-
-Add your screenshot here.
+[Assignment 6](screenshots/as6/14.jpg)
+*Abhinav T*
 
 ---
 
@@ -230,8 +208,8 @@ Verify that MySQL data remains after a non-destructive Docker Compose down/up cy
 Add a browser screenshot showing the registered user or created review before the down/up cycle.
 
 Add your full name as a clear caption directly below the screenshot.
-
-Add your screenshot here.
+[Assignment 6](screenshots/as6/15.jpg)
+*Abhinav T*
 
 ---
 
@@ -246,9 +224,7 @@ docker compose ps
 ```
 
 Do not use `docker compose down -v`.
-
-Add your screenshot here.
-
+[Assignment 6](screenshots/as6/16.jpg)
 ---
 
 #### Screenshot 17 — Data After Restart
@@ -256,8 +232,8 @@ Add your screenshot here.
 Add a browser screenshot showing the same registered user or review after the stack restarts.
 
 Add your full name as a clear caption directly below the screenshot.
-
-Add your screenshot here.
+[Assignment 6](screenshots/as6/17.jpg)
+*Abhinav T*
 
 ---
 
@@ -277,13 +253,18 @@ Write a short explanation of 5–8 lines covering:
 - When a full reset is useful
 - Why a full reset must not be used before persistence evidence is captured
 
-Write your explanation here.
+`docker compose down` stops and removes the stack's containers and its default network, but it leaves named volumes such as `mysql_data` in place, along with the built images.
+Keeping `mysql_data` is what preserves the database: MySQL stores its files in that volume, so when `docker compose up -d` creates a new MySQL container it mounts the same volume and finds the users, books and reviews already there.
+That is why my review was still on the book page after the down/up cycle in Screenshots 15 to 17.
+`docker compose down -v` also deletes the named volumes, so the next start runs MySQL's first-time setup on an empty data directory and every registered user and review is gone.
+A full reset is useful when I deliberately want a clean slate, for example to re-test first-run initialisation, to recover from a corrupted or half-initialised database, or when changed database credentials no longer match the existing data.
+It must not be used before the persistence evidence is captured, because it destroys the very data that proves persistence, and there is no way to get it back without a backup.
 
 ---
 
 # Final Public Frontend URL
 
-**Frontend URL:** `http://<VM_PUBLIC_IP>:<FRONTEND_PORT>`
+**Frontend URL:** http://13.40.214.81:3000
 
 Replace the placeholder with your working application URL.
 
@@ -291,7 +272,7 @@ Replace the placeholder with your working application URL.
 
 # GitHub Repository URL
 
-**Your Fork or Repository URL:** `Add your GitHub repository URL here`
+**Your Fork or Repository URL:** https://github.com/abhinavleo/book-review-app
 
 ---
 
@@ -303,37 +284,37 @@ Create a LinkedIn post about the Book Review App deployment and what you learned
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** Not published, by choice.
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of your published LinkedIn post here.
+Not published, by choice.
 
 ---
 
 # Submission Checklist
 
-- [ ] Book Review App repository forked and used
-- [ ] `.env` excluded from Git tracking
-- [ ] `.env.example` contains only safe placeholder values
-- [ ] Frontend and backend Dockerfiles created or confirmed
-- [ ] MySQL health check configured
-- [ ] Backend waits for healthy MySQL
-- [ ] Backend uses `mysql` as the database hostname
-- [ ] Frontend API URL uses the VM public IP and backend port
-- [ ] Backend CORS origin matches the frontend origin
-- [ ] MySQL port 3306 is not publicly exposed
-- [ ] Registration and login work
-- [ ] Book review creation works
-- [ ] Data persists after a non-destructive down/up cycle
-- [ ] Screenshots 1–17 included
-- [ ] Teardown explanation completed
-- [ ] Public frontend URL included
-- [ ] GitHub repository URL included
-- [ ] LinkedIn post URL and screenshot included
-- [ ] Full name visible in required terminal screenshots
-- [ ] Browser screenshots include a full-name caption
-- [ ] No sensitive information exposed
+- [x] Book Review App repository forked and used
+- [x] `.env` excluded from Git tracking
+- [x] `.env.example` contains only safe placeholder values
+- [x] Frontend and backend Dockerfiles created or confirmed
+- [x] MySQL health check configured
+- [x] Backend waits for healthy MySQL
+- [x] Backend uses `mysql` as the database hostname
+- [x] Frontend API URL uses the VM public IP and backend port
+- [x] Backend CORS origin matches the frontend origin
+- [x] MySQL port 3306 is not publicly exposed
+- [x] Registration and login work
+- [x] Book review creation works
+- [x] Data persists after a non-destructive down/up cycle
+- [x] Screenshots 1–17 included
+- [x] Teardown explanation completed
+- [x] Public frontend URL included
+- [x] GitHub repository URL included
+- [ ] LinkedIn post URL and screenshot included (not published, by choice)
+- [x] Full name visible in required terminal screenshots
+- [x] Browser screenshots include a full-name caption
+- [x] No sensitive information exposed
 
 ---
 

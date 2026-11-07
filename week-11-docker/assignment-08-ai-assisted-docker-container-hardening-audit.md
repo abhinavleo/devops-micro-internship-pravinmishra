@@ -12,7 +12,7 @@ In this assignment, you will build a read-only Bash script that audits a running
 
 # Target Container
 
-**Target Container Name:** `Add the exact container name here`
+**Target Container Name:** `epicbook-frontend-1`
 
 ---
 
@@ -32,9 +32,7 @@ Add a terminal screenshot showing your full name and both supplied files:
 docker-audit.sh
 SKILL.md
 ```
-
-Add your screenshot here.
-
+[Assignment 8](screenshots/as8/1.jpg)
 ---
 
 # Task 2 — Add the Docker Audit Skill to Claude Code
@@ -48,8 +46,8 @@ Add the supplied `docker-audit` skill to Claude Code and confirm that it is avai
 #### Screenshot 2 — Docker Audit Skill Available in Claude Code
 
 Add a screenshot of Claude Code showing `docker-audit` in the available skill list.
-
-Add your screenshot here.
+[Assignment 8](screenshots/as8/2.jpg)
+*Abhinav T*
 
 ---
 
@@ -69,9 +67,7 @@ Add a terminal screenshot showing:
 - Successful `bash -n docker-audit.sh` validation
 - Your full name
 - The usage message displayed when the script runs without a container name
-
-Add your screenshot here.
-
+[Assignment 8](screenshots/as8/3.jpg)
 ---
 
 # Task 4 — Run the Initial Docker Security Audit
@@ -89,17 +85,13 @@ Add a terminal screenshot showing:
 - Your full name
 - `docker ps`
 - The audit command using the selected target container name
-
-Add your screenshot here.
-
+[Assignment 8](screenshots/as8/4.jpg)
 ---
 
 #### Screenshot 5 — Initial Audit Results
 
 Add a terminal screenshot showing the initial Docker audit results.
-
-Add your screenshot here.
-
+[Assignment 8](screenshots/as8/5.jpg)
 ---
 
 # Task 5 — Use AI Assistance to Understand the Findings
@@ -118,8 +110,8 @@ Add a Claude Code screenshot showing:
 - Security risk
 - Recommended manual fix
 - Verification method
-
-Add your screenshot here.
+[Assignment 8](screenshots/as8/6.jpg)
+*Abhinav T*
 
 ---
 
@@ -134,17 +126,13 @@ Manually fix one WARN or FAIL finding from the initial audit.
 #### Screenshot 7 — Hardening Configuration Change
 
 Add a screenshot of the updated Dockerfile or `docker-compose.yml` showing the selected hardening fix.
-
-Add your screenshot here.
-
+[Assignment 8](screenshots/as8/7.jpg)
 ---
 
 #### Screenshot 8 — Updated Service Running
 
 Add a terminal screenshot showing your full name and the rebuilt or recreated service/container running successfully.
-
-Add your screenshot here.
-
+[Assignment 8](screenshots/as8/8.jpg)
 ---
 
 # Task 7 — Re-Run the Audit and Compare Results
@@ -162,9 +150,7 @@ Add a terminal screenshot showing:
 - Your full name
 - The updated running container
 - The final audit report
-
-Add your screenshot here.
-
+[Assignment 9](screenshots/as8/1.jpg)
 ---
 
 ### Before-and-After Comparison
@@ -176,7 +162,10 @@ Write a short comparison covering:
 - Final audit result
 - Security benefit of the improvement
 
-Write your comparison here.
+- **Initial audit finding:** the first audit of `epicbook-frontend-1` (image `epicbook-frontend:1.0.0`, built on `nginx:stable-alpine`) returned five PASS results and one **WARN: Container user**, because no non-root user was configured and the Nginx master process ran as root.
+- **Change applied:** I switched the frontend's base image to `nginxinc/nginx-unprivileged:1.30-alpine`, which NGINX maintains for running as a non-root user, and added `USER 101` and `EXPOSE 8080` to `frontend/Dockerfile`. Because the unprivileged image listens on 8080, I also updated the frontend health check in `docker-compose.yml` to port 8080, bumped the image tag to `epicbook-frontend:1.1.0`, and pointed the reverse proxy at `frontend:8080`. I made the edits myself, then rebuilt and recreated only the frontend and restarted the proxy; the backend and database kept running.
+- **Final audit result:** all six checks PASS, and the user check now reports `The container is configured to run as user: 101`. `docker compose exec frontend id` shows `uid=101(nginx)`, the frontend is healthy, and static assets still return 200 through the reverse proxy.
+- **Security benefit:** if an attacker found a flaw in Nginx or in how it serves files, they would now land in the container as an unprivileged user instead of root. They could not install packages, change the served files or system configuration, or use root privileges as a starting point to attack the host, so the damage from a compromise is much smaller. It also removes a WARN that would otherwise recur in every future audit of this service.
 
 ---
 
@@ -188,13 +177,13 @@ Create a LinkedIn post about the container security checks you performed, one ha
 
 ### Evidence
 
-**LinkedIn Post URL:** `Add your LinkedIn post URL here`
+**LinkedIn Post URL:** Not published, by choice.
 
 #### LinkedIn Post Screenshot
 
-Add a screenshot of the published LinkedIn post, including the final audit result.
+Not published, by choice.
 
-Add your screenshot here.
+Not published, by choice.
 
 ---
 
@@ -210,19 +199,19 @@ Add your screenshot here.
 
 # Completion Checklist
 
-- [ ] Audit workspace created and supplied files verified
-- [ ] `docker-audit` skill added to Claude Code
-- [ ] Audit script validated successfully
-- [ ] Running target container identified
-- [ ] Initial Docker audit completed
-- [ ] Claude Code explanation of findings captured
-- [ ] One hardening fix applied manually
-- [ ] Affected service or container rebuilt and recreated
-- [ ] Final Docker audit completed
-- [ ] Before-and-after comparison completed
-- [ ] Screenshots 1–9 included
-- [ ] LinkedIn post URL and screenshot included
-- [ ] No sensitive information exposed
+- [x] Audit workspace created and supplied files verified
+- [x] `docker-audit` skill added to Claude Code
+- [x] Audit script validated successfully
+- [x] Running target container identified
+- [x] Initial Docker audit completed
+- [x] Claude Code explanation of findings captured
+- [x] One hardening fix applied manually
+- [x] Affected service or container rebuilt and recreated
+- [x] Final Docker audit completed
+- [x] Before-and-after comparison completed
+- [x] Screenshots 1–9 included
+- [ ] LinkedIn post URL and screenshot included (not published, by choice)
+- [x] No sensitive information exposed
 
 ---
 
