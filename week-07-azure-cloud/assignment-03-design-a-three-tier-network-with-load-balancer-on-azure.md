@@ -19,7 +19,7 @@ Create `eb-demo-vnet` (10.0.0.0/16) with `web-subnet` (10.0.1.0/24), `app-subnet
 ### Evidence
 
 #### Screenshot 1 — Subnet configuration screen showing the three subnets and Bastion subnet (if enabled)
-[Assignment 3](screenshots/ass3/1.jpg)
+![Assignment 3](screenshots/ass3/1.jpg)
 The three subnets are deliberately sized differently: web-subnet at 10.0.1.0/24 gives 251 usable addresses for the tier that scales out furthest, app-subnet at 10.0.2.0/25 gives 123, and db-subnet at 10.0.3.0/26 gives 59 for the tier that needs the fewest hosts. Azure reserves five addresses in every subnet, which is why the usable counts fall short of the raw block sizes.
 
 Azure Bastion was not enabled. The VM is reached over SSH using its own public IP instead, so no AzureBastionSubnet appears in this configuration.
@@ -45,7 +45,7 @@ Create Standard Public Load Balancer `web-public-elb` with frontend IP `web-elb-
 ### Evidence
 
 #### Screenshot 2 — Load Balancer frontend IP configuration
-[Assignment 3](screenshots/ass3/2.jpg)
+![Assignment 3](screenshots/ass3/2.jpg)
 The frontend configuration web-elb-ip is backed by a dedicated Standard SKU public IP, web-elb-public-ip, on 4.250.98.203. This is a separate address from the VM's own public IP, which is what allows Task 4 to prove traffic arrives through the load balancer rather than directly at the VM. The "Used by" list confirms web-http-rule is bound to this frontend.
 
 ---
@@ -59,7 +59,7 @@ Confirm the NGINX default page is reachable through the Load Balancer's public I
 ### Evidence
 
 #### Screenshot 3 — Browser showing the NGINX welcome page through the Load Balancer Public IP
-[Assignment 3](screenshots/ass3/3.jpg)
+![Assignment 3](screenshots/ass3/3.jpg)
 Verified from the command line as well:
 
     $ az network lb probe list --resource-group vnet-demo-rg --lb-name web-public-elb

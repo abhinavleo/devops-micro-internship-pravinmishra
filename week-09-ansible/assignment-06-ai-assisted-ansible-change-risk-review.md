@@ -4,7 +4,7 @@ Part of the DevOps Micro Internship (DMI) with Agentic AI
 
 **Full Name:** Abhinav T  
 **Target:** EpicBook on AWS (eu-west-2), deployed in Assignment 05  
-**GitHub folder:** [https://github.com/abhinavleo/devops-micro-internship-pravinmishra/tree/main/week-09-ansible/ansible-onboarding/epicbook-prod/risk-review](https://github.com/gbadedata/devops-micro-internship-pravinmishra/tree/main/week-09-ansible/ansible-onboarding/epicbook-prod/risk-review)  
+**GitHub folder:** [https://github.com/abhinavleo/devops-micro-internship-pravinmishra/tree/main/week-09-ansible/ansible-onboarding/epicbook-prod/risk-review](https://github.com/abhinavleo/devops-micro-internship-pravinmishra/tree/main/week-09-ansible/ansible-onboarding/epicbook-prod/risk-review)  
 **Change summary:** [`change-summary.md`](./ansible-onboarding/epicbook-prod/risk-review/change-summary.md)
 
 | Stage | Report | Overall Status | Exit code |
@@ -33,18 +33,18 @@ Confirm that your previous EpicBook Ansible project is working before creating t
 
 #### Screenshot 1 — Output of `ansible web -i inventory.ini -m ping`
 
-[Assignment 6](screenshots/as6/1.jpg)
+![Assignment 6](screenshots/as6/1.jpg)
 
 ---
 
 #### Screenshot 2 — Output of `ansible-playbook -i inventory.ini site.yml --syntax-check`
 
-[Assignment 6](screenshots/as6/2.jpg)
+![Assignment 6](screenshots/as6/2.jpg)
 
 ---
 
 #### Screenshot 3 — Output of `pwd` and `find . -maxdepth 4 -type d | sort`
-[Assignment 6](screenshots/as6/3.jpg)
+![Assignment 6](screenshots/as6/3.jpg)
 ---
 
 ### Notes
@@ -72,7 +72,7 @@ Create a `CLAUDE.md` file that tells Claude Code how this project must behave.
 ### Evidence
 
 #### Screenshot 4 — `CLAUDE.md` open in VS Code or terminal showing the safety rules
-[Assignment 6](screenshots/as6/4.jpg)
+![Assignment 6](screenshots/as6/4.jpg)
 ---
 
 ### Notes
@@ -106,7 +106,7 @@ Use Claude Code to produce a read-only plan before writing the Bash script.
 ### Evidence
 
 #### Screenshot 5 — Claude Code showing the four-category risk-classification plan
-[Assignment 6](screenshots/as6/5.jpg)
+![Assignment 6](screenshots/as6/5.jpg)
 ---
 
 ### Notes
@@ -140,19 +140,19 @@ Create a Bash script that runs an Ansible dry run and classifies risky changes.
 ### Evidence
 
 #### Screenshot 6 — Top section of `ansible-check-review.sh` showing `full_name`, `playbook_path`, `inventory_path`, and the `checks` array
-[Assignment 6](screenshots/as6/6.jpg)
+![Assignment 6](screenshots/as6/6.jpg)
 ---
 
 #### Screenshot 7 — Middle section showing `extract_changed_tasks` and `check_tasks_matching_pattern`
-[Assignment 6](screenshots/as6/7.jpg)
+![Assignment 6](screenshots/as6/7.jpg)
 ---
 
 #### Screenshot 8 — Bottom section showing the loop, summary, and exit behavior
-[Assignment 6](screenshots/as6/8.jpg)
+![Assignment 6](screenshots/as6/8.jpg)
 ---
 
 #### Screenshot 9 — Output of `bash -n ansible-check-review.sh` and `ls -l ansible-check-review.sh`
-[Assignment 6](screenshots/as6/9.jpg)
+![Assignment 6](screenshots/as6/9.jpg)
 ---
 
 ### Notes
@@ -192,11 +192,11 @@ Run the script against your current EpicBook playbook and confirm the baseline r
 ### Evidence
 
 #### Screenshot 10 — Output of `./ansible-check-review.sh`
-[Assignment 6](screenshots/as6/10.jpg)
+![Assignment 6](screenshots/as6/10.jpg)
 ---
 
 #### Screenshot 11 — Output of `echo "Captured Exit Code: $script_exit_code"` and `cat reports/ansible-risk-report.txt`
-[Assignment 6](screenshots/as6/11.jpg)
+![Assignment 6](screenshots/as6/11.jpg)
 ---
 
 ### Notes
@@ -236,11 +236,11 @@ Turn the Bash script into a reusable Claude Code skill called `/ansible-risk-rev
 ### Evidence
 
 #### Screenshot 12 — `SKILL.md` showing the frontmatter, allowed tools, and safety rules
-[Assignment 6](screenshots/as6/12.jpg)
+![Assignment 6](screenshots/as6/12.jpg)
 ---
 
 #### Screenshot 13 — Claude Code output after running `/ansible-risk-review`
-[Assignment 6](screenshots/as6/13.jpg)
+![Assignment 6](screenshots/as6/13.jpg)
 ---
 
 ### Notes
@@ -286,19 +286,19 @@ Add a small controlled risky change in your lab playbook and confirm the script 
 ### Evidence
 
 #### Screenshot 14 — The added risky task inside the role file
-[Assignment 6](screenshots/as6/14.jpg)
+![Assignment 6](screenshots/as6/14.jpg)
 ---
 
 #### Screenshot 15 — Output of `./ansible-check-review.sh`
-[Assignment 6](screenshots/as6/15.jpg)
+![Assignment 6](screenshots/as6/15.jpg)
 ---
 
 #### Screenshot 16 — Claude Code `/ansible-risk-review` output showing the risky finding
-[Assignment 6](screenshots/as6/16.jpg)
+![Assignment 6](screenshots/as6/16.jpg)
 ---
 
 #### Screenshot 17 — Output of `cat reports/risky-change-report.txt`
-[Assignment 6](screenshots/as6/17.jpg)
+![Assignment 6](screenshots/as6/17.jpg)
 ---
 
 ### Notes
@@ -344,23 +344,23 @@ Review the risky-change report, apply the playbook manually as the human operato
 ### Evidence
 
 #### Screenshot 18 — Output of the real playbook run showing the final recap with `failed=0`
-[Assignment 6](screenshots/as6/18.jpg)
+![Assignment 6](screenshots/as6/18.jpg)
 ---
 
 #### Screenshot 19 — Output of `ansible web -i inventory.ini -m ping`
-[Assignment 6](screenshots/as6/19.jpg)
+![Assignment 6](screenshots/as6/19.jpg)
 ---
 
 #### Screenshot 20 — Second `/ansible-risk-review` output after applying the change
-[Assignment 6](screenshots/as6/20.jpg)
+![Assignment 6](screenshots/as6/20.jpg)
 ---
 
 #### Screenshot 21 — Output of `ls -lah reports`
-[Assignment 6](screenshots/as6/21.jpg)
+![Assignment 6](screenshots/as6/21.jpg)
 ---
 
 #### Screenshot 22 — `change-summary.md` showing all required sections and your Full Name
-[Assignment 6](screenshots/as6/22.jpg)
+![Assignment 6](screenshots/as6/22.jpg)
 ---
 
 ### Notes
@@ -375,7 +375,7 @@ From `epicbook-prod/ansible`: `ansible-playbook -i inventory.ini site.yml`, run 
 
 **2. Who made the final decision to apply the playbook?**
 
-I did, Oluwagbade Odimayo, after reading the risky-change report and Claude Code's analysis. Before applying I opened a second SSH session as a lifeline, because existing sessions survive an SSH restart.
+I did, Abhinav T, after reading the risky-change report and Claude Code's analysis. Before applying I opened a second SSH session as a lifeline, because existing sessions survive an SSH restart.
 
 ---
 

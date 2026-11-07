@@ -19,7 +19,7 @@ Create an architecture diagram showing the custom VPC (10.0.0.0/16), the six sub
 ### Evidence
 
 #### Diagram image or link
-[Assignment 6](screenshots/ass6/8.jpg)
+![Assignment 6](screenshots/ass6/8.jpg)
 
 ---
 
@@ -78,29 +78,29 @@ Capture visual proof of every tier and load balancer.
 ### Evidence
 
 #### Web EC2
-[Assignment 6](screenshots/ass6/1.jpg)
+![Assignment 6](screenshots/ass6/1.jpg)
 ---
 
 #### App EC2
-[Assignment 6](screenshots/ass6/2.jpg)
+![Assignment 6](screenshots/ass6/2.jpg)
 ---
 
 #### Public ALB
-[Assignment 6](screenshots/ass6/3.jpg)
+![Assignment 6](screenshots/ass6/3.jpg)
 ---
 
 #### Internal ALB
-[Assignment 6](screenshots/ass6/4.jpg)
+![Assignment 6](screenshots/ass6/4.jpg)
 ---
 
 #### RDS + Replica
-[Assignment 6](screenshots/ass6/5.jpg)
+![Assignment 6](screenshots/ass6/5.jpg)
 ---
 
 #### App UI proof
-[Assignment 6](screenshots/ass6/6.jpg)
+![Assignment 6](screenshots/ass6/6.jpg)
 #### Additional evidence: browser network trace confirming tier isolation
-[Assignment 6](screenshots/ass6/7.jpg)
+![Assignment 6](screenshots/ass6/7.jpg)
 The request URL is the public load balancer, the remote address is a public AWS address, and the response carries an Nginx server header. The browser never contacts the internal load balancer, the application server, or the database, because none of them are addressable from outside the VPC.
 
 ---

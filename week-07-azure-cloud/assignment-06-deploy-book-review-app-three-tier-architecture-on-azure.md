@@ -19,13 +19,13 @@ Create an architecture diagram and implementation plan identifying the presentat
 ### Evidence
 
 #### Screenshot 1 — Architecture diagram showing the public entry point, three tiers, network boundaries, and traffic flow
-[Assignment 6](screenshots/ass6/1.jpg)
+![Assignment 6](screenshots/ass6/1.jpg)
 Traffic enters only at the public load balancer and passes through each tier in turn. The web tier is the only tier the load balancer can reach, the application tier accepts connections only from the web subnet, and the database accepts connections only from the application subnet.
 
 ---
 
 #### Screenshot 2 — Written architecture assumptions and selected Azure services
-[Assignment 6](screenshots/ass6/2.jpg)
+![Assignment 6](screenshots/ass6/2.jpg)
 The main constraint shaping this design: Azure Database for MySQL Flexible Server is unavailable in UK South for this subscription, and private access requires the server and the VNet to share a region, so the entire deployment runs in UK West.
 
 ---
@@ -39,17 +39,17 @@ Create a dedicated Resource Group and VNet with separate subnets for the web, ap
 ### Evidence
 
 #### Screenshot 3 — Resource Group overview showing the assignment resources
-[Assignment 6](screenshots/ass6/3.jpg)
+![Assignment 6](screenshots/ass6/3.jpg)
 ---
 
 #### Screenshot 4 — VNet overview showing the address space and all required subnets
-[Assignment 6](screenshots/ass6/4.jpg)
+![Assignment 6](screenshots/ass6/4.jpg)
 10.10.0.0/16 divided into web 10.10.1.0/24, app 10.10.2.0/24 and db 10.10.3.0/24. The database subnet is delegated to `Microsoft.DBforMySQL/flexibleServers`, which private access requires and which prevents anything else being deployed into it.
 
 ---
 
 #### Screenshot 5 — Route-table or Private DNS evidence where applicable
-[Assignment 6](screenshots/ass6/5.jpg)
+![Assignment 6](screenshots/ass6/5.jpg)
 The zone resolves the server's public hostname to its private address inside the VNet, which is how the application tier reaches a database that has no public endpoint. No route tables were needed: the NAT gateway is associated with the web and app subnets directly, and Azure route tables do not accept a NAT gateway as a next hop.
 
 ---
@@ -63,8 +63,8 @@ Apply least-privilege NSG rules so traffic flows Internet → public entry point
 ### Evidence
 
 #### Screenshot 6 — NSG rules proving least-privilege access between the tiers
-[Assignment 6](screenshots/ass6/6.jpg)
-[Assignment 6](screenshots/ass6/6b.jpg)
+![Assignment 6](screenshots/ass6/6.jpg)
+![Assignment 6](screenshots/ass6/6b.jpg)
 Each tier admits exactly one thing and denies the rest. The deny rules matter as much as the allows: Azure's default `AllowVnetInBound` rule at priority 65000 already permits all traffic within the VNet, so an allow rule on its own restricts nothing. The explicit denies at priority 300 and 200 are what actually confine 3001 to the web subnet and 3306 to the app subnet.
 
 The rule at priority 100 in app-nsg admits the `AzureLoadBalancer` service tag on 3001. Without it the internal load balancer's health probe would be caught by the deny, and every backend would report unhealthy while the application itself was running perfectly.
@@ -72,7 +72,7 @@ The rule at priority 100 in app-nsg admits the `AzureLoadBalancer` service tag o
 ---
 
 #### Screenshot 7 — Key Vault or approved secret-management configuration (without displaying secret values)
-[Assignment 6](screenshots/ass6/7.jpg)
+![Assignment 6](screenshots/ass6/7.jpg)
 
 The application tier VM has a system-assigned managed identity with `Key Vault Secrets User` granted on two individual secrets rather than on the vault. It signs in with `az login --identity`, holding no stored credential of any kind, and fetches `db-app-password` and `jwt-secret` at deployment time.
 
@@ -89,13 +89,13 @@ Deploy the Book Review App presentation layer on the approved web-tier compute s
 ### Evidence
 
 #### Screenshot 8 — Web-tier compute overview showing subnet and availability configuration
-[Assignment 6](screenshots/ass6/8.jpg)
+![Assignment 6](screenshots/ass6/8.jpg)
 Both web VMs sit in `bookreview-web-avset` with two fault domains and two update domains, so a rack failure or a host update cannot take both offline at once. Neither has a public IP.
 
 ---
 
 #### Screenshot 9 — Terminal or service output proving the presentation layer is running
-[Assignment 6](screenshots/ass6/9.jpg)
+![Assignment 6](screenshots/ass6/9.jpg)
 Nginx listens on 80 and splits traffic: `/` to the local Next.js process on 3000, and `/api/` to the internal load balancer. The web tier therefore never addresses an application VM directly.
 
 ---
@@ -109,17 +109,17 @@ Deploy the Book Review App backend privately in the application subnet, configur
 ### Evidence
 
 #### Screenshot 10 — Application-tier compute overview showing private subnet placement
-[Assignment 6](screenshots/ass6/10.jpg)
+![Assignment 6](screenshots/ass6/10.jpg)
 ---
 
 #### Screenshot 11 — Backend process, service, or listening-port evidence
-[Assignment 6](screenshots/ass6/11.jpg)
+![Assignment 6](screenshots/ass6/11.jpg)
 The service loads its configuration through systemd's `EnvironmentFile` from `/etc/bookreview.env`, which is root-owned at mode 600. The screenshot shows the file being referenced but none of its values.
 
 ---
 
 #### Screenshot 12 — Internal health-check or API response (without exposing secrets)
-[Assignment 6](screenshots/ass6/12.jpg)
+![Assignment 6](screenshots/ass6/12.jpg)
 The startup log line `Database 'book_review_db' connected successfully with SSL!` is the useful one: it only appears after Sequelize authenticates, so it proves the Key Vault secret, the scoped database user, the delegated subnet, the NSG rules and TLS are all working together.
 
 ---
@@ -133,17 +133,17 @@ Create a private Azure managed database (public access disabled), with availabil
 ### Evidence
 
 #### Screenshot 13 — Database overview showing private connectivity and public access disabled
-[Assignment 6](screenshots/ass6/13.jpg)
+![Assignment 6](screenshots/ass6/13.jpg)
 ---
 
 #### Screenshot 14 — Availability, backup, and retention configuration
-[Assignment 6](screenshots/ass6/14.jpg)
+![Assignment 6](screenshots/ass6/14.jpg)
 Backup retention was raised from the default 7 days to 14. High availability is disabled and geo-redundancy is off, both deliberately: zone redundancy doubles the database cost, which is not justified for an assessment environment. That is recorded as an accepted risk with the extended retention window as the recovery mechanism rather than left as an unexamined default.
 
 ---
 
 #### Screenshot 15 — Successful schema or connectivity verification (without exposing credentials)
-[Assignment 6](screenshots/ass6/15.jpg)
+![Assignment 6](screenshots/ass6/15.jpg)
 The schema was created by the application on first start rather than imported by hand, and the connection above uses `bookreview_app`, not the admin account. Its password comes from Key Vault, so no credential appears on screen.
 
 ---
@@ -157,7 +157,7 @@ Configure the approved public entry service with health probes and backend pools
 ### Evidence
 
 #### Screenshot 16 — Public entry service showing listener, frontend endpoint, and healthy web targets
-[Assignment 6](screenshots/ass6/16.jpg)
+![Assignment 6](screenshots/ass6/16.jpg)
 Frontend `web-frontend` on 51.141.125.27 carrying three rules: the HTTP load-balancing rule on 80, and two inbound NAT rules on 2201 and 2202 that provide SSH to each web VM. Both backend members show Running.
 
 Management access is worth noting here. No VM has a public IP, so administrative SSH arrives through those NAT rules, restricted by NSG to a single address, and the application tier is reached by jumping through a web VM. Azure Bastion would be the managed equivalent but costs over £100 per month.
@@ -165,15 +165,15 @@ Management access is worth noting here. No VM has a public IP, so administrative
 ---
 
 #### Screenshot 17 — Internal application-tier load-balancing or routing configuration where applicable
-[Assignment 6](screenshots/ass6/17.jpg)
+![Assignment 6](screenshots/ass6/17.jpg)
 The application tier is addressed only as 10.10.2.50, never by VM address, so a second application VM could join the pool without touching the web tier's configuration.
 
 ---
 
 #### Screenshot 18 — Azure Monitor, diagnostic settings, logs, metrics, or alert evidence
-[Assignment 6](screenshots/ass6/18a.jpg)
-[Assignment 6](screenshots/ass6/18b.jpg)
-[Assignment 6](screenshots/ass6/18c.jpg)
+![Assignment 6](screenshots/ass6/18a.jpg)
+![Assignment 6](screenshots/ass6/18b.jpg)
+![Assignment 6](screenshots/ass6/18c.jpg)
 The middle screenshot is the one that matters. `web-backend-unhealthy` did not merely exist, it fired when a web VM was stopped during the availability test and returned to Resolved when the VM came back. The availability test and the monitoring validated each other.
 
 ---
@@ -187,25 +187,25 @@ Confirm the Book Review App works end to end through the public endpoint, with a
 ### Evidence
 
 #### Screenshot 19 — Browser showing the Book Review App through the public endpoint
-[Assignment 6](screenshots/ass6/19.jpg)
+![Assignment 6](screenshots/ass6/19.jpg)
 ---
 
 #### Screenshot 20 — Proof of successful database-backed read and write operations
-[Assignment 6](screenshots/ass6/20.jpg)
-[Assignment 6](screenshots/ass6/20b.jpg)
+![Assignment 6](screenshots/ass6/20.jpg)
+![Assignment 6](screenshots/ass6/20b.jpg)
 Registering an account and submitting a review exercises the write path; the book list is the read. The second screenshot confirms where the data went, queried through the application's own restricted database user. A browser screenshot on its own shows the page changed, not that it reached the database.
 
 ---
 
 #### Screenshot 21 — Evidence that private tiers are not publicly accessible
-[Assignment 6](screenshots/ass6/21.jpg)
+![Assignment 6](screenshots/ass6/21.jpg)
 Four independent pieces of evidence in one view. No network interface carries a public IP. Only two public addresses exist in the resource group, one on the load balancer frontend and one on the NAT gateway for outbound traffic, neither attached to a VM. Requests to the application tier fail from outside the VNet, both to its private address and to port 3001 on the public endpoint, because no load-balancing rule forwards that port. And the database reports `publicNetworkAccess: Disabled`.
 
 ---
 
 #### Screenshot 22 — Availability-test and healthy-target evidence
-[Assignment 6](screenshots/ass6/22.jpg)
-[Assignment 6](screenshots/ass6/22c.jpg)
+![Assignment 6](screenshots/ass6/22.jpg)
+![Assignment 6](screenshots/ass6/22c.jpg)
 With `bookreview-web-vm1` deallocated, ten consecutive requests through the load balancer returned 200 and the API continued to answer, served entirely by the remaining VM. On restart, both `bookreview-web` and `nginx` came back without intervention because the systemd units are enabled, and the load balancer returned the VM to its pool once the health probe passed.
 
 ---

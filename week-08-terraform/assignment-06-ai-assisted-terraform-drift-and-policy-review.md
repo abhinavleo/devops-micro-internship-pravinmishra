@@ -39,13 +39,13 @@ Confirm that your Terraform configuration and deployed infrastructure are curren
 ### Screenshot 1 — Clean Terraform Plan
 
 Add a screenshot of `terraform plan` showing no pending changes.
-[Assignment 6](screenshots/as6/1.jpg)
+![Assignment 6](screenshots/as6/1.jpg)
 ---
 
 ### Screenshot 2 — Assignment Workspace
 
 Add a screenshot of the folder structure showing `AI Assignment/`, `reports/`, and the Terraform project.
-[Assignment 6](screenshots/as6/2.jpg)
+![Assignment 6](screenshots/as6/2.jpg)
 ## Questions
 
 ### 1. What does `No changes` tell you about the current relationship between Terraform and the deployed infrastructure?
@@ -69,7 +69,7 @@ Provide Claude Code with clear project context, evidence requirements, and safet
 ### Screenshot 3 — Project Context and Safety Rules
 
 Add a screenshot of `CLAUDE.md` open in VS Code showing the Project Overview, Review Workflow, Safety Rules, and Output Rules.
-[Assignment 6](screenshots/as6/3.jpg)
+![Assignment 6](screenshots/as6/3.jpg)
 ## Questions
 
 ### 1. Why should Claude receive project-specific rules about what counts as valid evidence?
@@ -97,19 +97,19 @@ Create a Bash script that gathers Terraform plan evidence and checks it for dest
 ### Screenshot 4 — Script Variables and Checks Array
 
 Add a screenshot of the top section of `tf-drift-check.sh` showing the variables and `checks` array.
-[Assignment 6](screenshots/as6/4.jpg)
+![Assignment 6](screenshots/as6/4.jpg)
 ---
 
 ### Screenshot 5 — Destructive-Action and Open-Ingress Checks
 
 Add a screenshot showing `check_destructive_actions` and `check_open_ingress`, including the `jq` checks.
-[Assignment 6](screenshots/as6/5.jpg)
+![Assignment 6](screenshots/as6/5.jpg)
 ---
 
 ### Screenshot 6 — Script Validation and Permissions
 
 Add a screenshot showing successful `bash -n` and `ls -l` output.
-[Assignment 6](screenshots/as6/6.jpg)
+![Assignment 6](screenshots/as6/6.jpg)
 ## Questions
 
 ### 1. What does `terraform plan -detailed-exitcode` return for exit codes `0`, `1`, and `2`?
@@ -145,13 +145,13 @@ Verify that the review workflow reports a healthy result against your clean Terr
 ### Screenshot 7 — Healthy Baseline Report
 
 Add a screenshot of the drift script output showing your full name and a `HEALTHY` result.
-[Assignment 6](screenshots/as6/7.jpg)
+![Assignment 6](screenshots/as6/7.jpg)
 ---
 
 ### Screenshot 8 — Baseline Script Exit Code
 
 Add a screenshot showing the captured script exit code `0`.
-[Assignment 6](screenshots/as6/8.jpg)
+![Assignment 6](screenshots/as6/8.jpg)
 ## Questions
 
 ### 1. What is the Overall Status of your baseline?
@@ -179,13 +179,13 @@ Turn the Bash evidence-gathering workflow into a reusable Agentic AI review proc
 ### Screenshot 9 — `/tf-drift-review` Skill Configuration
 
 Add a screenshot of `SKILL.md` showing the frontmatter, allowed tools, and safety rules.
-[Assignment 6](screenshots/as6/9.jpg)
+![Assignment 6](screenshots/as6/9.jpg)
 ---
 
 ### Screenshot 10 — Clean Agentic AI Review
 
 Add a screenshot of `/tf-drift-review` showing the clean `HEALTHY` result.
-[Assignment 6](screenshots/as6/10.jpg)
+![Assignment 6](screenshots/as6/10.jpg)
 ## Questions
 
 ### 1. Why does this Skill have `Bash`, `Read`, and `Grep`, but not `Write`?
@@ -221,19 +221,19 @@ Create a safe, intentional difference and confirm that Terraform and Claude dete
 ### Screenshot 11 — Controlled Difference
 
 Add a screenshot of the controlled change you introduced, with sensitive details hidden.
-[Assignment 6](screenshots/as6/11.jpg)
+![Assignment 6](screenshots/as6/11.jpg)
 ---
 
 ### Screenshot 12 — Detected Difference and Risk Assessment
 
 Add a screenshot of `/tf-drift-review` showing the detected difference and risk assessment.
-[Assignment 6](screenshots/as6/12.jpg)
+![Assignment 6](screenshots/as6/12.jpg)
 ---
 
 ### Screenshot 13 — Detected Drift Report
 
 Add a screenshot of `drift-detected-report.txt` showing your full name and the `WARN` or `FAIL` result.
-[Assignment 6](screenshots/as6/13.jpg)
+![Assignment 6](screenshots/as6/13.jpg)
 ## Questions
 
 ### 1. What change did you introduce?
@@ -277,13 +277,13 @@ Overall Status: FAIL
 ### Screenshot 14 — `PreToolUse` Safety Hook
 
 Add a screenshot of `.claude/settings.json` showing the `PreToolUse` safety hook.
-[Assignment 6](screenshots/as6/14.jpg)
+![Assignment 6](screenshots/as6/14.jpg)
 ---
 
 ### Screenshot 15 — Blocked Apply Attempt
 
 Add a screenshot of Claude Code showing the blocked `terraform apply` attempt.
-[Assignment 6](screenshots/as6/15.jpg)
+![Assignment 6](screenshots/as6/15.jpg)
 ## Questions
 
 ### 1. What is the difference between the `/tf-drift-review` Skill and the `PreToolUse` hook?
@@ -319,13 +319,13 @@ Resolve the detected difference intentionally, verify the infrastructure returns
 ### Screenshot 16 — Human-Reviewed Resolution
 
 Add a screenshot of the human-reviewed resolution or `terraform apply` output where applicable.
-[Assignment 6](screenshots/as6/16.jpg)
+![Assignment 6](screenshots/as6/16.jpg)
 ---
 
 ### Screenshot 17 — Final Healthy Review
 
 Add a screenshot of the final `/tf-drift-review` showing `HEALTHY`.
-[Assignment 6](screenshots/as6/17.jpg)
+![Assignment 6](screenshots/as6/17.jpg)
 ---
 
 ### Screenshot 18 — Saved Reports
@@ -334,13 +334,13 @@ Add a screenshot of `ls -lah reports` showing both:
 
 - `drift-detected-report.txt`
 - `resolved-report.txt`
-[Assignment 6](screenshots/as6/18.jpg)
+![Assignment 6](screenshots/as6/18.jpg)
 ---
 
 ### Screenshot 19 — Drift Review Summary
 
 Add a screenshot of `drift-review-summary.md` showing all required sections and your full name.
-[Assignment 6](screenshots/as6/rev.jpg)
+![Assignment 6](screenshots/as6/rev.jpg)
 ## Terraform Drift Review Summary
 
 ### 1. Change Introduced

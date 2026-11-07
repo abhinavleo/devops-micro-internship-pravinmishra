@@ -23,18 +23,18 @@ Confirm your AWS CLI is authenticated and can see the S3 bucket, EC2 instance(s)
 ### Evidence
 
 #### Screenshot 1 — Output of `aws s3 ls`, the EC2 instance table, and the RDS instance table (blur the Account ID if visible)
-[Assignment 7](screenshots/ass6/1.jpg)
+![Assignment 7](screenshots/ass6/1.jpg)
 ---
 
 #### Screenshot 2 — Output of `pwd` and `find . -maxdepth 4 -type d | sort`
-[Assignment 7](screenshots/ass6/2.jpg)
+![Assignment 7](screenshots/ass6/2.jpg)
 ---
 
 ### Notes You Must Write (Very Important)
 
 **1. Which resources from this week's earlier assignments did you see in the listings?**
 
-The S3 static site bucket from Assignment 2 (pravin-portfolio-oluwagbade-eu-west-2), three running EC2 instances (mini-finance-server from Assignment 3, and bra-web-server and bra-app-server from the Assignment 6 capstone), and two RDS instances (bra-db, which is Multi-AZ, and its read replica bra-db-replica). The EpicBook resources from Assignment 4 and the highly available stack from Assignment 5 were already torn down, which is why they do not appear.
+The S3 static site bucket from Assignment 2 (pravin-portfolio-abhinav-eu-west-2), three running EC2 instances (mini-finance-server from Assignment 3, and bra-web-server and bra-app-server from the Assignment 6 capstone), and two RDS instances (bra-db, which is Multi-AZ, and its read replica bra-db-replica). The EpicBook resources from Assignment 4 and the highly available stack from Assignment 5 were already torn down, which is why they do not appear.
 
 **2. Why must you confirm your resources exist before writing an audit script against them?**
 
@@ -51,7 +51,7 @@ Create a `CLAUDE.md` in your workspace that tells Claude the audit script is rea
 ### Evidence
 
 #### Screenshot 3 — `CLAUDE.md` open in VS Code showing all four sections
-[Assignment 7](screenshots/ass6/3.jpg)
+![Assignment 7](screenshots/ass6/3.jpg)
 ---
 
 ### Notes You Must Write (Very Important)
@@ -75,7 +75,7 @@ Ask Claude Code to propose a read-only audit plan covering five checks — S3 pu
 ### Evidence
 
 #### Screenshot 4 — Claude Code showing the five-check plan
-[Assignment 7](screenshots/ass6/4.jpg)
+![Assignment 7](screenshots/ass6/4.jpg)
 ---
 
 ### Notes You Must Write (Very Important)
@@ -101,15 +101,15 @@ Make it executable and confirm it has no syntax errors.
 ### Evidence
 
 #### Screenshot 5 — Top section of `aws-audit.sh` showing the variables and the checks array
-[Assignment 7](screenshots/ass6/5.jpg)
+![Assignment 7](screenshots/ass6/5.jpg)
 ---
 
 #### Screenshot 6 — One check function (for example `check_ssh_open_to_world`) showing the AWS CLI call and conditional
-[Assignment 7](screenshots/ass6/6.jpg)
+![Assignment 7](screenshots/ass6/6.jpg)
 ---
 
 #### Screenshot 7 — Output of `bash -n scripts/aws-audit.sh` and `ls -l scripts/aws-audit.sh`
-[Assignment 7](screenshots/ass6/7.jpg)
+![Assignment 7](screenshots/ass6/7.jpg)
 ---
 
 ### Notes You Must Write (Very Important)
@@ -137,11 +137,11 @@ Run the script against your live AWS account and capture the current state befor
 ### Evidence
 
 #### Screenshot 8 — Output of `./scripts/aws-audit.sh` showing your Full Name and all five checks
-[Assignment 7](screenshots/ass6/8.jpg)
+![Assignment 7](screenshots/ass6/8.jpg)
 ---
 
 #### Screenshot 9 — Output showing the captured exit code and final summary
-[Assignment 7](screenshots/ass6/9.jpg)
+![Assignment 7](screenshots/ass6/9.jpg)
 ---
 
 ### Notes You Must Write (Very Important)
@@ -175,11 +175,11 @@ Turn the script into a Claude Code skill named `/aws-audit` that runs the script
 ### Evidence
 
 #### Screenshot 10 — `SKILL.md` showing the frontmatter, tool restrictions, and safety rules
-[Assignment 7](screenshots/ass6/10.jpg)
+![Assignment 7](screenshots/ass6/10.jpg)
 ---
 
 #### Screenshot 11 — `/aws-audit` output showing findings, cost/risk impact, and a recommended remediation command (or a clean report if your baseline passed everything)
-[Assignment 7](screenshots/ass6/11.jpg)
+![Assignment 7](screenshots/ass6/11.jpg)
 ---
 
 ### Notes You Must Write (Very Important)
@@ -209,12 +209,12 @@ Pick one real finding from your baseline report (or deliberately open a security
 ### Evidence
 
 #### Screenshot 12 — Output of the `revoke-security-group-ingress` and `authorize-security-group-ingress` commands you ran yourself
-[Assignment 7](screenshots/ass6/12.jpg)
-[Assignment 7](screenshots/ass6/12b.jpg)
+![Assignment 7](screenshots/ass6/12.jpg)
+![Assignment 7](screenshots/ass6/12b.jpg)
 ---
 
 #### Screenshot 13 — Rerun of `./scripts/aws-audit.sh` showing the finding is now PASS
-[Assignment 7](screenshots/ass6/13.jpg)
+![Assignment 7](screenshots/ass6/13.jpg)
 ---
 
 ### Notes You Must Write (Very Important)

@@ -36,7 +36,7 @@ Add a screenshot of Azure Repos showing:
 * Repository name
 * `main` branch
 * Project files
-[Assignment 3](screenshots/as3/1.jpg)
+![Assignment 3](screenshots/as3/1.jpg)
 *The React app imported into Azure Repos as `my-react-app` (project `DMI-Week10`) from `pravinmishraaws/my-react-app`, on the `main` branch. The `src` folder's latest commit is my edit to `App.js`, which adds my full name and the deployment date.*
 
 ---
@@ -80,7 +80,7 @@ Add a screenshot of the Azure Pipeline YAML open in the editor showing:
 * Test stage
 * Publish stage
 * Deploy stage
-[Assignment 3](screenshots/as3/2.png)
+![Assignment 3](screenshots/as3/2.png)
 *The full `azure-pipelines.yml` (153 lines): a trigger on `main`, and the Build, Test, Publish and Deploy stages. The build output leaves Build as the `react-build` artifact, and Publish re-publishes it as the checked `react-release` artifact that Deploy installs. No password, key or token is in the file: the Deploy stage refers only to the SSH service connection by name.*
 
 > Do not expose passwords, private keys, tokens, or cloud credentials.
@@ -103,7 +103,7 @@ Add a screenshot of one Azure DevOps pipeline run showing all four stages succee
 * Test
 * Publish
 * Deploy
-[Assignment 3](screenshots/as3/3.jpg)
+![Assignment 3](screenshots/as3/3.jpg)
 *Run #20260926.4, started by "Individual CI" from my commit to `main`, with all four stages succeeded in the same run and no warnings. Build and Publish each produced one artifact.*
 
 ---
@@ -121,7 +121,7 @@ Confirm that the pipeline deployed the production-ready React files to the corre
 Add a screenshot of the pipeline SSH verification log or VM terminal showing the post-deployment contents of:
 
 `/var/www/html`
-[Assignment 3](screenshots/as3/4.jpg)
+![Assignment 3](screenshots/as3/4.jpg)
 *The Deploy stage's SSH verification step. `/var/www/html` contains the production build only: `index.html` at the top level with the other build files and `static/`, and no `src/` or `node_modules/`. Files are `644` and directories `755`, set by the step before it, and the check that nothing is world-writable passed. Nginx is active, and a client-side route returns `200` because of the SPA fallback. The name check lists two bundles: `main.e670097f.js` from this release, and `main.496d3fa7.js` left over from the first release (see the note in the summary). The `***` is Azure DevOps masking the service connection's username.*
 
 ---
@@ -142,7 +142,7 @@ Add a browser screenshot showing:
 * VM public IP address in the browser address bar
 * Your Full Name
 * Deployment date
-[Assignment 3](screenshots/as3/5.jpg)
+![Assignment 3](screenshots/as3/5.jpg)
 *The React app at `http://18.130.221.182`, showing my full name, the deployment date (26/09/2026), and the line added by the commit that triggered the automatic run.*
 
 ## Final Application URL

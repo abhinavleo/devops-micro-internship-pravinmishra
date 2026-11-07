@@ -30,7 +30,7 @@ cat .dockerignore
 
 The file must exclude `node_modules`, `build`, and `.env`.
 
-[Assignment 2](screenshots/as2/1.jpg)
+![Assignment 2](screenshots/as2/1.jpg)
 
 ---
 
@@ -45,7 +45,7 @@ Create a baseline single-stage Docker image and run the application on port 3000
 #### Screenshot 2 — Contents of `Dockerfile.single`
 
 Add a screenshot showing the completed `Dockerfile.single`.
-[Assignment 2](screenshots/as2/2.jpg)
+![Assignment 2](screenshots/as2/2.jpg)
 
 ---
 
@@ -58,7 +58,7 @@ http://localhost:3000
 ```
 
 Ensure that your full name is visible in the application.
-[Assignment 2](screenshots/as2/3.jpg)
+![Assignment 2](screenshots/as2/3.jpg)
 
 ---
 
@@ -73,7 +73,7 @@ Create an optimized multi-stage Docker image with separate builder and Nginx run
 #### Screenshot 4 — Contents of the Multi-Stage Dockerfile
 
 Add a screenshot showing the completed multi-stage `Dockerfile`.
-[Assignment 2](screenshots/as2/4.jpg)
+![Assignment 2](screenshots/as2/4.jpg)
 
 ---
 
@@ -86,7 +86,7 @@ http://localhost
 ```
 
 Ensure that your full name is visible in the application.
-[Assignment 2](screenshots/as2/5.jpg)
+![Assignment 2](screenshots/as2/5.jpg)
 
 ---
 
@@ -112,7 +112,7 @@ The output must include both:
 react-single:latest
 react-multistage:latest
 ```
-[Assignment 2](screenshots/as2/6.jpg)
+![Assignment 2](screenshots/as2/6.jpg)
 
 ---
 

@@ -29,11 +29,11 @@ Confirm successful Azure Portal access and Locate the required services and subs
 ### Evidence
 
 #### Screenshot 1 — Azure Portal homepage after successful login
-[Assignment 1](screenshots/ass1/1.jpg)
+![Assignment 1](screenshots/ass1/1.jpg)
 ---
 
 #### Screenshot 2 — "Subscriptions" section showing the "Free Trial" subscription
-[Assignment 1](screenshots/ass1/2.jpg)
+![Assignment 1](screenshots/ass1/2.jpg)
 **Note on subscription type:** This task asks for a Free Trial subscription. The Azure free account is limited to one per customer, and this account has previously held an Azure subscription, so the free offer is no longer available to it. Microsoft's documented guidance for that situation, which the course solution document for this assignment also cites, is to use a pay-as-you-go subscription instead. The screenshot shows the subscription is Active and running under an Azure Plan, with my role as Owner. The subscription ID, directory name and parent management group ID are redacted.
 
 ---

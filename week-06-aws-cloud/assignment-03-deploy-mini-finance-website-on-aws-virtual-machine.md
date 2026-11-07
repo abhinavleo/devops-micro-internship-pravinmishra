@@ -50,7 +50,7 @@ Start the web server and confirm the Mini Finance website is accessible through 
 
 #### Screenshot 1 — Browser showing the Mini Finance website running at the EC2 public IP
 
-[Assignment 3](screenshots/ass3/1.jpg)
+![Assignment 3](screenshots/ass3/1.jpg)
 
 ---
 

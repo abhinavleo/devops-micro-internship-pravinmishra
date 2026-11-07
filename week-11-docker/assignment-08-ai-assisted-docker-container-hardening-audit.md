@@ -32,7 +32,7 @@ Add a terminal screenshot showing your full name and both supplied files:
 docker-audit.sh
 SKILL.md
 ```
-[Assignment 8](screenshots/as8/1.jpg)
+![Assignment 8](screenshots/as8/1.jpg)
 ---
 
 # Task 2 — Add the Docker Audit Skill to Claude Code
@@ -46,7 +46,7 @@ Add the supplied `docker-audit` skill to Claude Code and confirm that it is avai
 #### Screenshot 2 — Docker Audit Skill Available in Claude Code
 
 Add a screenshot of Claude Code showing `docker-audit` in the available skill list.
-[Assignment 8](screenshots/as8/2.jpg)
+![Assignment 8](screenshots/as8/2.jpg)
 *Abhinav T*
 
 ---
@@ -67,7 +67,7 @@ Add a terminal screenshot showing:
 - Successful `bash -n docker-audit.sh` validation
 - Your full name
 - The usage message displayed when the script runs without a container name
-[Assignment 8](screenshots/as8/3.jpg)
+![Assignment 8](screenshots/as8/3.jpg)
 ---
 
 # Task 4 — Run the Initial Docker Security Audit
@@ -85,13 +85,13 @@ Add a terminal screenshot showing:
 - Your full name
 - `docker ps`
 - The audit command using the selected target container name
-[Assignment 8](screenshots/as8/4.jpg)
+![Assignment 8](screenshots/as8/4.jpg)
 ---
 
 #### Screenshot 5 — Initial Audit Results
 
 Add a terminal screenshot showing the initial Docker audit results.
-[Assignment 8](screenshots/as8/5.jpg)
+![Assignment 8](screenshots/as8/5.jpg)
 ---
 
 # Task 5 — Use AI Assistance to Understand the Findings
@@ -110,7 +110,7 @@ Add a Claude Code screenshot showing:
 - Security risk
 - Recommended manual fix
 - Verification method
-[Assignment 8](screenshots/as8/6.jpg)
+![Assignment 8](screenshots/as8/6.jpg)
 *Abhinav T*
 
 ---
@@ -126,13 +126,13 @@ Manually fix one WARN or FAIL finding from the initial audit.
 #### Screenshot 7 — Hardening Configuration Change
 
 Add a screenshot of the updated Dockerfile or `docker-compose.yml` showing the selected hardening fix.
-[Assignment 8](screenshots/as8/7.jpg)
+![Assignment 8](screenshots/as8/7.jpg)
 ---
 
 #### Screenshot 8 — Updated Service Running
 
 Add a terminal screenshot showing your full name and the rebuilt or recreated service/container running successfully.
-[Assignment 8](screenshots/as8/8.jpg)
+![Assignment 8](screenshots/as8/8.jpg)
 ---
 
 # Task 7 — Re-Run the Audit and Compare Results

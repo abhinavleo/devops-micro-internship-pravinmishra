@@ -29,7 +29,7 @@ backend/
 .gitignore
 docker-compose.yml
 ```
-[Assignment 6](screenshots/as6/1.jpg)
+![Assignment 6](screenshots/as6/1.jpg)
 ---
 
 #### Screenshot 2 — Environment and Docker Ignore Files
@@ -44,7 +44,7 @@ backend/.dockerignore
 ```
 
 Ensure that no real passwords, tokens, or secrets are visible.
-[Assignment 6](screenshots/as6/2.jpg)
+![Assignment 6](screenshots/as6/2.jpg)
 ---
 
 # Task 2 — Create or Confirm Application Dockerfiles
@@ -58,13 +58,13 @@ Prepare Dockerfiles for the frontend and backend services and build both service
 #### Screenshot 3 — Frontend Dockerfile
 
 Add a screenshot showing the completed `frontend/Dockerfile`.
-[Assignment 6](screenshots/as6/3.jpg)
+![Assignment 6](screenshots/as6/3.jpg)
 ---
 
 #### Screenshot 4 — Backend Dockerfile
 
 Add a screenshot showing the completed `backend/Dockerfile`.
-[Assignment 6](screenshots/as6/4.jpg)
+![Assignment 6](screenshots/as6/4.jpg)
 ---
 
 #### Screenshot 5 — Docker Compose Build
@@ -74,7 +74,7 @@ Add a screenshot of the terminal showing successful completion of:
 ```bash
 docker compose build
 ```
-[Assignment 6](screenshots/as6/5.jpg)
+![Assignment 6](screenshots/as6/5.jpg)
 ---
 
 # Task 3 — Create the Docker Compose Stack
@@ -94,7 +94,7 @@ Add a screenshot showing the MySQL service in `docker-compose.yml`, including:
 - MySQL health check
 - `mysql_data` volume mount
 - No published MySQL port
-[Assignment 6](screenshots/as6/6.jpg)
+![Assignment 6](screenshots/as6/6.jpg)
 ---
 
 #### Screenshot 7 — Backend Configuration
@@ -105,7 +105,7 @@ Add a screenshot showing the backend service configuration, including:
 - Database host set to `mysql`
 - Browser frontend origin configured for CORS
 - Published backend port
-[Assignment 6](screenshots/as6/7.jpg)
+![Assignment 6](screenshots/as6/7.jpg)
 ---
 
 #### Screenshot 8 — Frontend Configuration
@@ -115,13 +115,13 @@ Add a screenshot showing the frontend service configuration, including:
 - Published frontend port
 - `depends_on` for the backend service
 - Browser-facing `NEXT_PUBLIC_API_URL`
-[Assignment 6](screenshots/as6/8.jpg)
+![Assignment 6](screenshots/as6/8.jpg)
 ---
 
 #### Screenshot 9 — Named Volume Definition
 
 Add a screenshot showing the `mysql_data` volume definition in `docker-compose.yml`.
-[Assignment 6](screenshots/as6/9.jpg)
+![Assignment 6](screenshots/as6/9.jpg)
 ---
 
 # Task 4 — Start and Verify the Stack
@@ -141,7 +141,7 @@ docker compose ps
 ```
 
 The output must show the MySQL, backend, and frontend services running. MySQL must show as healthy.
-[Assignment 6](screenshots/as6/10.jpg)
+![Assignment 6](screenshots/as6/10.jpg)
 ---
 
 #### Screenshot 11 — MySQL and Backend Logs
@@ -153,7 +153,7 @@ docker compose logs mysql backend --tail=50
 ```
 
 The logs must show MySQL readiness and successful backend database connection.
-[Assignment 6](screenshots/as6/11.jpg)
+![Assignment 6](screenshots/as6/11.jpg)
 ---
 
 # Task 5 — Test End-to-End Application Functionality
@@ -169,7 +169,7 @@ Verify that the Book Review App works through the browser.
 Add a browser screenshot showing successful user registration or login.
 
 Add your full name as a clear caption directly below the screenshot.
-[Assignment 6](screenshots/as6/12.jpg)
+![Assignment 6](screenshots/as6/12.jpg)
 *Abhinav T*
 
 ---
@@ -179,7 +179,7 @@ Add your full name as a clear caption directly below the screenshot.
 Add a browser screenshot showing a created book review visible in the application.
 
 Add your full name as a clear caption directly below the screenshot.
-[Assignment 6](screenshots/as6/13.jpg)
+![Assignment 6](screenshots/as6/13.jpg)
 *Abhinav T*
 
 ---
@@ -190,7 +190,7 @@ Add a browser developer-tools screenshot with:
 
 - The Network tab showing a successful API request
 - The Console drawer showing no CORS error after the API interaction
-[Assignment 6](screenshots/as6/14.jpg)
+![Assignment 6](screenshots/as6/14.jpg)
 *Abhinav T*
 
 ---
@@ -208,7 +208,7 @@ Verify that MySQL data remains after a non-destructive Docker Compose down/up cy
 Add a browser screenshot showing the registered user or created review before the down/up cycle.
 
 Add your full name as a clear caption directly below the screenshot.
-[Assignment 6](screenshots/as6/15.jpg)
+![Assignment 6](screenshots/as6/15.jpg)
 *Abhinav T*
 
 ---
@@ -224,7 +224,7 @@ docker compose ps
 ```
 
 Do not use `docker compose down -v`.
-[Assignment 6](screenshots/as6/16.jpg)
+![Assignment 6](screenshots/as6/16.jpg)
 ---
 
 #### Screenshot 17 — Data After Restart
@@ -232,7 +232,7 @@ Do not use `docker compose down -v`.
 Add a browser screenshot showing the same registered user or review after the stack restarts.
 
 Add your full name as a clear caption directly below the screenshot.
-[Assignment 6](screenshots/as6/17.jpg)
+![Assignment 6](screenshots/as6/17.jpg)
 *Abhinav T*
 
 ---

@@ -25,7 +25,7 @@ Add a screenshot of the terminal showing successful completion of:
 ```bash
 docker pull nginx:alpine
 ```
-[Assignment 4](screenshots/as4/1.png)
+![Assignment 4](screenshots/as4/1.png)
 ---
 
 #### Screenshot 2 — Host Log Directory
@@ -35,7 +35,7 @@ Add a screenshot of the terminal showing the created host directory:
 ```text
 $HOME/nginx-logs
 ```
-[Assignment 4](screenshots/as4/2.png)
+![Assignment 4](screenshots/as4/2.png)
 ---
 
 #### Screenshot 3 — Running Nginx Container with Port Mapping
@@ -51,7 +51,7 @@ The output must show the `myweb` container with:
 ```text
 0.0.0.0:80->80/tcp
 ```
-[Assignment 4](screenshots/as4/3.png)
+![Assignment 4](screenshots/as4/3.png)
 ---
 
 #### Screenshot 4 — Nginx Welcome Page
@@ -63,7 +63,7 @@ http://<YOUR-VM-PUBLIC-IP>
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
-[Assignment 4](screenshots/as4/4.png)
+![Assignment 4](screenshots/as4/4.png)
 *Abhinav T*
 
 ---
@@ -77,7 +77,7 @@ $HOME/nginx-logs
 ```
 
 The output must show `access.log`, `error.log`, and an access-log entry created when you opened the Nginx page.
-[Assignment 4](screenshots/as4/5.png)
+![Assignment 4](screenshots/as4/5.png)
 ---
 
 #### Screenshot 6 — Nginx Container Removed
@@ -88,7 +88,7 @@ Add a screenshot of the terminal showing successful completion of:
 docker stop myweb
 docker rm myweb
 ```
-[Assignment 4](screenshots/as4/6.png)
+![Assignment 4](screenshots/as4/6.png)
 ---
 
 #### Screenshot 7 — Logs Persist After Container Removal
@@ -100,7 +100,7 @@ $HOME/nginx-logs
 ```
 
 The access log must retain its content after the container has been removed.
-[Assignment 4](screenshots/as4/7.png)
+![Assignment 4](screenshots/as4/7.png)
 ---
 
 # Task 2 — Share Persistent Data Using a Docker Volume
@@ -114,7 +114,7 @@ Deploy backend and frontend containers that share data through a named Docker Vo
 #### Screenshot 8 — Project File Structure
 
 Add a screenshot of the terminal showing the `two-tier-app` project structure, including separate `backend` and `frontend` directories with a `Dockerfile` and `index.js` file in each.
-[Assignment 4](screenshots/as4/8.png)
+![Assignment 4](screenshots/as4/8.png)
 ---
 
 #### Screenshot 9 — Custom Docker Network
@@ -124,7 +124,7 @@ Add a screenshot of the terminal showing `mynetwork` in:
 ```bash
 docker network ls
 ```
-[Assignment 4](screenshots/as4/9.png)
+![Assignment 4](screenshots/as4/9.png)
 ---
 
 #### Screenshot 10 — Docker Volume
@@ -134,19 +134,19 @@ Add a screenshot of the terminal showing `shared-data` in:
 ```bash
 docker volume ls
 ```
-[Assignment 4](screenshots/as4/10.png)
+![Assignment 4](screenshots/as4/10.png)
 ---
 
 #### Screenshot 11 — Backend Dockerfile
 
 Add a screenshot of the terminal showing the completed backend `Dockerfile`.
-[Assignment 4](screenshots/as4/11.png)
+![Assignment 4](screenshots/as4/11.png)
 ---
 
 #### Screenshot 12 — Backend Image Build
 
 Add a screenshot of the terminal showing successful completion of the `backend-app:latest` image build.
-[Assignment 4](screenshots/as4/12.png)
+![Assignment 4](screenshots/as4/12.png)
 ---
 
 #### Screenshot 13 — Running Backend Container
@@ -158,19 +158,19 @@ docker ps
 ```
 
 The output must show the running `backend` container.
-[Assignment 4](screenshots/as4/13.png)
+![Assignment 4](screenshots/as4/13.png)
 ---
 
 #### Screenshot 14 — Frontend Dockerfile
 
 Add a screenshot of the terminal showing the completed frontend `Dockerfile`.
-[Assignment 4](screenshots/as4/14.png)
+![Assignment 4](screenshots/as4/14.png)
 ---
 
 #### Screenshot 15 — Frontend Image Build
 
 Add a screenshot of the terminal showing successful completion of the `frontend-app:latest` image build.
-[Assignment 4](screenshots/as4/15.png)
+![Assignment 4](screenshots/as4/15.png)
 ---
 
 #### Screenshot 16 — Running Backend and Frontend Containers
@@ -186,7 +186,7 @@ The output must show both `backend` and `frontend` containers running. Only `fro
 ```text
 0.0.0.0:80->80/tcp
 ```
-[Assignment 4](screenshots/as4/16.png)
+![Assignment 4](screenshots/as4/16.png)
 ---
 
 #### Screenshot 17 — Backend Write Operation
@@ -198,7 +198,7 @@ The output must include:
 ```text
 Data written: Hello from Backend!
 ```
-[Assignment 4](screenshots/as4/17.png)
+![Assignment 4](screenshots/as4/17.png)
 ---
 
 #### Screenshot 18 — Frontend Reads Shared Data
@@ -210,8 +210,8 @@ Hello from Backend!
 ```
 
 Add your full name as a clear caption directly below the screenshot.
-[Assignment 4](screenshots/as4/18.jpg)
-*Oluwagbade Odimayo*
+![Assignment 4](screenshots/as4/18.jpg)
+*Abhinav T*
 
 ---
 
@@ -224,7 +224,7 @@ Test Data 1
 ```
 
 Add your full name as a clear caption directly below the screenshot.
-[Assignment 4](screenshots/as4/20.png)
+![Assignment 4](screenshots/as4/20.png)
 *Abhinav T*
 
 ---
@@ -238,15 +238,15 @@ Test Data 2 - New Update
 ```
 
 Add your full name as a clear caption directly below the screenshot.
-[Assignment 4](screenshots/as4/20.png)
-*Oluwagbade Odimayo*
+![Assignment 4](screenshots/as4/20.png)
+*Abhinav T*
 
 ---
 
 #### Screenshot 21 — Container Removal and Recreation
 
 Add a screenshot of the terminal showing the `frontend` and `backend` containers removed and recreated using the same `shared-data` Docker Volume.
-[Assignment 4](screenshots/as4/21.png)
+![Assignment 4](screenshots/as4/21.png)
 ---
 
 #### Screenshot 22 — Data Persists After Recreation
@@ -260,7 +260,7 @@ Test Data 2 - New Update
 This proves that the `shared-data` Docker Volume outlived both application containers.
 
 Add your full name as a clear caption directly below the screenshot.
-[Assignment 4](screenshots/as4/22.jpg)
+![Assignment 4](screenshots/as4/22.jpg)
 *Abhinav T*
 
 ---

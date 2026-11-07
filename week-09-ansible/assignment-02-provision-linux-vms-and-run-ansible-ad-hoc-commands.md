@@ -43,11 +43,11 @@ This project will use the Git repository and Ansible controller prepared in Assi
 ### Evidence
 
 #### Screenshot 1 — Terminal showing the complete `ansible-adhoc-lab` project structure
-[Assignment 2](screenshots/as2/1.jpg)
+![Assignment 2](screenshots/as2/1.jpg)
 ---
 
 #### Screenshot 2 — Terminal showing `git status --short` with the new project files and updated `.gitignore`
-[Assignment 2](screenshots/as2/2.jpg)
+![Assignment 2](screenshots/as2/2.jpg)
 ---
 
 ### Notes
@@ -72,15 +72,15 @@ Do not configure both providers for this assignment.
 ### Evidence
 
 #### Screenshot 3 — Terraform configuration showing the three or four server roles and the `for_each` or `count` implementation
-[Assignment 2](screenshots/as2/3.jpg)
+![Assignment 2](screenshots/as2/3.jpg)
 ---
 
 #### Screenshot 4 — Terraform configuration showing SSH restricted to the controller IP and HTTP allowed only for web hosts
-[Assignment 2](screenshots/as2/4.jpg)
+![Assignment 2](screenshots/as2/4.jpg)
 ---
 
 #### Screenshot 5 — Terraform output configuration showing how public IP addresses are associated with the server roles
-[Assignment 2](screenshots/as2/5.jpg)
+![Assignment 2](screenshots/as2/5.jpg)
 ---
 
 ### Notes
@@ -98,15 +98,15 @@ Initialize and validate the Terraform configuration, review the execution plan, 
 ### Evidence
 
 #### Screenshot 6 — Final `terraform apply` output showing `Apply complete`
-[Assignment 2](screenshots/as2/6.jpg)
+![Assignment 2](screenshots/as2/6.jpg)
 ---
 
 #### Screenshot 7 — `terraform output public_ips` showing the role-to-IP mapping for all three or four VMs
-[Assignment 2](screenshots/as2/7.jpg)
+![Assignment 2](screenshots/as2/7.jpg)
 ---
 
 #### Screenshot 8 — Azure Portal or AWS Management Console showing all three or four VMs in the `Running` state, with their role-based names visible
-[Assignment 2](screenshots/as2/8.jpg)
+![Assignment 2](screenshots/as2/8.jpg)
 ---
 
 ### Notes
@@ -124,7 +124,7 @@ Verify that each managed VM can be accessed from the Ansible controller using SS
 ### Evidence
 
 #### Screenshot 9 — Terminal showing successful SSH hostname output from all VMs
-[Assignment 2](screenshots/as2/9.jpg)
+![Assignment 2](screenshots/as2/9.jpg)
 ---
 
 ### Notes
@@ -144,11 +144,11 @@ The inventory allows Ansible to run commands against all servers, or only specif
 ### Evidence
 
 #### Screenshot 10 — `inventory.ini` showing the `web`, `app`, and `db` groups
-[Assignment 2](screenshots/as2/10.jpg)
+![Assignment 2](screenshots/as2/10.jpg)
 ---
 
 #### Screenshot 11 — Output of `ansible-inventory -i inventory.ini --graph`
-[Assignment 2](screenshots/as2/11.jpg)
+![Assignment 2](screenshots/as2/11.jpg)
 ---
 
 ### Notes
@@ -168,37 +168,37 @@ This task proves that the inventory is working and that Ansible can control mult
 ### Evidence
 
 #### Screenshot 12 — Output of `ansible all -i inventory.ini -m ping`
-[Assignment 2](screenshots/as2/12.jpg)
+![Assignment 2](screenshots/as2/12.jpg)
 **Command run** (from `ansible-adhoc-lab/ansible`): `ansible all -i inventory.ini -m ping`
 
 ---
 
 #### Screenshot 13 — Output of `ansible all -i inventory.ini -m command -a "uptime"`
-[Assignment 2](screenshots/as2/13.jpg)
+![Assignment 2](screenshots/as2/13.jpg)
 **Command run** (from `ansible-adhoc-lab/ansible`): `ansible all -i inventory.ini -m command -a "uptime"`
 
 ---
 
 #### Screenshot 14 — Output of `ansible web -i inventory.ini -m apt -a "name=nginx state=present update_cache=yes" --become`
-[Assignment 2](screenshots/as2/14.jpg)
+![Assignment 2](screenshots/as2/14.jpg)
 **Command run** (from `ansible-adhoc-lab/ansible`): `ansible web -i inventory.ini -m apt -a "name=nginx state=present update_cache=yes" --become`
 
 ---
 
 #### Screenshot 15 — Output of `ansible web -i inventory.ini -m service -a "name=nginx state=started enabled=yes" --become`
-[Assignment 2](screenshots/as2/15.jpg)
+![Assignment 2](screenshots/as2/15.jpg)
 **Command run** (from `ansible-adhoc-lab/ansible`): `ansible web -i inventory.ini -m service -a "name=nginx state=started enabled=yes" --become`
 
 ---
 
 #### Screenshot 16 — Output of `ansible all -i inventory.ini -m apt -a "name=htop state=present update_cache=yes" --become`
-[Assignment 2](screenshots/as2/16.jpg)
+![Assignment 2](screenshots/as2/16.jpg)
 **Command run** (from `ansible-adhoc-lab/ansible`): `ansible all -i inventory.ini -m apt -a "name=htop state=present update_cache=yes" --become`
 
 ---
 
 #### Screenshot 17 — Output of `ansible web -i inventory.ini -m command -a "systemctl is-active nginx"`
-[Assignment 2](screenshots/as2/17.jpg)
+![Assignment 2](screenshots/as2/17.jpg)
 **Command run** (from `ansible-adhoc-lab/ansible`): `ansible web -i inventory.ini -m command -a "systemctl is-active nginx"`
 
 ---

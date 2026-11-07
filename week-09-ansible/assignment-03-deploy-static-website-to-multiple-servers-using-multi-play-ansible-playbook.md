@@ -30,7 +30,7 @@ Create the required folders and files for the Ansible project.
 ## Evidence
 
 ### Screenshot 1 — Terminal or VS Code showing the complete `static-web` project structure
-[Assignment 3](screenshots/as3/1.jpg)
+![Assignment 3](screenshots/as3/1.jpg)
 ---
 
 # Task 2 — Configure the Ansible Inventory
@@ -42,7 +42,7 @@ Add both Ubuntu servers to the Ansible inventory.
 ## Evidence
 
 ### Screenshot 2 — Output of `ansible-inventory -i inventory.ini --graph` showing `web1` and `web2`
-[Assignment 3](screenshots/as3/2.jpg)
+![Assignment 3](screenshots/as3/2.jpg)
 ---
 
 ## Configuration File
@@ -50,7 +50,7 @@ Add both Ubuntu servers to the Ansible inventory.
 Copy and paste the complete contents of your `inventory.ini` file below:
 
 ```ini
-# Web servers from the A2 Terraform lab (Oluwagbade Odimayo)
+# Web servers from the A2 Terraform lab (Abhinav T)
 [web]
 web1 ansible_host=35.176.126.122
 web2 ansible_host=18.135.15.215
@@ -72,7 +72,7 @@ Confirm that the Ansible controller can connect to both servers.
 ## Evidence
 
 ### Screenshot 3 — Ansible ping output showing `SUCCESS` and `pong` for both servers
-[Assignment 3](screenshots/as3/3.jpg)
+![Assignment 3](screenshots/as3/3.jpg)
 ---
 
 # Task 4 — Download and Personalize the Static Website
@@ -84,7 +84,7 @@ Download `index.html` to the Ansible controller and personalize the website with
 ## Evidence
 
 ### Screenshot 4 — Edited `files/index.html` showing the footer line with your full name
-[Assignment 3](screenshots/as3/4.jpg)
+![Assignment 3](screenshots/as3/4.jpg)
 ---
 
 # Task 5 — Create the Multi-Play Ansible Playbook
@@ -99,7 +99,7 @@ Copy and paste the complete contents of your `site.yml` file below:
 
 ```yaml
 ---
-# Multi-play static website deployment (Oluwagbade Odimayo).
+# Multi-play static website deployment (Abhinav T).
 # Play 1 installs Nginx, Play 2 deploys the site, Play 3 verifies both servers from the controller.
 
 - name: Play 1 - Install and start Nginx on the web servers
@@ -173,7 +173,7 @@ Check the playbook for YAML or Ansible syntax errors before running it.
 ## Evidence
 
 ### Screenshot 5 — Successful syntax-check output showing `playbook: site.yml`
-[Assignment 3](screenshots/as3/5.jpg)
+![Assignment 3](screenshots/as3/5.jpg)
 ---
 
 # Task 7 — Run the Multi-Play Playbook
@@ -185,11 +185,11 @@ Install Nginx, deploy the website, and verify both servers in one playbook run.
 ## Evidence
 
 ### Screenshot 6 — Play 3 verification showing HTTP `200` for both servers
-[Assignment 3](screenshots/as3/6.jpg)
+![Assignment 3](screenshots/as3/6.jpg)
 ---
 
 ### Screenshot 7 — Final play recap showing `unreachable=0` and `failed=0` for `web1`, `web2`, and `localhost`
-[Assignment 3](screenshots/as3/7.jpg)
+![Assignment 3](screenshots/as3/7.jpg)
 ---
 
 # Task 8 — Verify Idempotency
@@ -201,7 +201,7 @@ Run the playbook again and confirm that it does not make unnecessary changes.
 ## Evidence
 
 ### Screenshot 8 — Second playbook run showing the play recap with `changed=0`, `unreachable=0`, and `failed=0` for both web servers
-[Assignment 3](screenshots/as3/8.jpg)
+![Assignment 3](screenshots/as3/8.jpg)
 ---
 
 # Task 9 — Test Both Websites Manually
@@ -213,15 +213,15 @@ Confirm that the static website is accessible from both public IP addresses.
 ## Evidence
 
 ### Screenshot 9 — `curl -I` output showing HTTP `200 OK` from both servers
-[Assignment 3](screenshots/as3/9.jpg)
+![Assignment 3](screenshots/as3/9.jpg)
 ---
 
 ### Screenshot 10 — Browser showing the website from Server 1 with the public IP and your full name visible
-[Assignment 3](screenshots/as3/10.jpg)
+![Assignment 3](screenshots/as3/10.jpg)
 ---
 
 ### Screenshot 11 — Browser showing the website from Server 2 with the public IP and your full name visible
-[Assignment 3](screenshots/as3/11.jpg)
+![Assignment 3](screenshots/as3/11.jpg)
 ---
 
 ## Website URLs

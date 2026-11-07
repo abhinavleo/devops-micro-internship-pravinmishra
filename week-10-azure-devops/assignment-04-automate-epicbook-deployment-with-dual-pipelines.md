@@ -69,7 +69,7 @@ Add a screenshot of the Infrastructure Pipeline run showing:
 * `backend_ansible_host`
 * `backend_private_ip`
 * `mysql_fqdn`
-[Assignment 4](screenshots/as4/1.jpg)
+![Assignment 4](screenshots/as4/1.jpg)
 *The Infrastructure Pipeline (`gbadedata.epicbook-infra`, run #20260927.1). The Apply stage ran only after my approval on the `epicbook-infra` environment, and applied the plan file saved by the Plan stage: `Apply complete! Resources: 18 added, 0 changed, 0 destroyed.` It then printed the four non-sensitive outputs: `app_public_ip`, `backend_ansible_host`, `backend_private_ip` and `mysql_fqdn`. The subscription ID in the resource IDs shows as `***`, because the pipeline registers it as a secret before Terraform runs.*
 
 > Do not expose the MySQL password, Client Secret, Terraform state, SSH private key, or another sensitive value.
@@ -85,7 +85,7 @@ Add a screenshot of the Azure Portal Resource Group overview showing:
 * Backend VM
 * Azure Database for MySQL Flexible Server
 * Related EpicBook resources
-[Assignment 4](screenshots/as4/2.jpg)
+![Assignment 4](screenshots/as4/2.jpg)
 *Resource group `rg-abhinav-epicbook` (UK West): the virtual network `vnet-epicbook` with its NSGs, NICs and public IPs, the frontend and backend VMs with their disks, the MySQL Flexible Server `mysql-epicbook-abhinav`, the private DNS zone used for its private access, and the storage account `stepicbooka70995` that holds the Terraform state. The Essentials panel, which shows the subscription ID, is collapsed.*
 
 > Hide sensitive IDs, credentials, and database details.
@@ -123,7 +123,7 @@ Run the Application Pipeline to configure the VMs, deploy EpicBook, and verify t
 ### Screenshot 3 — Successful Application Pipeline
 
 Add a screenshot of the Application Pipeline run summary showing all required stages or jobs succeeded.
-[Assignment 4](screenshots/as4/3.jpg)
+![Assignment 4](screenshots/as4/3.jpg)
 *The Application Pipeline (`gbadedata.epicbook-app`, run #20260927.1) with both stages succeeded: **Configure and deploy** runs the Ansible playbook, and **Verify** checks EpicBook from outside through the frontend public IP and confirms the backend's port 8080 cannot be reached from the internet.*
 
 ---
@@ -136,7 +136,7 @@ Add a screenshot of the Application Pipeline log showing:
 * Successful configuration or verification
 * Zero failed hosts
 * Zero unreachable hosts
-[Assignment 4](screenshots/as4/4.jpg)
+![Assignment 4](screenshots/as4/4.jpg)
 *The end of the Ansible run: the proxied page on the frontend passed its checks, the agent loaded EpicBook through the public IP ("EpicBook is live ... with name and books from MySQL"), and the PLAY RECAP shows `epicbook-backend` (ok=23), `epicbook-frontend` (ok=13) and `localhost` (ok=2), all with `unreachable=0` and `failed=0`.*
 
 > Do not expose the SSH private key, MySQL password, Client Secret, or complete database connection string.
@@ -161,7 +161,7 @@ Add a browser screenshot showing:
 * Deployment date
 
 The screenshot may show a product, cart, or successful order view.
-[Assignment 4](screenshots/as4/5.jpg)
+![Assignment 4](screenshots/as4/5.jpg)
 *EpicBook at `http://20.162.94.243/cart`, served through Nginx on the frontend VM. The banner shows my full name and the deployment date (27/09/2026), and the cart holds one book (28 Summers, $28.00) taken from the database. The row this created was confirmed in Azure Database for MySQL: `cart_rows` went from 0 before the click to 1, with one matching `Cartbook` link, and the catalogue holds 54 books.*
 
 > Do not expose credentials or sensitive information.

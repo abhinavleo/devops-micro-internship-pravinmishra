@@ -21,7 +21,7 @@ Review the EpicBook repository and design the intended application architecture.
 #### Screenshot 1 — EpicBook Project Structure
 
 Add a terminal screenshot showing the EpicBook project structure after cloning the repository.
-[Assignment 7](screenshots/as7/1.jpg)
+![Assignment 7](screenshots/as7/1.jpg)
 ---
 
 #### Screenshot 2 — Architecture Diagram
@@ -38,7 +38,7 @@ Add a screenshot of your architecture diagram showing:
 - Persistent database storage
 
 Add your full name inside the diagram or as a clear caption below it.
-[Assignment 7](screenshots/as7/2.jpg)
+![Assignment 7](screenshots/as7/2.jpg)
 
 *Abhinav T*
 
@@ -53,7 +53,7 @@ docs/02-env-and-ports.md
 ```
 
 It must document environment-variable names, internal ports, persistent-data details, and the health-check method. Do not expose real credentials or values.
-[Assignment 7](screenshots/as7/3.jpg)
+![Assignment 7](screenshots/as7/3.jpg)
 ---
 
 # Task 1 — Create Production Docker Images
@@ -73,7 +73,7 @@ Add a screenshot showing `backend/Dockerfile`, including:
 - Production startup command
 - Internal backend port
 - Non-root user configuration
-[Assignment 7](screenshots/as7/4.jpg)
+![Assignment 7](screenshots/as7/4.jpg)
 ---
 
 #### Screenshot 5 — Frontend Dockerfile
@@ -82,7 +82,7 @@ Add a screenshot showing `frontend/Dockerfile`, including:
 
 - Nginx runtime image
 - Static frontend files copied to the Nginx web root
-[Assignment 7](screenshots/as7/5.jpg)
+![Assignment 7](screenshots/as7/5.jpg)
 ---
 
 #### Screenshot 6 — Docker Ignore Files
@@ -93,7 +93,7 @@ Add a screenshot showing both:
 backend/.dockerignore
 frontend/.dockerignore
 ```
-[Assignment 7](screenshots/as7/6.jpg)
+![Assignment 7](screenshots/as7/6.jpg)
 ---
 
 #### Screenshot 7 — Docker Image Builds and Size Comparison
@@ -105,13 +105,13 @@ Add a terminal screenshot showing successful builds of:
 - Frontend image
 
 The screenshot must also show the baseline and optimized backend image-size comparison.
-[Assignment 7](screenshots/as7/7.jpg)
+![Assignment 7](screenshots/as7/7.jpg)
 ---
 
 #### Screenshot 8 — Backend Running as Non-Root User
 
 Add a terminal screenshot showing the optimized backend container running as a non-root user.
-[Assignment 7](screenshots/as7/8.jpg)
+![Assignment 7](screenshots/as7/8.jpg)
 ---
 
 ### Notes
@@ -149,7 +149,7 @@ frontend
 backend
 database
 ```
-[Assignment 7](screenshots/as7/9.jpg)
+![Assignment 7](screenshots/as7/9.jpg)
 ---
 
 #### Screenshot 10 — Networks and Named Volume
@@ -159,13 +159,13 @@ Add a screenshot showing:
 - `front-tier` network
 - `back-tier` network
 - `db_data` named volume
-[Assignment 7](screenshots/as7/10.jpg)
+![Assignment 7](screenshots/as7/10.jpg)
 ---
 
 #### Screenshot 11 — Docker Compose Validation
 
 Add a terminal screenshot showing successful Docker Compose validation without exposing environment-variable values or secrets.
-[Assignment 7](screenshots/as7/11.jpg)
+![Assignment 7](screenshots/as7/11.jpg)
 ---
 
 # Task 3 — Configure Health Checks and Startup Dependencies
@@ -179,13 +179,13 @@ Configure health checks and ensure services start only after their dependencies 
 #### Screenshot 12 — Backend Health Endpoint
 
 Add a screenshot showing the backend application configuration for the `/health` endpoint.
-[Assignment 7](screenshots/as7/12.jpg)
+![Assignment 7](screenshots/as7/12.jpg)
 ---
 
 #### Screenshot 13 — MySQL and Backend Health Checks
 
 Add a screenshot showing `docker-compose.yml` with health checks for MySQL and the backend.
-[Assignment 7](screenshots/as7/13.jpg)
+![Assignment 7](screenshots/as7/13.jpg)
 ---
 
 #### Screenshot 14 — Frontend and Reverse-Proxy Health Checks
@@ -195,19 +195,19 @@ Add a screenshot showing:
 - Frontend health check
 - Reverse-proxy health check
 - `depends_on` conditions using `service_healthy`
-[Assignment 7](screenshots/as7/14.jpg)
+![Assignment 7](screenshots/as7/14.jpg)
 ---
 
 #### Screenshot 15 — Running Healthy Services
 
 Add a terminal screenshot showing Docker Compose service status. The database, backend, frontend, and reverse proxy must be running successfully.
-[Assignment 7](screenshots/as7/15.jpg)
+![Assignment 7](screenshots/as7/15.jpg)
 ---
 
 #### Screenshot 16 — Public Health Endpoint
 
 Add a terminal screenshot showing a successful response from the public application health endpoint through the reverse proxy.
-[Assignment 7](screenshots/as7/16.jpg)
+![Assignment 7](screenshots/as7/16.jpg)
 ---
 
 #### Screenshot 17 — Health-Check and Startup-Order Document
@@ -219,7 +219,7 @@ docs/03-healthchecks-and-depends-on.md
 ```
 
 Explain the health-check method for each service and the startup dependency order.
-[Assignment 7](screenshots/as7/17.jpg)
+![Assignment 7](screenshots/as7/17.jpg)
 ---
 
 # Task 4 — Configure the Reverse Proxy and Same-Origin Routing
@@ -240,13 +240,13 @@ It must show routes for:
 - Application pages
 - API requests
 - Health endpoint
-[Assignment 7](screenshots/as7/18.jpg)
+![Assignment 7](screenshots/as7/18.jpg)
 ---
 
 #### Screenshot 19 — Only Reverse Proxy Publishes Port 80
 
 Add a screenshot of `docker-compose.yml` showing that only the `reverse-proxy` service publishes port 80.
-[Assignment 7](screenshots/as7/19.jpg)
+![Assignment 7](screenshots/as7/19.jpg)
 ---
 
 #### Screenshot 20 — Reverse-Proxy Route Testing
@@ -257,7 +257,7 @@ Add a terminal screenshot showing successful requests through the selected rever
 - One API endpoint
 - One static asset
 - Health endpoint
-[Assignment 7](screenshots/as7/20.png)
+![Assignment 7](screenshots/as7/20.png)
 ---
 
 #### Screenshot 21 — EpicBook Application Through Public IP
@@ -265,7 +265,7 @@ Add a terminal screenshot showing successful requests through the selected rever
 Add a browser screenshot showing the EpicBook application loaded through the VM public IP address.
 
 Add your full name as a clear caption below the screenshot.
-[Assignment 7](screenshots/as7/21.jpg)
+![Assignment 7](screenshots/as7/21.jpg)
 *Abhinav T*
 
 ---
@@ -279,7 +279,7 @@ docs/04-proxy-routing-and-cors.md
 ```
 
 Explain the proxy routes and state whether CORS was required and why.
-[Assignment 7](screenshots/as7/22.png)
+![Assignment 7](screenshots/as7/22.png)
 ---
 
 # Task 5 — Prove Data Persistence, Backup, and Restore
@@ -293,31 +293,31 @@ Verify MySQL persistence and perform a controlled backup and restore drill.
 #### Screenshot 23 — MySQL Volume Configuration
 
 Add a terminal screenshot showing the `db_data` named volume and its MySQL mount configuration.
-[Assignment 7](screenshots/as7/23.png)
+![Assignment 7](screenshots/as7/23.png)
 ---
 
 #### Screenshot 24 — Test Data Before Backup
 
 Add a terminal screenshot showing the selected test data before the backup and restore drill.
-[Assignment 7](screenshots/as7/24.png)
+![Assignment 7](screenshots/as7/24.png)
 ---
 
 #### Screenshot 25 — Successful Backup Creation
 
 Add a terminal screenshot showing successful backup creation and the backup file stored in the host backup directory.
-[Assignment 7](screenshots/as7/25.png)
+![Assignment 7](screenshots/as7/25.png)
 ---
 
 #### Screenshot 26 — Controlled Data-Loss Test
 
 Add a terminal screenshot showing that the selected test record was removed during the controlled data-loss test.
-[Assignment 7](screenshots/as7/26.jpg)
+![Assignment 7](screenshots/as7/26.jpg)
 ---
 
 #### Screenshot 27 — Restore Verification
 
 Add a terminal screenshot showing successful restore and verification that the deleted test record is available again.
-[Assignment 7](screenshots/as7/27.png)
+![Assignment 7](screenshots/as7/27.png)
 ---
 
 #### Screenshot 28 — Persistence After Down/Up Cycle
@@ -325,7 +325,7 @@ Add a terminal screenshot showing successful restore and verification that the d
 Add a terminal screenshot showing that database data remains available after a non-destructive Docker Compose down/up cycle.
 
 Do not use `docker compose down -v`.
-[Assignment 7](screenshots/as7/28.png)
+![Assignment 7](screenshots/as7/28.png)
 ---
 
 #### Screenshot 29 — Persistence and Backup Document
@@ -337,7 +337,7 @@ docs/05-persistence-and-backup.md
 ```
 
 Include the backup plan and restore procedure.
-[Assignment 7](screenshots/as7/29.jpg)
+![Assignment 7](screenshots/as7/29.jpg)
 ---
 
 # Task 6 — Configure Logging and Observability
@@ -355,7 +355,7 @@ Add a screenshot showing:
 - Configuration for the selected reverse proxy
 - Proxy log format
 - Docker Compose host log-directory bind mount
-[Assignment 7](screenshots/as7/30.jpg)
+![Assignment 7](screenshots/as7/30.jpg)
 ---
 
 #### Screenshot 31 — Persistent Proxy Logs and Backend Logs
@@ -364,7 +364,7 @@ Add a terminal screenshot showing:
 
 - Selected reverse-proxy logs available from the host directory after a proxy restart
 - Backend logs displayed through Docker Compose
-[Assignment 7](screenshots/as7/31.jpg)
+![Assignment 7](screenshots/as7/31.jpg)
 ---
 
 ### Notes
@@ -400,7 +400,7 @@ Add a cloud-console screenshot showing:
 - VM public IP address
 - SSH port 22 restricted to your IP address
 - HTTP port 80 allowed from Anywhere
-[Assignment 7](screenshots/as7/32.jpg)
+![Assignment 7](screenshots/as7/32.jpg)
 *Abhinav T*
 
 ---
@@ -412,7 +412,7 @@ Add a VM terminal screenshot showing:
 - Docker Compose service status
 - Successful public health or API response
 - No published database, frontend, or backend ports
-[Assignment 7](screenshots/as7/33.jpg)
+![Assignment 7](screenshots/as7/33.jpg)
 ---
 
 #### Screenshot 34 — EpicBook Application on Cloud VM
@@ -420,7 +420,7 @@ Add a VM terminal screenshot showing:
 Add a browser screenshot showing the EpicBook application loaded through the VM public IP address.
 
 Add your full name as a clear caption below the screenshot.
-[Assignment 7](screenshots/as7/34.jpg)
+![Assignment 7](screenshots/as7/34.jpg)
 *Abhinav T*
 
 ---
@@ -435,7 +435,7 @@ Write a short note covering:
 - Security rules configured
 - Confirmation that the application and backend API worked through the reverse proxy
 
-- **Cloud provider:** AWS, EC2 instance `oluwagbade-odimayo-week11-docker` (m7i-flex.large) in eu-west-2 (London).
+- **Cloud provider:** AWS, EC2 instance `abhinav-t-week11-docker` (m7i-flex.large) in eu-west-2 (London).
 - **VM operating system:** Ubuntu 24.04 LTS, with Docker Engine and the Compose plugin installed from Docker's official repository by cloud-init.
 - **Public port exposed:** only TCP 80, published by the `reverse-proxy` service. The frontend, backend and database publish no ports, and `ss -ltn` on the host shows only 22 and 80 listening publicly.
 - **Security rules:** the security group allows TCP 80 from anywhere and TCP 22 from my own IP address only, with no other inbound rules. The database also sits on an internal Docker network with no internet access.
@@ -492,7 +492,7 @@ Add a terminal screenshot showing:
 - Expected unavailable response through the reverse proxy
 - Backend restart
 - Successful health-check recovery
-[Assignment 7](screenshots/as7/35.jpg)
+![Assignment 7](screenshots/as7/35.jpg)
 ---
 
 #### Screenshot 36 — Database Failure and Recovery
@@ -503,7 +503,7 @@ Add a terminal screenshot showing:
 - Failed database-dependent request
 - Database restart
 - Successful application recovery
-[Assignment 7](screenshots/as7/36.jpg)
+![Assignment 7](screenshots/as7/36.jpg)
 ---
 
 ### Notes

@@ -27,7 +27,7 @@ docker network ls
 ```
 
 The output must include the default `bridge`, `host`, and `none` networks.
-[Assignment 3](screenshots/as3/1.png)
+![Assignment 3](screenshots/as3/1.png)
 ---
 
 #### Screenshot 2 — Nginx Image Pull
@@ -37,7 +37,7 @@ Add a screenshot of the terminal showing successful completion of:
 ```bash
 docker pull nginx:alpine
 ```
-[Assignment 3](screenshots/as3/2.png)
+![Assignment 3](screenshots/as3/2.png)
 ---
 
 #### Screenshot 3 — Running `myweb` Container
@@ -53,7 +53,7 @@ The output must show the running `myweb` container with:
 ```text
 0.0.0.0:80->80/tcp
 ```
-[Assignment 3](screenshots/as3/3.png)
+![Assignment 3](screenshots/as3/3.png)
 ---
 
 #### Screenshot 4 — Nginx Welcome Page
@@ -65,8 +65,8 @@ http://<YOUR-VM-PUBLIC-IP>
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
-[Assignment 3](screenshots/as3/4.jpg)
-*Oluwagbade Odimayo*
+![Assignment 3](screenshots/as3/4.jpg)
+*Abhinav T*
 
 ---
 
@@ -85,7 +85,7 @@ Add a screenshot of the terminal showing `mynetwork` in:
 ```bash
 docker network ls
 ```
-[Assignment 3](screenshots/as3/5.png)
+![Assignment 3](screenshots/as3/5.png)
 ---
 
 #### Screenshot 6 — Running `web` and `client` Containers
@@ -97,7 +97,7 @@ docker ps
 ```
 
 The output must show both `web` and `client` containers running without published host ports.
-[Assignment 3](screenshots/as3/6.png)
+![Assignment 3](screenshots/as3/6.png)
 ---
 
 #### Screenshot 7 — Service Discovery by Container Name
@@ -109,7 +109,7 @@ docker exec client wget -qO- http://web
 ```
 
 The output must display the Nginx Welcome Page HTML.
-[Assignment 3](screenshots/as3/7.png)
+![Assignment 3](screenshots/as3/7.png)
 ---
 
 #### Screenshot 8 — Custom Network Inspection
@@ -121,7 +121,7 @@ docker network inspect mynetwork
 ```
 
 The output must show both `web` and `client` connected to `mynetwork`.
-[Assignment 3](screenshots/as3/8.png)
+![Assignment 3](screenshots/as3/8.png)
 ---
 
 # Task 3 — Demonstrate Multi-Network Isolation
@@ -141,7 +141,7 @@ docker network ls
 ```
 
 The output must include both `frontend-network` and `backend-network`.
-[Assignment 3](screenshots/as3/9.jpg)
+![Assignment 3](screenshots/as3/9.jpg)
 ---
 
 #### Screenshot 10 — Running Multi-Network Containers
@@ -157,7 +157,7 @@ The output must show:
 - `frontend` with the published port mapping `0.0.0.0:80->80/tcp`
 - `backend` without a published host port
 - `db` without a published host port
-[Assignment 3](screenshots/as3/10.png)
+![Assignment 3](screenshots/as3/10.png)
 ---
 
 #### Screenshot 11 — Frontend Network Inspection
@@ -169,7 +169,7 @@ docker network inspect frontend-network
 ```
 
 The output must show `frontend` and `backend`.
-[Assignment 3](screenshots/as3/11.png)
+![Assignment 3](screenshots/as3/11.png)
 ---
 
 #### Screenshot 12 — Backend Network Inspection
@@ -181,7 +181,7 @@ docker network inspect backend-network
 ```
 
 The output must show `backend` and `db`.
-[Assignment 3](screenshots/as3/12.png)
+![Assignment 3](screenshots/as3/12.png)
 ---
 
 #### Screenshot 13 — Frontend-to-Backend Communication
@@ -193,13 +193,13 @@ docker exec frontend wget -qO- http://backend
 ```
 
 The output must display the Nginx Welcome Page HTML.
-[Assignment 3](screenshots/as3/13.png)
+![Assignment 3](screenshots/as3/13.png)
 ---
 
 #### Screenshot 14 — Backend-to-Database Communication
 
 Add a screenshot of the terminal showing a successful connection to `db` on port `27017` from the `backend` container.
-[Assignment 3](screenshots/as3/14.png)
+![Assignment 3](screenshots/as3/14.png)
 ---
 
 #### Screenshot 15 — Frontend-to-Database Isolation
@@ -211,7 +211,7 @@ The output must include:
 ```text
 Expected result: frontend cannot reach db
 ```
-[Assignment 3](screenshots/as3/15.png)
+![Assignment 3](screenshots/as3/15.png)
 ---
 
 #### Screenshot 16 — Public Frontend Access
@@ -223,8 +223,8 @@ http://<YOUR-VM-PUBLIC-IP>
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
-[Assignment 3](screenshots/as3/16.jpg)
-*Oluwagbade Odimayo*
+![Assignment 3](screenshots/as3/16.jpg)
+*Abhinav T*
 
 ---
 
@@ -245,7 +245,7 @@ docker ps
 ```
 
 The output must show the running `fastapp` container.
-[Assignment 3](screenshots/as3/17.png)
+![Assignment 3](screenshots/as3/17.png)
 ---
 
 #### Screenshot 18 — Host Network Mode Verification
@@ -261,7 +261,7 @@ The output must confirm:
 ```text
 "NetworkMode": "host"
 ```
-[Assignment 3](screenshots/as3/18.jpg)
+![Assignment 3](screenshots/as3/18.jpg)
 ---
 
 #### Screenshot 19 — Host-Networked Nginx Page
@@ -273,7 +273,7 @@ http://<YOUR-VM-PUBLIC-IP>
 ```
 
 Ensure that the VM public IP is visible in the address bar. Add your full name as a clear caption directly below the screenshot.
-[Assignment 3](screenshots/as3/19.jpg)
+![Assignment 3](screenshots/as3/19.jpg)
 *Abhinav T*
 
 ---

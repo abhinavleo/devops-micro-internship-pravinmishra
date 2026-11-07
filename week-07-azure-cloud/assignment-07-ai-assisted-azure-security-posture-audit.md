@@ -19,7 +19,7 @@ Confirm your Azure CLI is authenticated and can see the VM, network, storage acc
 ### Evidence
 
 #### Screenshot 1 — `az account show` and `az vm list -d -o table` confirming your subscription and running VM (subscription ID partially blurred)
-[Assignment 7](screenshots/ass7/1.jpg)
+![Assignment 7](screenshots/ass7/1.jpg)
 Workspace created at `~/DMI/azure-audit`, outside the submission repository so that audit reports containing resource detail are never committed by accident. Subscription ID partially blurred as required; tenant IDs and the account email are also covered.
 
 ---
@@ -34,7 +34,7 @@ Create a `CLAUDE.md` for this workspace that tells Claude what the audit covers 
 
 #### Screenshot 2 — `CLAUDE.md` open in your editor showing the project overview, audit workflow, and safety rules
 
-[Assignment 7](screenshots/ass7/2.jpg)
+![Assignment 7](screenshots/ass7/2.jpg)
 The three safety rules are stated explicitly: never run a mutating `az` command, never claim a finding without evidence from a report, and always leave remediation to the human. A fourth rule keeps subscription IDs, tenant IDs and credentials out of both the reports and the terminal.
 
 ---
@@ -48,13 +48,13 @@ Ask Claude Code to read `CLAUDE.md` and propose a read-only, four-check audit pl
 ### Evidence
 
 #### Screenshot 3 — Claude Code showing the four-check plan, with no files created or modified
-[Assignment 7](screenshots/ass7/3a.png)
+![Assignment 7](screenshots/ass7/3a.png)
 Claude Code was run in plan mode, which blocks edits at the tool level rather than relying on the prompt alone. The listing above is the evidence that nothing was created: only `CLAUDE.md` exists, and both `azure-audit.sh` and `reports/` return "No such file or directory".
-[Assignment 7](screenshots/ass7/3b.jpg)
-[Assignment 7](screenshots/ass7/3c.jpg)
-[Assignment 7](screenshots/ass7/3d.jpg)
-[Assignment 7](screenshots/ass7/3e.jpg)
-[Assignment 7](screenshots/ass7/3f.jpg)
+![Assignment 7](screenshots/ass7/3b.jpg)
+![Assignment 7](screenshots/ass7/3c.jpg)
+![Assignment 7](screenshots/ass7/3d.jpg)
+![Assignment 7](screenshots/ass7/3e.jpg)
+![Assignment 7](screenshots/ass7/3f.jpg)
 One design decision was settled before the plan was finalised. Azure encrypts every managed disk at rest by default with a platform-managed key, so a check that only asks whether encryption exists passes on every VM ever created and can never report anything. Platform-managed-key-only therefore grades WARN, with PASS reserved for a customer-managed key or Azure Disk Encryption, and FAIL for encryption genuinely absent. A check that cannot be evaluated also grades WARN rather than a silent PASS, so unverified is never reported as clean.
 
 ---
@@ -68,13 +68,13 @@ Write a Bash script that runs the four checks from Task 3 using read-only `az` c
 ### Evidence
 
 #### Screenshot 4 — Your script open in your editor, showing the check functions and the `az` commands they call
-[Assignment 7](screenshots/ass7/4.jpg)
+![Assignment 7](screenshots/ass7/4.jpg)
 All ten `az` invocations use `list` or `show`. The script uses `set -uo pipefail` but deliberately not `set -e`, so one failing check cannot abort the other three.
 
 ---
 
 #### Screenshot 5 — Output of `bash -n` (no syntax errors) and `ls -l` showing the script is executable
-[Assignment 7](screenshots/ass7/5.png)
+![Assignment 7](screenshots/ass7/5.png)
 ---
 
 # Task 5 — Run the Script and Review the Baseline Report
@@ -86,7 +86,7 @@ Run the script against your live resources and read the report honestly, even if
 ### Evidence
 
 #### Screenshot 6 — Script output showing your Full Name and all four checks with a PASS, WARN, or FAIL result
-[Assignment 7](screenshots/ass7/6.jpg)
+![Assignment 7](screenshots/ass7/6.jpg)
 Baseline result: WARN, exit 1. Checks 1, 2 and 4 passed and Check 3 warned. Nothing was fixed at this stage.
 
 Two of these deserve reading rather than skimming. Check 1's PASS is not vacuous: it examined two NSGs and found no inbound rule reaching 22 or 3389 from the internet, which reflects the SSH restriction applied when the VM was built in Assignment 5. Check 3's WARN came from the "ADE status unreadable" branch rather than the plain platform-key branch, because `az vm encryption show` exits non-zero when the extension is absent and the script treats a non-zero exit as unverified.
@@ -102,13 +102,13 @@ Create a Claude Code skill restricted to read-only tools (no `Write`) that runs 
 ### Evidence
 
 #### Screenshot 7 — Your skill file's frontmatter showing `allowed-tools` without `Write`
-[Assignment 7](screenshots/ass7/7.jpg)
+![Assignment 7](screenshots/ass7/7.jpg)
 `allowed-tools` contains no `Write` and no `Edit`, and the Bash entries are scoped to running the script and reading reports. The skill can therefore run the audit and explain it, but cannot modify the script, the report or anything in Azure.
 
 ---
 
 #### Screenshot 8 — `/azure-audit` output showing the baseline findings and Claude's explanation
-[Assignment 7](screenshots/ass7/8.jpg)
+![Assignment 7](screenshots/ass7/8.jpg)
 
 The skill ran the script, read the newest report, gave each check its status and evidence, explained the risk of the outstanding warning in concrete terms, proposed a remediation command, and stopped without running it.
 
@@ -125,7 +125,7 @@ Pick one WARN or FAIL finding (or deliberately open an NSG rule to port 22 from 
 ### Evidence
 
 #### Screenshot 9 — Saved report showing the original finding before the fix
-[Assignment 7](screenshots/ass7/9.jpg)
+![Assignment 7](screenshots/ass7/9.jpg)
 The baseline was clean on Check 1, so a finding was created deliberately, as the task permits, by widening the existing SSH rule to `0.0.0.0/0`:
 
     az network nsg rule update --resource-group epicbook-rg \
@@ -142,13 +142,13 @@ The saved report is `reports/azure-audit-20260922-205304.txt`.
 
 #### Screenshot 10 — Terminal output of the remediation command you ran yourself
 
-[Assignment 7](screenshots/ass7/10.png)
+![Assignment 7](screenshots/ass7/10.png)
 The fix restricts SSH to one address rather than closing the port entirely, so administrative access is preserved while the internet-wide exposure is removed. It was run by hand, not by the skill. SSH to the VM was confirmed working immediately afterwards, because a wrong address here locks you out of your own machine.
 
 ---
 
 #### Screenshot 11 — Second `/azure-audit` run (or report) showing the finding resolved
-[Assignment 7](screenshots/ass7/11.jpg)
+![Assignment 7](screenshots/ass7/11.jpg)
 Check 1 returned to PASS and the overall result fell from FAIL (exit 2) to WARN (exit 1). The disk encryption WARN is still present, which is the point: the fix cleared exactly one finding and left the other untouched. A re-run that came back entirely green would have been the suspicious outcome.
 
 The two reports sit side by side as before and after: `azure-audit-20260922-205304.txt` and `azure-audit-20260922-210634.txt`.

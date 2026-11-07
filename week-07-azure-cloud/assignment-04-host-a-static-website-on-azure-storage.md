@@ -49,7 +49,7 @@ Open the primary endpoint URL and confirm the Mini Finance application, styling,
 ### Evidence
 
 #### Screenshot 1 — Mini Finance website running in the browser
-[Assignment 4](screenshots/ass4/1.jpg)
+![Assignment 4](screenshots/ass4/1.jpg)
 The page renders with full styling, chart rendering and images, which confirms the CSS, JS, fonts and image directories all uploaded with their paths intact.
 
 **A note on uploading:** the portal's Upload dialog does not recursively upload directories, so selecting the files from the repository folder produced a flat set of HTML files with no assets, and the site rendered unstyled. Uploading with `az storage blob upload-batch` preserved the directory structure that the relative paths in `index.html` depend on.

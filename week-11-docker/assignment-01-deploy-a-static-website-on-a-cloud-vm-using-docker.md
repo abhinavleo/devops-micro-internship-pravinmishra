@@ -27,7 +27,7 @@ Add a screenshot of the cloud console showing:
 - Security Group or Network Security Group inbound rules
 - SSH port 22 enabled from your IP address
 - HTTP port 80 enabled from Anywhere
-[Assignment 1](screenshots/as1/1.jpg)
+![Assignment 1](screenshots/as1/1.jpg)
 ---
 
 # Task 2 — Configure Cloud-Init for Docker Installation
@@ -47,7 +47,7 @@ cat /var/log/cloud-init-output.log
 ```
 
 The visible output must show Docker installation activity.
-[Assignment 1](screenshots/as1/2.png)
+![Assignment 1](screenshots/as1/2.png)
 *Tail of `cat /var/log/cloud-init-output.log`: Docker packages installed from download.docker.com during provisioning, ending with the Docker version banner and cloud-init's finished line.*
 
 ---
@@ -73,7 +73,7 @@ and
 ```bash
 docker ps
 ```
-[Assignment 1](screenshots/as1/3.jpg)
+![Assignment 1](screenshots/as1/3.jpg)
 ---
 
 # Task 4 — Clone the Application Repository
@@ -87,7 +87,7 @@ Download the static website source code.
 #### Screenshot 4 — Application Project Files
 
 Add a screenshot of the terminal showing the contents of the `Azure-Static-Website` project directory after cloning the repository.
-[Assignment 1](screenshots/as1/4.jpg)
+![Assignment 1](screenshots/as1/4.jpg)
 ---
 
 # Task 5 — Create a Dockerfile
@@ -107,7 +107,7 @@ cat Dockerfile
 ```
 
 The Dockerfile must use `nginx:alpine`, copy the website files to the Nginx web root, and expose port 80.
-[Assignment 1](screenshots/as1/5.jpg)
+![Assignment 1](screenshots/as1/5.jpg)
 ---
 
 # Task 6 — Build the Docker Image
@@ -127,7 +127,7 @@ docker images
 ```
 
 The output must include the `static-site` image with the `latest` tag.
-[Assignment 1](screenshots/as1/6.jpg)
+![Assignment 1](screenshots/as1/6.jpg)
 ---
 
 # Task 7 — Deploy the Docker Container
@@ -151,7 +151,7 @@ The output must show the running `static-site` container with the port mapping:
 ```text
 0.0.0.0:80->80/tcp
 ```
-[Assignment 1](screenshots/as1/7.jpg)
+![Assignment 1](screenshots/as1/7.jpg)
 ---
 
 # Task 8 — Verify the Deployment
@@ -169,7 +169,7 @@ Add a screenshot of the terminal showing the output of:
 ```bash
 curl ifconfig.me
 ```
-[Assignment 1](screenshots/as1/7.jpg)
+![Assignment 1](screenshots/as1/7.jpg)
 ---
 
 #### Screenshot 9 — Deployed Static Website
@@ -178,11 +178,11 @@ Add a screenshot of the browser showing the deployed static website.
 
 Ensure that the VM public IP address is visible in the browser address bar.
 
-[Assignment 1](screenshots/as1/9.jpg)
+![Assignment 1](screenshots/as1/9.jpg)
 ---
 
 # Public Application URL
-[Assignment 1](screenshots/as1/8.jpg)
+![Assignment 1](screenshots/as1/8.jpg)
 ---
 
 # LinkedIn Requirement
