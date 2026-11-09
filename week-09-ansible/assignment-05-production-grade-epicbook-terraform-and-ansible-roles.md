@@ -114,7 +114,7 @@ Terraform will create the VM, managed MySQL database, networking, security rules
 ---
 
 #### Screenshot 4 — Azure Portal or AWS Console showing the VM running
-![Assignment 5](screenshots/as5/4.jpg)
+![Assignment 5](screenshots/as5/3.jpg)
 ---
 
 #### Screenshot 5 — Azure Portal or AWS Console showing the managed MySQL database created
