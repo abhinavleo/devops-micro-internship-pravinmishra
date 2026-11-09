@@ -2,8 +2,8 @@
 
 Part of the DevOps Micro Internship (DMI) with Agentic AI
 
-**Full Name:** Abhinav T 
-**Environment:** Ubuntu 24.04 on WSL2, Python 3.12.3, ansible-core 2.21.4  
+**Full Name:** Abhinav T
+**Environment:** Ubuntu 24.04 on WSL2, Python 3.12.3, ansible-core 2.21.4
 **Workspace files:** [`ansible-onboarding/`](./ansible-onboarding/)
 
 ---
@@ -154,7 +154,7 @@ A virtual environment keeps this project's Ansible completely separate from the 
 
 **4. Why must SSH private keys and `.venv/` remain outside version control?**
 
-A private key is proof of identity: anyone who gets a copy can log in to every server that trusts the matching public key. Once a key is committed it stays in Git history even if the file is later deleted, so the only safe fix is to replace the key everywhere. `.gitignore` excludes key files and the `detect-private-key` hook is a second safety net. `.venv/` is different: it is not secret, but it is large, full of platform-specific binaries, and its scripts contain absolute paths to `/home/gbadedata/...`, so it would not work on anyone else's machine. It is fully reproducible from `requirements.txt`, so committing it would add noise and nothing useful.
+A private key is proof of identity: anyone who gets a copy can log in to every server that trusts the matching public key. Once a key is committed it stays in Git history even if the file is later deleted, so the only safe fix is to replace the key everywhere. `.gitignore` excludes key files and the `detect-private-key` hook is a second safety net. `.venv/` is different: it is not secret, but it is large, full of platform-specific binaries, and its scripts contain absolute paths to `/home/ abhin/...`, so it would not work on anyone else's machine. It is fully reproducible from `requirements.txt`, so committing it would add noise and nothing useful.
 
 ---
 

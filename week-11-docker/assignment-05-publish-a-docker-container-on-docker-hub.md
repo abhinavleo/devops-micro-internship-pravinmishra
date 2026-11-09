@@ -116,7 +116,7 @@ Ensure that the VM public IP is visible in the address bar. Add your full name a
 
 # Docker Hub Repository URL
 
-**Repository URL:** https://hub.docker.com/r/gbadedata/my-react-app
+**Repository URL:** https://hub.docker.com/r/gbdedata/my-react-app
 
 ---
 
@@ -128,7 +128,7 @@ Write a short explanation covering:
 - Why a container registry is useful in DevOps workflows
 - Why production deployments should use versioned image tags instead of relying only on `latest`
 
-**Why image tagging is required before pushing.** Docker works out where to push from the image name itself. A local name like `react-multistage:latest` has no registry or account in it, so Docker would treat it as `docker.io/library/react-multistage`, the namespace reserved for official images, which I cannot push to. Tagging it as `gbadedata/my-react-app:latest` adds my Docker Hub account and repository to the name. The tag is only a second name for the same image ID, so nothing is copied or rebuilt.
+**Why image tagging is required before pushing.** Docker works out where to push from the image name itself. A local name like `react-multistage:latest` has no registry or account in it, so Docker would treat it as `docker.io/library/react-multistage`, the namespace reserved for official images, which I cannot push to. Tagging it as ` abhin/my-react-app:latest` adds my Docker Hub account and repository to the name. The tag is only a second name for the same image ID, so nothing is copied or rebuilt.
 
 **Why a container registry is useful in DevOps workflows.** A registry is the single place where a built image lives, so an image is built once and then pulled by any machine that needs to run it. In this assignment I deleted every local copy and the VM still pulled and ran the exact image I had pushed, which is the same pattern a CI pipeline uses: build and push once, then servers pull that image to deploy. Images are stored as layers, so a pull only downloads the layers a host does not already have.
 
@@ -209,12 +209,12 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ## 📌 Resources
 
-- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme  
-- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho  
-- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/  
+- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme
+- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme
+- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme
+- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme
+- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho
+- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/
 - 🏢 CloudAdvisory (LinkedIn): https://www.linkedin.com/company/thecloudadvisory/
 
 ---

@@ -52,7 +52,7 @@ spec:
       initContainers:
         # Wait until MySQL accepts TCP connections, so the API does not crash-loop while the database starts
         - name: wait-for-mysql
-          image: gbadedata/book-review-backend:00dd4a5
+          image:  abhin/book-review-backend:00dd4a5
           command:
             - sh
             - -c
@@ -70,7 +70,7 @@ spec:
               drop: ["ALL"]
       containers:
         - name: backend
-          image: gbadedata/book-review-backend:00dd4a5
+          image:  abhin/book-review-backend:00dd4a5
           ports:
             - name: http
               containerPort: 3001

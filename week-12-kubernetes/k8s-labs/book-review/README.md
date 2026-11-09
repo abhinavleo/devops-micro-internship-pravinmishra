@@ -16,8 +16,8 @@ Architecture diagram: [a10-03-architecture-diagram.png](../../screenshots/a10-03
 | `tests/networkpolicy-test.sh` | Checks which tier-to-tier connections the policies allow |
 | `tests/pod-hardening-report.py` | Prints probes, resources and security settings per container |
 
-Images: `gbadedata/book-review-backend:00dd4a5` and `gbadedata/book-review-frontend:00dd4a5` on Docker Hub, built from
-[gbadedata/book-review-app@00dd4a5](https://github.com/abhinavleo/book-review-app/tree/00dd4a53732f8e84ee322059487d29fdaf53f696) (frontend image: [`frontend/Dockerfile.k8s`](https://github.com/abhinavleo/book-review-app/blob/00dd4a53732f8e84ee322059487d29fdaf53f696/frontend/Dockerfile.k8s)).
+Images: ` abhin/book-review-backend:00dd4a5` and ` abhin/book-review-frontend:00dd4a5` on Docker Hub, built from
+[ abhin/book-review-app@00dd4a5](https://github.com/ abhin/book-review-app/tree/00dd4a53732f8e84ee322059487d29fdaf53f696) (frontend image: [`frontend/Dockerfile.k8s`](https://github.com/ abhin/book-review-app/blob/00dd4a53732f8e84ee322059487d29fdaf53f696/frontend/Dockerfile.k8s)).
 
 ## Deploy order
 

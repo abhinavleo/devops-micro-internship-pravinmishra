@@ -28,7 +28,16 @@ Choose Team Mode or Solo Mode, and document how each Scrum role (Product Owner, 
 
 Write one line for each role: PO (what you prioritized), SM (how you ensured process), Dev Lead (what you built), DevOps Lead (how you shipped).
 
-Write your answer here.
+Mode: Solo Mode. I played all four roles myself, which is the honest description of a one-person exercise.
+
+Product Owner: I ordered the backlog by value before estimating anything, rather than by effort. Discoverability ranked above trust, because a visitor who cannot find a relevant job never gets far enough to care whether the site looks credible. So the search call-to-action, the result count and the job card content came before footer trust signals and form labelling.
+
+Scrum Master: I kept the exercise inside its time box and kept the sprint honest. Three Stories at four points, not six at eleven. I also held the sprint scope fixed once it had started, which is the easiest rule to break when nobody else would notice.
+
+Dev Lead: I limited the increment to text on the hero heading and the primary search button. UI only, no backend, no data. The smallest change that still delivers what the top-ranked Story describes.
+
+DevOps Lead: I deployed the Gotto Job template to the same EC2 instance already serving my portfolio site, using a separate Nginx location and a separate directory outside `/var/www/html`. That separation mattered because the portfolio deploy script clears its own webroot on every run and would otherwise have deleted this site.
+
 
 ---
 
@@ -98,7 +107,18 @@ Confirm the Story Points (1, 2, or 3) for each Story and record brief reasoning 
 
 For each story, explain in one or two lines why it is a 1, 2, or 3 (mention any debate, even in Solo Mode).
 
-Write your answer here.
+GOTTO-2, clarify the primary search call-to-action label, 1 point. A text change in a single template file with no layout impact. The only argument for making it a 2 was that it still needs deploying and verifying like anything else, which is true of a 1 as well.
+
+GOTTO-3, show result count on the job listing page, 2 points. Still presentational, but the count has to render somewhere sensible and read correctly when there are zero results. That edge case is the difference between a 1 and a 2.
+
+GOTTO-4, surface employer name and location on job cards, 3 points. I first estimated this at 2 and revised it upward. It changes a repeating component rather than a single element, so it has to be checked at more than one viewport width, and any layout regression multiplies across every card on the page.
+
+GOTTO-5, add contact and last-updated trust signals to the footer, 2 points. Two separate pieces of information in a shared component, so the change lands on every page rather than one.
+
+GOTTO-6, make navigation labels consistent across pages, 1 point. Text edits across five HTML files. Individually trivial, and the only real risk is missing a page.
+
+GOTTO-7, improve contact form field labels and helper text, 2 points. Labels are straightforward, but helper text has to be written rather than edited, and writing takes longer than changing.
+
 
 ---
 
@@ -233,12 +253,12 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ## 📌 Resources
 
-- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme  
-- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho  
-- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/  
+- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme
+- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme
+- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme
+- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme
+- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho
+- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/
 - 🏢 CloudAdvisory (LinkedIn): https://www.linkedin.com/company/thecloudadvisory/
 
 ---

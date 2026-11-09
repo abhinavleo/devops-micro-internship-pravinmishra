@@ -109,7 +109,7 @@ spec:
             capabilities:
               drop: ["ALL"]
         - name: nextjs
-          image: gbadedata/book-review-frontend:00dd4a5
+          image:  abhin/book-review-frontend:00dd4a5
           ports:
             - name: nextjs
               containerPort: 3000

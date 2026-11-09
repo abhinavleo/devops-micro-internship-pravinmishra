@@ -36,7 +36,7 @@ Verify the required tools, Azure DevOps authentication, organization and project
 
 No screenshot is required for this task.
 
-I checked that `curl`, `jq`, Git, the Azure CLI with the `azure-devops` extension, and Claude Code were installed, and that Azure DevOps authentication worked for organization `https://dev.azure.com/gbadedata` and project `DMI-Week10`. I then read the numeric pipeline IDs with `az pipelines list`: 5 for `gbadedata.epicbook-infra` and 6 for `gbadedata.epicbook-app`.
+I checked that `curl`, `jq`, Git, the Azure CLI with the `azure-devops` extension, and Claude Code were installed, and that Azure DevOps authentication worked for organization `https://dev.azure.com/gbdedata` and project `DMI-Week10`. I then read the numeric pipeline IDs with `az pipelines list`: 5 for ` abhin.epicbook-infra` and 6 for ` abhin.epicbook-app`.
 
 ---
 
@@ -52,7 +52,7 @@ Confirm that both EpicBook pipelines are healthy and place the supplied assignme
 
 Terminal output showing the latest completed Infrastructure and Application Pipeline runs with successful results.
 ![Assignment 5](screenshots/as5/1.jpg)
-*The latest completed run of each pipeline, read with the Azure DevOps CLI before the drill. `gbadedata.epicbook-infra`: run ID 26 (#20260927.1) on `refs/heads/main`, `completed`, `succeeded`, finished 2026-09-27 12:31 UTC. `gbadedata.epicbook-app`: run ID 28 (#20261012.1) on `refs/heads/main`, `completed`, `succeeded`, finished 2026-10-12 08:06 UTC.*
+
 
 ## Notes
 
@@ -60,8 +60,8 @@ Terminal output showing the latest completed Infrastructure and Application Pipe
 
 The latest completed run of each pipeline, read from Azure DevOps before I changed anything (Screenshot 1):
 
-* Infrastructure Pipeline `gbadedata.epicbook-infra` (pipeline ID 5): run ID 26 (#20260927.1) on `main`, `completed` and `succeeded`, finished 2026-09-27 12:31 UTC.
-* Application Pipeline `gbadedata.epicbook-app` (pipeline ID 6): run ID 28 (#20261012.1) on `main`, `completed` and `succeeded`, finished 2026-10-12 08:06 UTC.
+* Infrastructure Pipeline ` abhin.epicbook-infra` (pipeline ID 5): run ID 26 (#20260927.1) on `main`, `completed` and `succeeded`, finished 2026-09-27 12:31 UTC.
+* Application Pipeline ` abhin.epicbook-app` (pipeline ID 6): run ID 28 (#20261012.1) on `main`, `completed` and `succeeded`, finished 2026-10-12 08:06 UTC.
 
 Run 28 was the first run after I added the Validate stage to the application pipeline (Task 6 explains why), so the baseline is a green run of the same pipeline definition the drill used. The triage script then confirmed both results independently in Task 4.
 
@@ -86,7 +86,7 @@ Configure the supplied project context and verify the safety boundaries Claude m
 `CLAUDE.md` open in the editor with the Project Overview, Incident Workflow, Safety Rules, and Output Rules visible.
 ![Assignment 5](screenshots/as5/2.jpg)
 
-*`CLAUDE.md` in the assignment folder, which is the folder Claude Code is started from. It holds the Project Overview, the four-step Incident Workflow (Gather, Analyze, Human Act, Verify), the Safety Rules and the nine Output Rules, exactly as given in Task 2 of the lesson.*
+
 
 ## Notes
 
@@ -131,10 +131,10 @@ Configure the supplied Bash script and verify that it retrieves and classifies e
 Editor showing the script configuration variables, report filenames, check-function array, and read-only log-retrieval functions. Ensure that no token is visible.
 ![Assignment 5](screenshots/as5/3a.jpg)
 
-*The configuration block of `pipeline-triage.sh`: Full Name, organization URL, project and the two numeric pipeline IDs (5 and 6). All of these are non-secret. Below them are the report and raw-log filenames and the `checks=( ... )` array. No token is stored in the file; the script reads the credential from the `AZURE_DEVOPS_EXT_PAT` environment variable when it runs.*
+
 ![Assignment 5](screenshots/as5/3b.jpg)
 
-*`ado_get`, the only function that contacts Azure DevOps. It always sends `--request GET`, passes the credential to `curl` on standard input (`--header @-`), rejects a 200 response that is not JSON (often a sign-in page), and maps HTTP 203, 302, 401 and 403 to an authentication error and 404 to a configuration error. `report_api_error` writes these as `ERROR` lines in the report, so a failed request can never be reported as healthy.*
+
 
 ---
 
@@ -143,7 +143,6 @@ Editor showing the script configuration variables, report filenames, check-funct
 Terminal showing successful Bash syntax validation and executable file permission.
 ![Assignment 5](screenshots/as5/4.jpg)
 
-*Bash syntax validation reports no syntax errors, and `ls -l` shows the script is executable (`-rwxr-xr-x`).*
 
 ## Notes
 
@@ -228,7 +227,6 @@ Run the supplied script against the healthy baseline and verify the initial pipe
 Healthy pipeline report showing your Full Name, both successful pipelines, Overall Status `HEALTHY`, and captured exit code `0`.
 ![Assignment 5](screenshots/as5/5.jpg)
 
-*The healthy-state run: the exit code captured from the shell is `0`, and the key report lines show Full Name Abhinav T, the Infrastructure Pipeline (run ID 26) and the Application Pipeline (run ID 28) both `succeeded` with verdict `HEALTHY`, Overall Status `HEALTHY` and Script Exit Code `0`. The `reports/` listing shows the report and both downloaded raw logs.*
 
 ## Notes
 
@@ -238,8 +236,8 @@ Screenshot 5 shows:
 
 * the exit code captured from the shell straight after the run: `0`
 * Full Name: Abhinav T
-* Infrastructure Pipeline `gbadedata.epicbook-infra`, run #20260927.1 (run ID 26): result `succeeded`, verdict `HEALTHY`
-* Application Pipeline `gbadedata.epicbook-app`, run #20261012.1 (run ID 28): result `succeeded`, verdict `HEALTHY`
+* Infrastructure Pipeline ` abhin.epicbook-infra`, run #20260927.1 (run ID 26): result `succeeded`, verdict `HEALTHY`
+* Application Pipeline ` abhin.epicbook-app`, run #20261012.1 (run ID 28): result `succeeded`, verdict `HEALTHY`
 * Overall Status `HEALTHY` and Script Exit Code `0`
 
 The full report lists all 18 checks as PASS, with WARN 0, FAIL 0 and ERROR 0. The script also downloaded both complete raw logs (169,506 and 87,277 bytes), which shows that log retrieval worked rather than being skipped. Before going further, I checked both logs for leaks. The MySQL password, the PAT and private-key markers each had 0 matches, and the sanitizer had made 40 redactions. Some of those were harmless values, such as an SSH public key. Base64 strings that contain `/` are only partly redacted, so the sanitizer is a second layer behind Azure DevOps' own `***` masking, not a replacement for it.
@@ -322,7 +320,7 @@ Create a controlled Application Pipeline failure that can be diagnosed without c
 Failed Application Pipeline run showing the temporary branch, failed status, failed step, and relevant non-sensitive error evidence.
 ![Assignment 5](screenshots/as5/8a.jpg)
 
-*Run #20261012.2 (run ID 29) of `gbadedata.epicbook-app`, queued manually on `drill/pipeline-failure` at commit `56b77864`. The Validate stage failed at "Install dependencies (npm ci)" with `Bash exited with code '1'.`, and the Configure and deploy and Verify stages were skipped due to conditions, so nothing was deployed.*
+*Run #20261012.2 (run ID 29) of ` abhin.epicbook-app`, queued manually on `drill/pipeline-failure` at commit `56b77864`. The Validate stage failed at "Install dependencies (npm ci)" with `Bash exited with code '1'.`, and the Configure and deploy and Verify stages were skipped due to conditions, so nothing was deployed.*
 ![Assignment 5](screenshots/as5/8b.jpg)
 
 *The failed step, "Install dependencies (npm ci)": `npm error code E404`, `npm error 404 Not Found - GET https://registry.npmjs.org/epicbook-drill-missing-dependency - Not found`, and `##[error]Bash exited with code '1'.` The log contains no credentials.*
@@ -331,7 +329,7 @@ Failed Application Pipeline run showing the temporary branch, failed status, fai
 
 ### 1. What exact failure did you introduce?
 
-In the application repository, `gbadedata/epicbook-app`, I created the branch `drill/pipeline-failure` from `main` and made one commit, `56b77864` ("DRILL: add a non-existent npm dependency to test pipeline triage (do not merge)"). It adds one entry to the `dependencies` block of `package.json`:
+In the application repository, ` abhin/epicbook-app`, I created the branch `drill/pipeline-failure` from `main` and made one commit, `56b77864` ("DRILL: add a non-existent npm dependency to test pipeline triage (do not merge)"). It adds one entry to the `dependencies` block of `package.json`:
 
 ```json
 "epicbook-drill-missing-dependency": "^1.0.0"

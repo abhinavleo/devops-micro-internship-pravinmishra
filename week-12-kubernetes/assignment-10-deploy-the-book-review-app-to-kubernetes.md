@@ -12,20 +12,19 @@ Deploy the Book Review App as a production-style three-tier application using Ku
 
 ## Submission Details
 
-**Full Name:** Add your full name here.
+**Full Name:** Abhinav T
 
-**Kubernetes Platform:** Add your platform here.
+**Kubernetes Platform:** Azure Kubernetes Service (AKS), Kubernetes v1.35.8, UK West: one Standard_D4als_v6 node, Azure CNI Overlay with the Cilium dataplane, which enforces NetworkPolicy
 
 **Namespace:** book-review
 
-**Frontend URL or IP:** Add the working endpoint here.
+**Frontend URL or IP:** http://51.141.108.62 (live while the cluster is kept for Assignment 11)
 
-**Access Method:** Public LoadBalancer, Ingress, or documented local access.
+**Access Method:** Public LoadBalancer: the Kubernetes `LoadBalancer` Service `frontend` on port 80, backed by an Azure Standard Load Balancer
 
-**GitHub Manifests or Helm Chart URL:** Add your repository link here.
+**GitHub Manifests or Helm Chart URL:** YAML manifests in [`week-12-kubernetes/k8s-labs/book-review`](https://github.com/abhinavleo/devops-micro-internship-pravinmishra/tree/main/week-12-kubernetes/k8s-labs/book-review). Images ` abhin/book-review-backend:00dd4a5` and ` abhin/book-review-frontend:00dd4a5`, built from [ abhin/book-review-app@00dd4a5](https://github.com/ abhin/book-review-app/tree/00dd4a53732f8e84ee322059487d29fdaf53f696) (frontend image: [`frontend/Dockerfile.k8s`](https://github.com/abhinavleo/book-review-app/blob/00dd4a53732f8e84ee322059487d29fdaf53f696/frontend/Dockerfile.k8s))
 
-**Architecture Diagram:** Add your diagram or link here.
-
+**Architecture Diagram:** ![Assignment 10](screenshots/as10/3.png)
 ---
 
 # Task 1 — Prepare the Kubernetes Cluster and Project
@@ -37,8 +36,7 @@ Prepare the cluster, application source, container images, and tooling needed fo
 ### Evidence
 
 #### Screenshot 1 — Active Kubernetes context and Ready nodes
-
-Add your screenshot here.
+![Assignment 10](screenshots/as10/1.png)
 
 ---
 
@@ -46,7 +44,7 @@ Add your screenshot here.
 
 Required only if you choose Helm. Skip this screenshot if using YAML manifests.
 
-Add your screenshot here, or write “Not applicable — using YAML manifests.”
+Not applicable: using YAML manifests.
 
 ---
 
@@ -59,28 +57,27 @@ Document the workloads, networking, configuration, storage, and permitted commun
 ### Evidence
 
 #### Screenshot 3 — Completed Kubernetes architecture diagram
-
-Add your screenshot here.
-
+![Assignment 10](screenshots/as10/3.png)
 ---
 
 # Task 3 — Create ConfigMaps and Secrets
 
 ## Goal
 
-Provide application configuration and credentials without embedding sensitive values in images or committing them to Git.
+
 
 ### Evidence
 
 #### Screenshot 4 — ConfigMap configuration or describe output showing non-sensitive values
+![Assignment 10](screenshots/as10/4.png)
 
-Add your screenshot here.
 
 ---
 
 #### Screenshot 5 — Secret references or describe output showing names and keys without sensitive values
+![Assignment 10](screenshots/as10/5.png)
 
-Add your screenshot here.
+
 
 ---
 
@@ -93,14 +90,15 @@ Provide persistent MySQL storage and allow the backend to connect without exposi
 ### Evidence
 
 #### Screenshot 6 — Managed MySQL status or MySQL StatefulSet and PVC status
+![Assignment 10](screenshots/as10/6.png)
 
-Add your screenshot here.
+
 
 ---
 
 #### Screenshot 7 — Successful database connectivity or schema verification with credentials hidden
+![Assignment 10](screenshots/as10/7.png)
 
-Add your screenshot here.
 
 ---
 
@@ -113,16 +111,18 @@ Run one or two Node.js/Express backend replicas on port 3001 and expose them thr
 ### Evidence
 
 #### Screenshot 8 — Backend Deployment, ready Pods, and internal Service
+![Assignment 10](screenshots/as10/8.png)
 
-Add your screenshot here.
+
 
 ---
 
 #### Screenshot 9 — Backend startup logs and database connectivity evidence
 
 If the application does not log successful database connections, provide a successful database-backed request alongside the startup logs.
+![Assignment 10](screenshots/as10/9.png)
 
-Add your screenshot here.
+
 
 ---
 
@@ -135,14 +135,13 @@ Run the Next.js frontend behind Nginx on port 80 and proxy API requests to the i
 ### Evidence
 
 #### Screenshot 10 — Frontend Deployment and Ready Pods
+![Assignment 10](screenshots/as10/10.png)
 
-Add your screenshot here.
 
 ---
 
 #### Screenshot 11 — Nginx reverse-proxy configuration showing the internal backend Service name and port 3001
-
-Add your screenshot here.
+![Assignment 10](screenshots/as10/11.png)
 
 ---
 
@@ -155,14 +154,16 @@ Expose the frontend and enforce the intended communication path between applicat
 ### Evidence
 
 #### Screenshot 12 — Frontend LoadBalancer or Ingress configuration and assigned endpoint, or documented local access method
+![Assignment 10](screenshots/as10/12.png)
 
-Add your screenshot here.
+
 
 ---
 
 #### Screenshot 13 — Internal backend Service and NetworkPolicy or equivalent restriction, with access-test evidence
+![Assignment 10](screenshots/as10/13.png)
 
-Add your screenshot here.
+
 
 ---
 
@@ -175,32 +176,31 @@ Prove that the frontend, backend, and MySQL database work together and collect o
 ### Evidence
 
 #### Screenshot 14 — `kubectl get all` output for the book-review namespace
-
-Add your screenshot here.
-
+![Assignment 10](screenshots/as10/14.png)
 ---
 
 #### Screenshot 15 — Functional Book Review App in the browser with the URL visible, including evidence of a successful user flow
-
-Add your screenshot here.
+![Assignment 10](screenshots/as10/15.png)
 
 ---
 
 #### Screenshot 16 — Frontend or Nginx container logs
+![Assignment 10](screenshots/as10/16.png)
 
-Add your screenshot here.
 
 ---
 
 #### Screenshot 17 — Backend logs and evidence of a successful database-backed operation
+![Assignment 10](screenshots/as10/17.jpg)
+![Assignment 10](screenshots/as10/17b.jpg)
 
-Add your screenshot here.
+
 
 ---
 
 #### Screenshot 18 — Optional: Kubernetes dashboard
 
-Add your screenshot here, or write “Not attempted.”
+Not attempted.
 
 Multiple images may be included under a screenshot number when needed to demonstrate the complete user flow.
 
@@ -215,8 +215,8 @@ Add selected improvements without breaking the required three-tier architecture.
 ### Evidence
 
 #### Screenshot 19 — Optional: Evidence of selected Helm, HPA, probe, or TLS improvements
+![Assignment 10](screenshots/as10/19.png)
 
-Add your screenshot here, or write “Not attempted.”
 
 ---
 
@@ -230,11 +230,11 @@ Explain your three-tier architecture, demonstrate the working application, and s
 
 #### Screenshot 20 — Published LinkedIn post about your Book Review App deployment on Kubernetes
 
-Add your screenshot here.
+Not published
 
 ### LinkedIn Post URL
 
-Add your published LinkedIn post URL here.
+Not published
 
 ---
 
@@ -244,31 +244,57 @@ Add your published LinkedIn post URL here.
 
 Describe the application components and user flows you successfully deployed and tested.
 
-Add your summary here.
+All three tiers run on AKS in the `book-review` namespace and work together end to end. MySQL 8.4 runs as a StatefulSet with an 8 GiB Azure Disk behind a headless Service. Two backend replicas (Node.js/Express on port 3001) sit behind an internal ClusterIP Service. Two frontend replicas each run Nginx on port 80 in front of the Next.js server, and Nginx proxies `/api/` to `backend.book-review.svc.cluster.local:3001`. The only public entry point is the `frontend` LoadBalancer Service at http://51.141.108.62. Settings come from a ConfigMap and the credentials from a Secret created from a local file that is never committed.
+
+In the browser I registered, logged in and posted reviews. The backend logged the requests and the rows appeared in MySQL (Screenshots 15 to 17). I then deleted the MySQL Pod and restarted both Deployments, twice, and every review was still there, including the one posted before the first restart. NetworkPolicies, enforced by Cilium, allow only internet to frontend:80, frontend to backend:3001 and backend to mysql:3306; the test in Screenshot 13 confirmed the allowed paths and that a Pod without a tier label is blocked from both the backend and MySQL. Ports 3001 and 3306 do not answer on the public IP (Screenshot 12).
 
 ## Issues and Fixes
 
 Describe the main issues encountered, their causes, and how you resolved them.
 
-Add your summary here.
+1. **Docker in WSL could not reach Docker Desktop.** After Docker Desktop was reset, `/var/run/docker.sock` was missing in Ubuntu, so the image build stopped at its first check. Turning on WSL integration for Ubuntu-24.04 in Docker Desktop fixed it. Docker Hub then rejected a password login, so I used the browser-based `docker login` flow.
+2. **The frontend would have called `localhost:3001` from the browser.** `NEXT_PUBLIC_API_URL` is baked into the JavaScript at build time, and the code used `||`, so an empty value fell back to `http://localhost:3001`. I changed it to `??` in both places, so an empty value means same-origin `/api` calls that Nginx proxies, added Next.js standalone output and a production `frontend/Dockerfile.k8s`, and checked the built image for any remaining `localhost:3001` before pushing.
+3. **Next.js 15.2.9 had a critical security advisory.** I upgraded to 15.5.27 and ran `npm audit fix` for the production dependencies: no critical advisories remain. One moderate and one high remain in a PostCSS copy bundled inside Next.js, which only Next.js 16 fixes.
+4. **The backend logs were full of `Incoming request from: undefined`.** The app logs every request, and the kubelet's health probes call `/` every 5 to 10 seconds without an Origin header. I filtered them out with `grep -v` for Screenshot 9; a separate, unlogged health endpoint in the app would be the lasting fix.
+5. **I lost request logs to my own restart test.** My first log captures were taken before the browser test, and the restart then replaced the Pods that held the request lines. I posted two more reviews, captured Screenshots 16 and 17 straight away, and repeated the restart test for the persistence check.
+
+I also designed around these problems before they could happen:
+
+- A new Azure Disk contains `lost+found`, and MySQL refuses to initialise a non-empty data directory, so the volume is mounted with `subPath: mysql`.
+- Two backend replicas starting together would both find empty tables and insert the sample data twice, so the first rollout used one replica and then scaled to two. Screenshot 7 shows exactly 2 users, 3 books and 2 reviews.
+- The backend accepts only the browser origin listed in `ALLOWED_ORIGINS`, so I created the LoadBalancer Service first and put its IP in the ConfigMap before the backend started.
+- Kubernetes sets `HOSTNAME` to the Pod name and the Next.js server binds to `HOSTNAME`, so the `nextjs` container sets `HOSTNAME=0.0.0.0`.
+- Non-root Nginx (UID 101) cannot bind port 80 by default, so the Pod sets the `net.ipv4.ip_unprivileged_port_start=0` sysctl, which the baseline Pod Security standard allows.
+- The MySQL probes connect over TCP to 127.0.0.1, so they cannot pass during first-time initialisation, when the temporary server listens only on a socket.
 
 ## Tools and Sources Used
 
 List the documentation and tools that helped you complete the assignment.
 
-Add your tools and sources here.
+- Azure Kubernetes Service, Azure CLI, kubectl, Docker Desktop with WSL 2, and Docker Hub for the images
+- Kubernetes documentation: [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/), [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/), [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/), [probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/) and [sysctls](https://kubernetes.io/docs/tasks/administer-cluster/sysctl-cluster/)
+- Microsoft Learn: [Azure CNI powered by Cilium](https://learn.microsoft.com/azure/aks/azure-cni-powered-by-cilium) and [the Azure Disk CSI driver](https://learn.microsoft.com/azure/aks/azure-disk-csi)
+- [Next.js standalone output](https://nextjs.org/docs/app/api-reference/config/next-config-js/output), the [MySQL image documentation](https://hub.docker.com/_/mysql) and [nginx-unprivileged](https://github.com/nginx/docker-nginx-unprivileged)
+- Claude (AI assistant) for planning, the manifests and test scripts, and checking the evidence
 
 ## Optional Improvements
 
 Describe any optional improvements implemented, or write “Not attempted.”
 
-Add your summary here.
+Implemented, with the evidence in Screenshot 19:
+
+- Readiness and liveness probes on every container, plus a startup probe for MySQL, and rolling updates with `maxUnavailable: 0`.
+- CPU and memory requests and a memory limit on every container.
+- Non-root app containers (UID 1000 for the backend and Next.js, UID 101 for Nginx) with privilege escalation disabled, all capabilities dropped and the `RuntimeDefault` seccomp profile; the backend also has a read-only root filesystem.
+- Pod Security `baseline` enforced on the namespace, and the NetworkPolicies from Task 7.
+
+Not attempted: Helm, HPA, TLS, Ingress and the Kubernetes dashboard.
 
 ## Cleanup or Reuse Plan
 
 State which resources were removed or why the environment is being retained.
 
-Add your cleanup status or reuse plan here.
+Removed. The AKS cluster `aks-abhinav-week12` (resource group `rg-abhinav-week12-aks`, UK West) stayed up through Assignment 11, which used the same cluster. I stopped it once both assignments were submitted, and deleted the whole resource group . That removed the cluster, its node, the Azure Disk and the public IP, so http://51.141.108.62 no longer answers. I also deleted the local Secret values file and the Assignment 11 read-only kubeconfig. The Docker Hub images stay public; they contain no secrets.
 
 ---
 
@@ -291,36 +317,36 @@ Add your cleanup status or reuse plan here.
 
 # Completion Checklist
 
-- [ ] Selected and configured a supported Kubernetes platform
-- [ ] Confirmed the context and Ready nodes (Screenshot 1)
-- [ ] Created and selected the book-review namespace
-- [ ] Inspected the application repository
-- [ ] Prepared images accessible to the cluster
-- [ ] Confirmed Helm if using charts (Screenshot 2, conditional)
-- [ ] Created the architecture diagram (Screenshot 3)
-- [ ] Created ConfigMaps and Secrets (Screenshots 4–5)
-- [ ] Excluded actual Secret values from Git and screenshots
-- [ ] Provisioned private managed MySQL or persistent Kubernetes MySQL (Screenshot 6)
-- [ ] Initialized the required database and schema
-- [ ] Verified database connectivity or schema (Screenshot 7)
-- [ ] Deployed one or two backend replicas listening on port 3001
-- [ ] Created the backend ClusterIP Service (Screenshot 8)
-- [ ] Verified backend-to-database connectivity (Screenshot 9)
-- [ ] Deployed one or two frontend replicas behind Nginx (Screenshot 10)
-- [ ] Configured API proxying through the internal backend Service (Screenshot 11)
-- [ ] Configured and documented frontend access (Screenshot 12)
-- [ ] Enforced backend access restrictions (Screenshot 13)
-- [ ] Confirmed that the backend and database are not publicly exposed
-- [ ] Captured resource status for book-review (Screenshot 14)
-- [ ] Tested application functionality and database writes (Screenshots 15 and 17)
-- [ ] Verified saved data after application restart
-- [ ] Captured frontend and backend logs (Screenshots 16–17)
-- [ ] Included optional dashboard or improvement evidence if attempted (Screenshots 18–19)
-- [ ] Published the LinkedIn post (Screenshot 20)
-- [ ] Included the LinkedIn post URL
-- [ ] Documented issues, fixes, and useful sources
-- [ ] Recorded cleanup status or reuse plans
-- [ ] No sensitive data exposed
+- [x] Selected and configured a supported Kubernetes platform
+- [x] Confirmed the context and Ready nodes (Screenshot 1)
+- [x] Created and selected the book-review namespace
+- [x] Inspected the application repository
+- [x] Prepared images accessible to the cluster
+- [ ] Confirmed Helm if using charts (Screenshot 2, conditional) (not applicable: YAML manifests)
+- [x] Created the architecture diagram (Screenshot 3)
+- [x] Created ConfigMaps and Secrets (Screenshots 4–5)
+- [x] Excluded actual Secret values from Git and screenshots
+- [x] Provisioned private managed MySQL or persistent Kubernetes MySQL (Screenshot 6)
+- [x] Initialized the required database and schema
+- [x] Verified database connectivity or schema (Screenshot 7)
+- [x] Deployed one or two backend replicas listening on port 3001
+- [x] Created the backend ClusterIP Service (Screenshot 8)
+- [x] Verified backend-to-database connectivity (Screenshot 9)
+- [x] Deployed one or two frontend replicas behind Nginx (Screenshot 10)
+- [x] Configured API proxying through the internal backend Service (Screenshot 11)
+- [x] Configured and documented frontend access (Screenshot 12)
+- [x] Enforced backend access restrictions (Screenshot 13)
+- [x] Confirmed that the backend and database are not publicly exposed
+- [x] Captured resource status for book-review (Screenshot 14)
+- [x] Tested application functionality and database writes (Screenshots 15 and 17)
+- [x] Verified saved data after application restart
+- [x] Captured frontend and backend logs (Screenshots 16–17)
+- [x] Included optional dashboard or improvement evidence if attempted (Screenshots 18–19) (Screenshot 19; the dashboard was not attempted)
+- [ ] Published the LinkedIn post (Screenshot 20) (not published, by choice)
+- [ ] Included the LinkedIn post URL (not published, by choice)
+- [x] Documented issues, fixes, and useful sources
+- [x] Recorded cleanup status or reuse plans
+- [x] No sensitive data exposed
 
 ---
 
@@ -334,12 +360,12 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ## 📌 Resources
 
-- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme  
-- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho  
-- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/  
+- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme
+- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme
+- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme
+- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme
+- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho
+- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/
 - 🏢 CloudAdvisory (LinkedIn): https://www.linkedin.com/company/thecloudadvisory/
 
 ---

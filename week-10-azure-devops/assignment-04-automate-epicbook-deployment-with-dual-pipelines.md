@@ -70,7 +70,7 @@ Add a screenshot of the Infrastructure Pipeline run showing:
 * `backend_private_ip`
 * `mysql_fqdn`
 ![Assignment 4](screenshots/as4/1.jpg)
-*The Infrastructure Pipeline (`gbadedata.epicbook-infra`, run #20260927.1). The Apply stage ran only after my approval on the `epicbook-infra` environment, and applied the plan file saved by the Plan stage: `Apply complete! Resources: 18 added, 0 changed, 0 destroyed.` It then printed the four non-sensitive outputs: `app_public_ip`, `backend_ansible_host`, `backend_private_ip` and `mysql_fqdn`. The subscription ID in the resource IDs shows as `***`, because the pipeline registers it as a secret before Terraform runs.*
+*The Infrastructure Pipeline (` abhin.epicbook-infra`, run #20260927.1). The Apply stage ran only after my approval on the `epicbook-infra` environment, and applied the plan file saved by the Plan stage: `Apply complete! Resources: 18 added, 0 changed, 0 destroyed.` It then printed the four non-sensitive outputs: `app_public_ip`, `backend_ansible_host`, `backend_private_ip` and `mysql_fqdn`. The subscription ID in the resource IDs shows as `***`, because the pipeline registers it as a secret before Terraform runs.*
 
 > Do not expose the MySQL password, Client Secret, Terraform state, SSH private key, or another sensitive value.
 
@@ -124,7 +124,7 @@ Run the Application Pipeline to configure the VMs, deploy EpicBook, and verify t
 
 Add a screenshot of the Application Pipeline run summary showing all required stages or jobs succeeded.
 ![Assignment 4](screenshots/as4/3.jpg)
-*The Application Pipeline (`gbadedata.epicbook-app`, run #20260927.1) with both stages succeeded: **Configure and deploy** runs the Ansible playbook, and **Verify** checks EpicBook from outside through the frontend public IP and confirms the backend's port 8080 cannot be reached from the internet.*
+*The Application Pipeline (` abhin.epicbook-app`, run #20260927.1) with both stages succeeded: **Configure and deploy** runs the Ansible playbook, and **Verify** checks EpicBook from outside through the frontend public IP and confirms the backend's port 8080 cannot be reached from the internet.*
 
 ---
 

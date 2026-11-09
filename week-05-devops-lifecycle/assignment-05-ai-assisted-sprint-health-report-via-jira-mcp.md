@@ -31,7 +31,7 @@ Because the token is only one third of what a request needs, and it is the third
 
 Atlassian Cloud authenticates REST calls with HTTP Basic auth, where the username is the account email and the password is the API token. The email is not metadata sitting alongside the credential, it is literally half of it. A token with no email attached cannot be presented as a credential at all.
 
-The site URL is a separate problem. One Atlassian account can hold access to many sites, and the token does not encode which one is meant. `https://gbadedata.atlassian.net` is an address, not an identity.
+The site URL is a separate problem. One Atlassian account can hold access to many sites, and the token does not encode which one is meant. `https:// abhin.atlassian.net` is an address, not an identity.
 
 I confirmed this rather than assuming it. Before touching MCP at all I ran a direct check that built a Basic header from `email:token`, base64-encoded it, and sent it to `{JIRA_URL}/rest/api/3/myself`. It returned my display name and email. Remove any one of the three values and the request either cannot be addressed or cannot be authorised.
 
@@ -293,12 +293,12 @@ It helps learners build strong DevOps foundations with hands-on experience.
 
 ## 📌 Resources
 
-- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme  
-- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme  
-- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho  
-- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/  
+- 🌐 DMI Official Website: https://dmi.pravinmishra.com?utm_source=github&utm_medium=readme
+- 🎓 University: https://university.pravinmishra.com?utm_source=github&utm_medium=readme
+- 💬 Discord Community: https://discord.pravinmishra.com?utm_source=github&utm_medium=readme
+- 📝 Blog: https://dmi.pravinmishra.com/blog?utm_source=github&utm_medium=readme
+- ▶️ YouTube Playlist: https://www.youtube.com/playlist?list=PLFeSNDtI4Cho
+- 🔗 Pravin Mishra (LinkedIn): https://www.linkedin.com/in/pravin-mishra-aws-trainer/
 - 🏢 CloudAdvisory (LinkedIn): https://www.linkedin.com/company/thecloudadvisory/
 
 ---

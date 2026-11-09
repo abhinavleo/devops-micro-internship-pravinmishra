@@ -19,4 +19,4 @@ WARN: 1
 FAIL: 2
 Overall Status: FAIL
 Script Exit Code: 2
-Report File: /home/gbadedata/week-06-aws-audit/reports/aws-audit-report.txt
+Report File: /home/ abhin/week-06-aws-audit/reports/aws-audit-report.txt
