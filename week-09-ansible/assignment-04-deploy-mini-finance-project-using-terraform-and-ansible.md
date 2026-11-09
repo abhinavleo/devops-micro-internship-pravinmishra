@@ -107,7 +107,7 @@ Add the Terraform-provisioned Azure VM to the Ansible inventory and confirm that
 ### Evidence
 
 #### Screenshot 7 — Ansible ping output showing `SUCCESS` and `pong` from the Azure VM
-![Assignment 4](screenshots/as4/7.jpg)
+![Assignment 4](screenshots/as4/7.png)
 ---
 
 ### Configuration File
@@ -261,15 +261,15 @@ Validate the syntax of the multi-play Ansible playbook and run it to install Ngi
 ### Evidence
 
 #### Screenshot 10 — Successful playbook syntax check showing `playbook: site.yml`
-![Assignment 4](screenshots/as4/10.jpg)
+![Assignment 4](screenshots/as4/10.png)
 ---
 
 #### Screenshot 11 — Play 3 output showing the successful HTTP verification and assertion
-![Assignment 4](screenshots/as4/11.jpg)
+![Assignment 4](screenshots/as4/11.png)
 ---
 
 #### Screenshot 12 — Final `PLAY RECAP` showing `failed=0` and `unreachable=0`
-![Assignment 4](screenshots/as4/12.jpg)
+![Assignment 4](screenshots/as4/12.png)
 ---
 
 ### Notes
