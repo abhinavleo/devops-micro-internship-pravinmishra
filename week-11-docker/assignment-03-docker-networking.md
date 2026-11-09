@@ -37,7 +37,7 @@ Add a screenshot of the terminal showing successful completion of:
 ```bash
 docker pull nginx:alpine
 ```
-![Assignment 3](screenshots/as3/2.png)
+![Assignment 3](screenshots/as3/2.jpg)
 ---
 
 #### Screenshot 3 — Running `myweb` Container
