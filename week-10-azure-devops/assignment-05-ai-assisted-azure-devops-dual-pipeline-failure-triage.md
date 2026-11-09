@@ -263,7 +263,7 @@ Configure the supplied Claude Code skill and verify that it runs the Bash tool a
 `SKILL.md` showing the frontmatter, manual-invocation setting, narrowly scoped tools, safety rules, and required output structure.
 ![Assignment 5](screenshots/as5/6.jpg)
 
-*`.claude/skills/pipeline-triage/SKILL.md`. The frontmatter sets `disable-model-invocation: true`, pre-approves only `Bash(./pipeline-triage.sh)`, `Read` and `Grep`, and removes `Edit`, `Write` and `NotebookEdit` with `disallowed-tools`. The body runs the script, reads the evidence, and reports the same nine items as the Output Rules in `CLAUDE.md`, without editing files, rerunning pipelines or touching secrets.*
+
 
 ---
 
@@ -272,7 +272,7 @@ Configure the supplied Claude Code skill and verify that it runs the Bash tool a
 Healthy `/pipeline-triage` result showing that both pipelines are healthy and no fix is required.
 ![Assignment 5](screenshots/as5/7.jpg)
 
-*The healthy check before the drill: both pipelines healthy (runs 26 and 28), exit code `0`, 18 PASS, no failure category and no fix needed. I made a mistake here: I typed `./pipeline-triage.sh` as the prompt instead of `/pipeline-triage`, so this run followed `CLAUDE.md` but did not use the skill (it ran two shell commands, which the skill would not allow). Both later runs were invoked as `/pipeline-triage`. Screenshot 11a is the skill on a healthy state, reporting both pipelines healthy and no fix required.*
+
 
 ## Notes
 
@@ -320,10 +320,10 @@ Create a controlled Application Pipeline failure that can be diagnosed without c
 Failed Application Pipeline run showing the temporary branch, failed status, failed step, and relevant non-sensitive error evidence.
 ![Assignment 5](screenshots/as5/8a.jpg)
 
-*Run #20261012.2 (run ID 29) of ` abhin.epicbook-app`, queued manually on `drill/pipeline-failure` at commit `56b77864`. The Validate stage failed at "Install dependencies (npm ci)" with `Bash exited with code '1'.`, and the Configure and deploy and Verify stages were skipped due to conditions, so nothing was deployed.*
+
 ![Assignment 5](screenshots/as5/8b.jpg)
 
-*The failed step, "Install dependencies (npm ci)": `npm error code E404`, `npm error 404 Not Found - GET https://registry.npmjs.org/epicbook-drill-missing-dependency - Not found`, and `##[error]Bash exited with code '1'.` The log contains no credentials.*
+
 
 ## Notes
 
@@ -372,10 +372,10 @@ Use `/pipeline-triage` to classify the failed Application Pipeline without allow
 `/pipeline-triage` output and saved incident report showing the affected pipeline, failure category, sanitized evidence, recommendation, and your Full Name.
 ![Assignment 5](screenshots/as5/9a.png)
 
-*`/pipeline-triage` after the failure. Claude reports Overall Status `FAIL` with exit code `2`, the Application Pipeline, run ID 29, the dependency installation failure category, the npm `E404` lines as evidence, the non-existent package added by commit `56b7786` as the root cause, one recommendation and one verification step. It also states "I haven't changed any files or touched any pipeline run."*
+
 ![Assignment 5](screenshots/as5/9b.jpg)
 
-*`reports/incident-failure-report.txt`, saved before the fix: Full Name, and the Application Pipeline section with run ID 29 on `drill/pipeline-failure`, the failed step, the sanitized evidence, the category and the recommended human action, ending with Overall Status `FAIL` and Script Exit Code `2`.*
+
 
 ## Notes
 
@@ -424,7 +424,7 @@ Apply the recommended fix manually and verify that the Application Pipeline and 
 Corrected Application Pipeline run showing the temporary branch and successful status.
 ![Assignment 5](screenshots/as5/10.jpg)
 
-*Run #20261012.3 (run ID 30) on `drill/pipeline-failure` at commit `16d58cc7`, which reverts the drill commit: `Success`, in 16 seconds. Validate passed. The Configure and deploy and Verify stages show "Skipped due to conditions" because they only run for `main`, so the corrected branch did not redeploy EpicBook either.*
+
 
 ---
 
@@ -433,10 +433,10 @@ Corrected Application Pipeline run showing the temporary branch and successful s
 Recovery `/pipeline-triage` output showing Overall Status `HEALTHY`, exit code `0`, your Full Name, and both saved report filenames.
 ![Assignment 5](screenshots/as5/11a.jpg)
 
-*`/pipeline-triage` after the fix: Overall Status `HEALTHY`, Script Exit Code `0`, 18 PASS, the Infrastructure Pipeline at run ID 26 and the Application Pipeline at run ID 30. Claude ends with "I didn't change any files, pipelines or Azure resources."*
+
 ![Assignment 5](screenshots/as5/11b.jpg)
 
-*`reports/recovery-report.txt`: Full Name, both pipelines `HEALTHY`, Script Exit Code `0`, and the folder listing with both saved reports, `incident-failure-report.txt` and `recovery-report.txt`.*
+
 
 ## Notes
 
