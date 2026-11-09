@@ -58,7 +58,7 @@ Add a screenshot from AWS or Azure showing:
 * VM status as **Running**
 * Public IP address
 ![Assignment 1](screenshots/as1/1.jpg)
-*AWS EC2, eu-west-2: `abhinav-ado-agent` (t3.small, Ubuntu 24.04 LTS) in the Running state with public IPv4 18.134.138.248. The security group allows SSH (port 22) only from my own public IP as a /32; there are no other inbound rules. The AWS account ID is blurred.*
+
 
 ---
 
@@ -72,7 +72,7 @@ Add an SSH terminal screenshot showing the output of:
 
 The screenshot must confirm a supported Ubuntu version, `x86_64` architecture, and a successful HTTP response from Azure DevOps.
 ![Assignment 1](screenshots/as1/2.jpg)
-*Ubuntu 24.04.5 LTS (Noble Numbat) on `x86_64`, and a direct `HTTP/2 200` from `dev.azure.com`. The brief's `curl -I https://dev.azure.com` sends a HEAD request, which the bare domain answers with 404, and the organization's own URLs redirect anonymous requests to sign-in (302). So I used a GET to Azure DevOps' public resource-area lookup endpoint, which answers without authentication: it returns `200` with a JSON body whose `locationUrl` is my organization, `https://dev.azure.com/ abhin/`.*
+
 
 ---
 
@@ -93,9 +93,9 @@ Add a terminal screenshot showing:
 * Agent service start
 * `sudo ./svc.sh status` reporting that the service is running
 ![Assignment 1](screenshots/as1/3.jpg)
-*`./config.sh` connected to the ` abhin` organization, added the agent `abhinav-ado-agent` to `abhinav-selfhosted-pool`, and saved its settings. `sudo ./svc.sh install` registered it as a systemd service that runs as the `ubuntu` user, and `sudo ./svc.sh start` started it (start prints the service state, `active (running)`). The PAT was entered at a hidden prompt and does not appear anywhere.*
+
 ![Assignment 1](screenshots/as1/3b.jpg)
-*A separate `sudo ./svc.sh status` run later: the service is still `active (running)` since 12:13 UTC, the same moment it was started above, so it has run continuously since registration.*
+
 
 > Ensure that the PAT is not visible.
 
@@ -118,7 +118,7 @@ Add a screenshot of the Azure DevOps Agent Pool **Agents** page showing:
 * Agent status as **Online**
 * Agent enabled and available
 ![Assignment 1](screenshots/as1/4.jpg)
-*The Agents tab for `abhinav-selfhosted-pool` in project `DMI-Week10`: `abhinav-ado-agent` is Online, Idle (available for jobs), enabled, and running agent version 5.279.0.*
+
 
 ---
 
@@ -140,7 +140,7 @@ Add a screenshot of `azure-pipelines.yml` open in the Azure Repos editor showing
 * Your Full Name
 * Linux verification commands
 ![Assignment 1](screenshots/as1/5.jpg)
-*`azure-pipelines.yml` on `main` in the `DMI-Week10` repo: `trigger: none`, the self-hosted pool `abhinav-selfhosted-pool`, and a single Bash step named "Verify self-hosted Ubuntu agent" that prints my full name, the agent and machine names, and the four Linux checks.*
+
 
 ---
 
@@ -158,9 +158,9 @@ Add a screenshot of the successful Azure DevOps pipeline run showing:
 * Output from `df -h`
 * Output from `pwd`
 ![Assignment 1](screenshots/as1/6a.jpg)
-*Run #20260926.1, manually triggered (the pipeline has `trigger: none`). Hovering the status icon shows **Success**, and the single stage and job both completed.*
+
 ![Assignment 1](screenshots/as1/6b.jpg)
-*The expanded "Verify self-hosted Ubuntu agent" step: `Submitted by: Abhinav T`, agent name and machine name `abhinav-ado-agent`, `uname -a` (Linux 7.0.0-aws, x86_64), `whoami` = `ubuntu`, `df -h` for the 19 GB root volume, and `pwd` = `/home/ubuntu/myagent/_work/1/s`. That working directory is inside the agent's own folder on the VM, which confirms the job ran on the self-hosted agent rather than a Microsoft-hosted one.*
+
 
 ---
 

@@ -16,8 +16,8 @@ set -u
 set -o pipefail
 
 # >>> STUDENT CONFIGURATION: replace these placeholders (non-secret values only) <<<
-full_name="Oluwagbade Odimayo"
-ado_org="https://dev.azure.com/gbadedata"            # e.g. https://dev.azure.com/your-organization
+full_name="Abhinav T"
+ado_org="https://dev.azure.com/gbddata"            # e.g. https://dev.azure.com/your-organization
 ado_project="DMI-Week10"
 infra_pipeline_id="5" # numeric ID of the Infrastructure Pipeline
 app_pipeline_id="6"     # numeric ID of the Application Pipeline

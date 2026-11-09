@@ -36,7 +36,7 @@ Verify the required tools, Azure DevOps authentication, organization and project
 
 No screenshot is required for this task.
 
-I checked that `curl`, `jq`, Git, the Azure CLI with the `azure-devops` extension, and Claude Code were installed, and that Azure DevOps authentication worked for organization `https://dev.azure.com/gbdedata` and project `DMI-Week10`. I then read the numeric pipeline IDs with `az pipelines list`: 5 for ` abhin.epicbook-infra` and 6 for ` abhin.epicbook-app`.
+I checked that `curl`, `jq`, Git, the Azure CLI with the `azure-devops` extension, and Claude Code were installed, and that Azure DevOps authentication worked for organization `https://dev.azure.com/gbddata` and project `DMI-Week10`. I then read the numeric pipeline IDs with `az pipelines list`: 5 for ` abhin.epicbook-infra` and 6 for ` abhin.epicbook-app`.
 
 ---
 

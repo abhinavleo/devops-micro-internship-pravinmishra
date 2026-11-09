@@ -2,16 +2,16 @@
 CI/CD Pipeline Failure Triage Report
 EpicBook dual pipelines (Azure DevOps)
 ========================================
-Full Name: Oluwagbade Odimayo
+Full Name: Abhinav T
 Timestamp: 2026-10-12T09:31:38Z
-Organization: https://dev.azure.com/gbadedata
+Organization: https://dev.azure.com/gbddata
 Project: DMI-Week10
 Mode: read-only (HTTP GET requests only)
 
 Authentication: Personal Access Token from the AZURE_DEVOPS_EXT_PAT environment variable
 
 ---------------- Infrastructure Pipeline ----------------
-Pipeline name: gbadedata.epicbook-infra
+Pipeline name: abhin.epicbook-infra
 Pipeline ID: 5
 Run: 20260927.1 (run ID 26)
 Branch: main (commit 2e8f96bb)
@@ -35,7 +35,7 @@ Raw log file: reports/infra-last-run.log
 Pipeline verdict: HEALTHY
 
 ---------------- Application Pipeline ----------------
-Pipeline name: gbadedata.epicbook-app
+Pipeline name: abhin.epicbook-app
 Pipeline ID: 6
 Run: 20261012.3 (run ID 30)
 Branch: drill/pipeline-failure (commit 16d58cc7)

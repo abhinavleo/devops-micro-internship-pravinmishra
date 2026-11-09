@@ -36,7 +36,7 @@ Add a screenshot of Azure Repos showing:
 * Project files
 * `index.html`
 ![Assignment 2](screenshots/as2/1.jpg)
-*The Azure Static Website imported into Azure Repos (project `DMI-Week10`) from `pravinmishraaws/Azure-Static-Website`. The files are `index.html` and `README.md`, and the latest commit on `index.html` is my edit adding my full name to the site footer.*
+
 
 ---
 
@@ -65,7 +65,7 @@ Add a screenshot of the saved SSH Service Connection **Overview** page showing:
 * Service Connection name
 * SSH connection type
 ![Assignment 2](screenshots/as2/2.jpg)
-*The saved SSH service connection `ssh-static-site-ec2`. It authenticates with a dedicated deploy key (RSA 4096) whose private half is stored only in the connection, with the password field left empty; "basic authentication" is the generic label Azure DevOps shows for every SSH connection. Its host is the web server's private IP, so the agent's SSH traffic stays inside the AWS VPC.*
+
 
 > Do not expose a password, SSH private key, passphrase, or another credential.
 
@@ -91,7 +91,7 @@ Add a screenshot of `azure-pipelines.yml` open in the Azure Repos editor showing
 * `CopyFilesOverSSH@0` task
 * `SSH@0` verification task
 ![Assignment 2](screenshots/as2/3.png)
-*`azure-pipelines.yml` in Azure Repos: a push trigger covering all branches (`'*'`), the self-hosted pool `abhinav-selfhosted-pool`, pipeline variables, the checkout step, a pipeline information step, `CopyFilesOverSSH@0` (which deploys the site but leaves out the pipeline file and README), and an `SSH@0` verification task that fails the run unless Nginx is active and the page it serves contains my name.*
+
 
 > Ensure that no password, SSH private key, PAT, or AWS credential is visible.
 
@@ -115,9 +115,9 @@ Add a screenshot of the successful pipeline run and log summary showing:
 * Remote-verification step completed
 * Your Full Name visible in the pipeline output
 ![Assignment 2](screenshots/as2/4a.jpg)
-*Run #20260926.3, started by "Individual CI", meaning my commit to `index.html` triggered it without anyone clicking Run. Hovering the status icon shows **Success**.*
+
 ![Assignment 2](screenshots/as2/4b.jpg)
-*The same run's log. All steps completed: checkout, pipeline information, the file copy and the remote verification. The expanded information step shows `Submitted by: Abhinav t` and `Trigger: IndividualCI`. The `***` in the file listing is Azure DevOps masking the service connection's username (`ubuntu`) wherever it appears in the log.*
+
 
 ---
 
@@ -138,7 +138,7 @@ Add a browser screenshot showing:
 * Your Full Name
 * Updated website content after the automatic deployment
 ![Assignment 2](screenshots/as2/5.jpg)
-*The site served by Nginx at `http://3.8.196.232`. The footer shows my name and the line "Auto-deployed from Azure Repos by Azure Pipelines", which was the change in the commit that triggered run #20260926.3.*
+
 
 ## Final Website URL
 

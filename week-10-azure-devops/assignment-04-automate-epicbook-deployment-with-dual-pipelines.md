@@ -180,7 +180,7 @@ https://github.com/abhinavleo/epicbook-infra
 
 ## Application Repository URL
 
-https://github.com/abhinavleo/epicbook-app
+https://github.com/abhinavleo/epicbookapp
 
 ---
 
@@ -191,7 +191,7 @@ Write a short explanation of why separate Infrastructure and Application Reposit
 I split the work the way a platform team and an application team usually do.
 
 - **[`epicbook-infra`](https://github.com/abhinavleo/epicbook-infra)** holds only the Terraform code and its pipeline. Infrastructure changes rarely and needs care, so its pipeline runs only when files under `terraform/` change, and Apply waits for a human approval.
-- **[`epicbook-app`](https://github.com/abhinavleo/epicbook-app)** holds the EpicBook code, the Ansible roles and their pipeline. It runs on every push to `main`, so the application can change often without touching or re-planning the infrastructure.
+- **[`epicbook-app`](https://github.com/abhinavleo/epicbookapp)** holds the EpicBook code, the Ansible roles and their pipeline. It runs on every push to `main`, so the application can change often without touching or re-planning the infrastructure.
 
 The split also keeps the security boundaries clear. Only the infrastructure pipeline uses the Azure service connection and reads the Terraform state. The application pipeline never has Azure credentials at all: it only has the VM SSH key and the database password. And code fixes stay with the team that owns the code: to make EpicBook verify TLS to Azure Database for MySQL, I changed `models/index.js` and `config/config.json` in the application repository, without touching the infrastructure.
 
