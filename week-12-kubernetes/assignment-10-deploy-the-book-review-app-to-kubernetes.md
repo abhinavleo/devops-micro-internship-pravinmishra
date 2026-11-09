@@ -22,7 +22,7 @@ Deploy the Book Review App as a production-style three-tier application using Ku
 
 **Access Method:** Public LoadBalancer: the Kubernetes `LoadBalancer` Service `frontend` on port 80, backed by an Azure Standard Load Balancer
 
-**GitHub Manifests or Helm Chart URL:** YAML manifests in [`week-12-kubernetes/k8s-labs/book-review`](https://github.com/abhinavleo/devops-micro-internship-pravinmishra/tree/main/week-12-kubernetes/k8s-labs/book-review). Images ` abhin/book-review-backend:00dd4a5` and ` abhin/book-review-frontend:00dd4a5`, built from [ abhin/book-review-app@00dd4a5](https://github.com/ abhin/book-review-app/tree/00dd4a53732f8e84ee322059487d29fdaf53f696) (frontend image: [`frontend/Dockerfile.k8s`](https://github.com/abhinavleo/book-review-app/blob/00dd4a53732f8e84ee322059487d29fdaf53f696/frontend/Dockerfile.k8s))
+**GitHub Manifests or Helm Chart URL:** YAML manifests in [`week-12-kubernetes/k8s-labs/book-review`](https://github.com/abhinavleo/devops-micro-internship-pravinmishra/tree/main/week-12-kubernetes/k8s-labs/book-review). Images ` abhin/book-review-backend:00dd4a5` and ` abhin/book-review-frontend:00dd4a5`, built from [ abhin/book-review-app@00dd4a5](https://github.com/abhinavleo/book-review-app/tree/00dd4a53732f8e84ee322059487d29fdaf53f696) (frontend image: [`frontend/Dockerfile.k8s`](https://github.com/abhinavleo/book-review-app/blob/00dd4a53732f8e84ee322059487d29fdaf53f696/frontend/Dockerfile.k8s))
 
 **Architecture Diagram:** ![Assignment 10](screenshots/as10/3.png)
 ---
