@@ -188,7 +188,7 @@ Summarize the VPC/subnet layout, the ALB and Auto Scaling Group setup, the priva
 All three states in one view: the terminated instance winding down as unhealthy, its replacement already in service in the same Availability Zone, and the instance in the other zone untouched. The replacement went back into the zone that lost capacity rather than simply topping up the total, which is what preserves zone-level redundancy after a failure instead of leaving both instances in one place.
 
 #### Load balancer continuity during the instance failure test
-![Assignment 5](screenshots/ass5/21alb.jpg)
+![Assignment 5](screenshots/ass5/22alb.jpg)
 The same curl loop used in Test B, run during Test A. Two independent mechanisms are working here: the load balancer stops routing to the failing instance once its health check fails, and separately the Auto Scaling group notices capacity has dropped and launches a replacement. Neither knows about the other, and the user data script is what makes the replacement useful rather than an empty server.
 
 #### Multi-AZ database failover
@@ -226,12 +226,12 @@ Publish a LinkedIn post about the high-availability build, including the ALB URL
 
 #### LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
+Not published: I will publish a LinkedIn post for this assignment.
 
 ---
 
 #### Screenshot — Published LinkedIn post
-
+Not published: I will publish a LinkedIn post for this assignment.
 ---
 
 # Submission Instructions

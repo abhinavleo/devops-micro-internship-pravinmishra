@@ -20,7 +20,6 @@ Create `eb-demo-vnet` (10.0.0.0/16) with `web-subnet` (10.0.1.0/24), `app-subnet
 
 #### Screenshot 1 — Subnet configuration screen showing the three subnets and Bastion subnet (if enabled)
 ![Assignment 3](screenshots/ass3/1.jpg)
-The three subnets are deliberately sized differently: web-subnet at 10.0.1.0/24 gives 251 usable addresses for the tier that scales out furthest, app-subnet at 10.0.2.0/25 gives 123, and db-subnet at 10.0.3.0/26 gives 59 for the tier that needs the fewest hosts. Azure reserves five addresses in every subnet, which is why the usable counts fall short of the raw block sizes.
 
 Azure Bastion was not enabled. The VM is reached over SSH using its own public IP instead, so no AzureBastionSubnet appears in this configuration.
 
@@ -46,7 +45,7 @@ Create Standard Public Load Balancer `web-public-elb` with frontend IP `web-elb-
 
 #### Screenshot 2 — Load Balancer frontend IP configuration
 ![Assignment 3](screenshots/ass3/2.jpg)
-The frontend configuration web-elb-ip is backed by a dedicated Standard SKU public IP, web-elb-public-ip, on 4.250.98.203. This is a separate address from the VM's own public IP, which is what allows Task 4 to prove traffic arrives through the load balancer rather than directly at the VM. The "Used by" list confirms web-http-rule is bound to this frontend.
+
 
 ---
 
@@ -74,7 +73,6 @@ Verified from the command line as well:
     HTTP/1.1 200 OK
     Server: nginx/1.18.0 (Ubuntu)
 
-The health probe polls TCP port 80 every five seconds, and the backend pool contains the web-nginx VM by NIC association. Traffic only reaches the VM once the probe reports the backend healthy.
 
 ---
 

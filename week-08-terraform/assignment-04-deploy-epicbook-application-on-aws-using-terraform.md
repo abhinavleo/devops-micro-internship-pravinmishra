@@ -405,7 +405,7 @@ Not applicable: I will publish a LinkedIn post for this assignment.
 
 ## LinkedIn Post URL
 
-**LinkedIn Post URL:** Not published: I chose not to publish a LinkedIn post for this assignment.
+**LinkedIn Post URL:** Not published: I will publish a LinkedIn post for this assignment.
 
 ---
 

@@ -100,7 +100,7 @@ Confirm the React app loads through the VM's public IP, navigation works, and a 
 
 #### Screenshot 9 — Browser showing the React app with the public IP visible in the address bar
 ![Assignment 2](screenshots/ass2/9.jpg)
-**SPA routing verification:** This app has no client-side router, so there are no nested links to click. Requesting a path directly tests the same behaviour that the `try_files $uri /index.html;` directive exists for. The screenshot below shows `/test-route` returning the application rather than a 404, which confirms Nginx falls back to `index.html` instead of looking for a file that does not exist.
+
 ![Assignment 2](screenshots/ass2/10.jpg)
 ---
 
@@ -114,9 +114,8 @@ Restrict the SSH Network Security Group rule to your IP if not already restricte
 
 #### Screenshot 10 (optional) — Network Security Group rule showing SSH restricted to your IP
 ![Assignment 2](screenshots/ass2/11.jpg)
-**Firewall check:** `sudo ufw status` on the VM returns `Status: inactive`, so nothing at the OS level blocks port 80. Inbound traffic is controlled entirely by the Network Security Group, where port 80 stays open to the internet and port 22 is now limited to a single source address.
 
-**Note on the Ubuntu 20.04 image:** Canonical no longer lists plain Ubuntu Server 20.04 LTS in the Azure Portal Marketplace gallery. Searching there returns only Ubuntu Pro 20.04, which is a metered paid image, alongside third-party republished images from other publishers. The free Canonical image is still present in the platform and was confirmed with `az vm image list-skus --location uksouth --publisher Canonical --offer 0001-com-ubuntu-server-focal`, which returns `20_04-lts` and `20_04-lts-gen2`. `az vm image show` reported `"plan": null` for that URN, confirming no licence charge. The VM was therefore created by referencing the image URN directly rather than selecting it from the portal gallery, and `lsb_release -d` on the running VM reports `Ubuntu 20.04.6 LTS` as required.
+
 
 ---
 

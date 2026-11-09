@@ -449,11 +449,11 @@ Suggested tags:
 
 ### LinkedIn Post URL
 
-Not published: I chose not to publish a LinkedIn post for this assignment.
+Not published: I will publish a LinkedIn post for this assignment.
 
 ### Published LinkedIn Post Screenshot — Mandatory
 
-Not applicable, as no post was published.
+no post was published.
 
 ---
 

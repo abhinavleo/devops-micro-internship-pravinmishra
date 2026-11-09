@@ -35,8 +35,6 @@ Create `epicbook-vpc` (10.0.0.0/16) with a public subnet (10.0.1.0/24) and a pri
 ![Assignment 4](screenshots/ass4/3.jpg)
 #### Additional evidence — Private route table with no internet route
 
-![Private route table associated with both private subnets and no internet gateway route](./screenshots/a4-03b-private-route-table.png)
-
 Creating a separate private route table was not in the task list but was necessary. A new subnet inherits the VPC main route table, which here is the public one carrying the 0.0.0.0/0 route to the internet gateway, so both private subnets would have had an internet path by default. Associating them with a dedicated table that holds only the local route is what actually makes them private.
 
 ---
@@ -120,8 +118,6 @@ Connect to RDS from EC2, create the `epicbook` database, and import the provided
 #### Screenshot 13 — Terminal showing successful `SHOW TABLES;` output with tables listed
 ![Assignment 4](screenshots/ass4/13.jpg)
 #### Additional evidence — Row counts confirming the seed data imported
-
-![Author and Book row counts after importing the seed files](./screenshots/a4-13b-row-counts.png)
 
 Tables existing does not prove data landed. The counts confirm 53 authors and 54 books, which also proves the import order held, since Book carries a foreign key to Author and would have failed had the seeds run the other way round.
 

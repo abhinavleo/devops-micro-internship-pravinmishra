@@ -126,7 +126,7 @@ Include the required hashtags, the credit note for your track, and the tags spec
 
 #### LinkedIn Post URL
 
-Not applicable: I will publish a LinkedIn post for this assignment.
+I will publish a LinkedIn post for this assignment.
 
 
 

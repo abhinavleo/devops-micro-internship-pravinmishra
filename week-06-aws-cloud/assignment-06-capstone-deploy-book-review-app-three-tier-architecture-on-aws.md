@@ -33,7 +33,7 @@ Record the AWS Region used and list every AWS service used across networking, co
 
 **Region:**
 
-`eu-west-2` (London). Chosen for proximity to reduce latency and to keep all resources in one region for simpler networking and lower data transfer cost.
+`eu-west-2` (London).
 
 ---
 
@@ -101,7 +101,7 @@ Capture visual proof of every tier and load balancer.
 ![Assignment 6](screenshots/ass6/6.jpg)
 #### Additional evidence: browser network trace confirming tier isolation
 ![Assignment 6](screenshots/ass6/7.jpg)
-The request URL is the public load balancer, the remote address is a public AWS address, and the response carries an Nginx server header. The browser never contacts the internal load balancer, the application server, or the database, because none of them are addressable from outside the VPC.
+
 
 ---
 
@@ -159,12 +159,12 @@ Publish a LinkedIn post sharing the capstone deployment, including the public AL
 
 #### LinkedIn Post URL
 
-Paste your LinkedIn post URL here:
+Paste your LinkedIn post URL here: Not published: I will publish a LinkedIn post for this assignment.
 
 ---
 
 #### Screenshot of LinkedIn post
-
+Not published: I will publish a LinkedIn post for this assignment.
 ---
 
 # Submission Instructions
